@@ -7,12 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-      },
-    
-      fontFamily: {
         calibri: ['Calibri', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         tomorrow: ['Tomorrow', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
