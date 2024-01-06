@@ -9,6 +9,11 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+    
+      fontFamily: {
+        calibri: ['Calibri', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        tomorrow: ['Tomorrow', 'sans-serif'],
+      },
     },
   },
   plugins: [],
