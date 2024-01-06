@@ -25,9 +25,14 @@ const Header = () => {
       </div>
       <div className="flex gap-5 w-2/5 items-center relative">
         <Link to="/" className="cursor-pointer">
-          Hero Page
+          Home
         </Link>
-
+        <Link to="/about" className="cursor-pointer">
+          about
+        </Link>
+        <Link to="/contact" className="cursor-pointer">
+          contact
+        </Link>
         <Link to="/documentation" className="cursor-pointer">
           Documentation
         </Link>
@@ -35,7 +40,7 @@ const Header = () => {
           aria-controls="login-menu"
           aria-haspopup="true"
           onClick={handleMenuClick}
-          style={{ background: "#00AB55", cursor: "pointer", color: "white" }}
+          style={{background:"#00AB55", cursor:"pointer", color:"white"}}
         >
           Login
         </Button>
