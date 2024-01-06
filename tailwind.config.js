@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        calibri: ['Calibri', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        tomorrow: ['Tomorrow', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
