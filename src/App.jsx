@@ -4,6 +4,9 @@ import HomePage from "./pages/HomePage";
 import Heropage from "./pages/Heropage";
 import Header from "./common/Header";
 import Footer from "./common/Footer";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Faq from "./pages/Faq";
 
 const App = () => {
   return (
@@ -15,6 +18,9 @@ const App = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route index element={<Heropage />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/faq" element={<Faq />} />
             </Routes>
           </div>
         </div>

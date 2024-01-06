@@ -27,6 +27,7 @@ const Header = () => {
         <Link to="/" className="cursor-pointer">
           Hero Page
         </Link>
+
         <Link to="/documentation" className="cursor-pointer">
           Documentation
         </Link>
@@ -34,7 +35,7 @@ const Header = () => {
           aria-controls="login-menu"
           aria-haspopup="true"
           onClick={handleMenuClick}
-          style={{background:"#00AB55", cursor:"pointer", color:"white"}}
+          style={{ background: "#00AB55", cursor: "pointer", color: "white" }}
         >
           Login
         </Button>
