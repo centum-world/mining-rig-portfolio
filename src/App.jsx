@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link, Element, animateScroll as scroll } from "react-scroll";
-import RefreshIcon from '@mui/icons-material/Refresh';
+import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 import HomePage from "./pages/HomePage";
 import Heropage from "./pages/Heropage";
 import Header from "./common/Header";
@@ -37,7 +37,7 @@ const App = () => {
           duration={500}
           className={`fixed bottom-4 right-4 cursor-pointer ${isHeaderVisible ? "opacity-100" : "opacity-0"}`}
         >
-         <RefreshIcon/>
+         <ArrowUpwardOutlinedIcon/>
         </Link>
         <Element name="top" className="d-none"></Element>
       </div>
