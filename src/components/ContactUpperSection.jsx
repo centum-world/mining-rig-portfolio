@@ -1,7 +1,69 @@
-import React from "react";
-import contact from '../assets/png/Contact-us.gif'
+import React, { useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import contact from '../assets/png/Contact-us3.gif'
 
 const ContactUpperSection = () => {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [sending, setSending] = useState(false);
+
+  //   email section   -----
+
+  const sendEmail = () => {
+    setSending(true);
+
+    const templateParams = {
+      to_name: name,
+      from_email: email,
+      message: message,
+    };
+
+    emailjs
+      .send(
+        "service_rkjubno",
+        "template_5inlwwy",
+        templateParams,
+        "qoR2rMGkc83u2KsWw"
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        // Show toast for successful email sending
+        toast.success("Email sent successfully!", {
+          position: "top-right",
+          autoClose: 3000, // Close the toast after 3 seconds
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        // Clear form fields after successful submission
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setSending(false);
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+        // Show toast for failed email sending
+        toast.error("Failed to send email!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setSending(false);
+      });
+  };
   return (
     <>
      <div className="flex ">
@@ -27,18 +89,18 @@ const ContactUpperSection = () => {
       <div className="right-side">
         <div>
         <form
-            // onSubmit={(e) => {
-            //   e.preventDefault();
-            //   if (name && email && phone && message) {
-            //     sendEmail();
-            //   } else {
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (name && email && phone && message) {
+                sendEmail();
+              } else {
                 
-            //     toast.warning("Please fill all fields");
-            //   }
-            // }}
+                toast.warning("Please fill all fields");
+              }
+            }}
           >
-            <div className="flex flex-wrap justify-center items-center pt-14 pl-14 ">
-              <div className="h-auto w-full md:w-auto lg:w-auto bg-white rounded-lg shadow-xl p-2">
+            <div className="flex flex-wrap justify-center items-center pt-14 pl-14 mt-10 ">
+              <div className="h-auto w-full  md:w-auto lg:w-auto bg-white rounded-lg shadow-xl p-5">
                 <div className="flex">
                   <h1 className="text-2xl font-bold font-tomorrow text-gray-600">
                     Send a message
@@ -50,36 +112,40 @@ const ContactUpperSection = () => {
                     type="text"
                     placeholder="Name"
                     className="rounded-md p-3 border border-gray-400 border-solid border-1 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-green-600 col-span-2 sm:col-span-1"
-                    
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                   <input
                     type="email"
                     placeholder="Email"
                     className="rounded-md p-3 border border-gray-400 border-solid border-1 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-green-600 col-span-2 sm:col-span-1"
-                    
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <input
                     type="text"
                     placeholder="Phone"
                     className="rounded-md p-3 border border-gray-400 border-solid border-1 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-green-600 col-span-2 sm:col-span-1"
-
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                   />
                   <textarea
                     placeholder="Your Message"
                     className="rounded-md p-3 border border-gray-400 border-solid border-1 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-green-600 col-span-2"
                     rows="4"
-                   
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
 
                   <button
                     type="submit"
                     className="rounded-md p-3 text-lg bg-green-600 font-semibold text-white font-calibri col-span-2 sm:col-span-1"
-                    // disabled={sending}
+                    disabled={sending}
                   >
-                    Submit
-                    {/* {sending ? "Sending..." : "Send Message"} */}
+                    
+                    {sending ? "Sending..." : "Submit"}
                   </button>
-                  {/* <ToastContainer /> */}
+                  <ToastContainer />
                 </div>
               </div>
             </div>

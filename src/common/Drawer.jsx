@@ -12,6 +12,10 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import { Link, useNavigate } from "react-router-dom";
+import ContactMailOutlinedIcon from '@mui/icons-material/ContactMailOutlined';
+import { AboutIcon } from "../utils/icons";
+import QuizOutlinedIcon from '@mui/icons-material/QuizOutlined';
+import { HomeIcon } from "../utils/icons";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -40,15 +44,15 @@ export default function TemporaryDrawer() {
     >
       <List>
         {[
-          { text: "Home", path: "/" },
-          { text: "About", path: "/about" },
-          { text: "Contact", path: "/contact" },
-          { text: "FAQ", path: "/faq" },
+          { text: "Home", path: "/" ,icon: <HomeIcon color='gray' /> },
+          { text: "About", path: "/about",icon:<AboutIcon color='gray' />},
+          { text: "Contact", path: "/contact",icon:<ContactMailOutlinedIcon/>  },
+          { text: "FAQ", path: "/faq",icon:<QuizOutlinedIcon/> },
         ].map((item) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton component={Link} to={item.path}>
               <ListItemIcon>
-                {item.text === "Home" ? <InboxIcon /> : <MailIcon />}
+              <ListItemIcon>{item.icon}</ListItemIcon>
               </ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>

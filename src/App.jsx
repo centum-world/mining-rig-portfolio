@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <div className="flex-1 flex bg-gray-50">
+        <div className="flex-1 flex ">
           <div className="flex-1">
             <Routes>
               <Route path="/" element={<HomePage />} />
