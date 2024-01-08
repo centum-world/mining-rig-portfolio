@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Link, Element, animateScroll as scroll } from "react-scroll";
+import {animateScroll as scroll,Link as ScrollLink, Element } from "react-scroll";
 import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 import HomePage from "./pages/HomePage";
 import Heropage from "./pages/Heropage";
@@ -12,9 +12,15 @@ import Faq from "./pages/Faq";
 
 const App = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const bottomRef = useRef(null);
+
 
   const handleScroll = () => {
     setIsHeaderVisible(window.scrollY < 10);
+  };
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
   };
 
   return (
@@ -31,14 +37,15 @@ const App = () => {
           </Routes>
         </div>
         <Footer />
-        <Link
+        <ScrollLink
           to="top"
           smooth={true}
           duration={500}
           className={`fixed bottom-4 right-4 cursor-pointer ${isHeaderVisible ? "opacity-100" : "opacity-0"}`}
+          onClick={scrollToTop}
         >
          <ArrowUpwardOutlinedIcon/>
-        </Link>
+        </ScrollLink>
         <Element name="top" className="d-none"></Element>
       </div>
     </Router>
