@@ -38,7 +38,7 @@ const Header = () => {
         <Drawer />
       </div>
       <div className="flex gap-5 w-2/5 items-center relative">
-        <div className="flex gap-2 items-center relative">
+        <div className="flex gap-2 items-center relative bg-gray-100 rounded-2xl p-2">
           {colorButtons.map((color, index) => (
             <div
               key={index}
