@@ -72,12 +72,6 @@ const Header = () => {
         <Link to="/" className="cursor-pointer">
           Home
         </Link>
-        <Link to="/about" className="cursor-pointer">
-          About
-        </Link>
-        <Link to="/contact" className="cursor-pointer">
-          Contact
-        </Link>
         <Link to="/documentation" className="cursor-pointer">
           Documentation
         </Link>

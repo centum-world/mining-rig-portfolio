@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import rocket from "../assets/png/rocket.png";
 
 const Heropage = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -48,8 +49,8 @@ const Heropage = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 flex items-center justify-center">
-        centum world
+      <div className="flex-1 flex items-center justify-center max-w-">
+        <img  src={rocket} alt="heroImg"  />
       </div>
     </section>
   );
