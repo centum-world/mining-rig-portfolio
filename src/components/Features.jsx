@@ -3,6 +3,8 @@ import AirlineStopsIcon from "@mui/icons-material/AirlineStops";
 import { Button } from "@mui/material";
 import purchase from "../assets/png/purchase.png";
 import { useSelector } from "react-redux";
+import { AirplayOutlined } from "@mui/icons-material";
+import FeaturesCard from "./FeaturesCard";
 
 const FeatureCard = ({ title, description }) => {
   return (
@@ -26,7 +28,7 @@ const Features = () => {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-20">
+    <div className="flex flex-col items-center space-y-20 p-4">
       <div className="flex items-center justify-center gap-32">
         <FeatureCard
           title="Built for developers"
@@ -43,8 +45,9 @@ const Features = () => {
       </div>
       <div className="flex flex-col justify-center items-center space-y-4">
         <div className="text-gray-500">FEATURES</div>
-        <div className="text-4xl font-semibold">
-          The powerful and flexible theme for all kinds of businesses
+        <div className="text-5xl text-gray-700 font-semibold text-center">
+          The powerful and flexible theme
+          <br /> for all kinds of businesses
         </div>
         <div className="text-gray-500 text-xl font-medium text-center">
           Build a beautiful, modern website with flexible, fully customizable,
@@ -64,6 +67,9 @@ const Features = () => {
           </Button>
         </div>
         <img src={purchase} alt="purchase" className="w-1/3" />
+      </div>
+      <div className="h-auto w-full flex flex-wrap gap-6  px-32">
+        <FeaturesCard />
       </div>
     </div>
   );

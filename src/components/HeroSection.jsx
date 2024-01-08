@@ -13,8 +13,8 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="flex bg-gray-50 h-[90vh]">
-      <div className=" gap-10 flex  items-center justify-center w-[50%] mb-32">
+    <section className="flex bg-gray-50 h-[90vh] p-4">
+      <div className=" gap-10 flex  items-center justify-center w-[50%] my-auto mx-auto">
         <div className="space-y-6">
           <h1 className="text-6xl font-bold  text-gray-700 font-sans ">
             Turn your ideas <br /> into a{" "}
