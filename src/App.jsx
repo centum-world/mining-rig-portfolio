@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link, Element, animateScroll as scroll } from "react-scroll";
-import RefreshIcon from '@mui/icons-material/Refresh';
+import RefreshIcon from "@mui/icons-material/Refresh";
 import HomePage from "./pages/HomePage";
 import Heropage from "./pages/Heropage";
 import Header from "./common/Header";
@@ -20,7 +20,9 @@ const App = () => {
   return (
     <Router>
       <div className="flex flex-col min-h-screen" onScroll={handleScroll}>
-        <Header isVisible={isHeaderVisible} />
+        <div>
+          <Header isVisible={isHeaderVisible} />
+        </div>
         <div className="flex-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -35,9 +37,11 @@ const App = () => {
           to="top"
           smooth={true}
           duration={500}
-          className={`fixed bottom-4 right-4 cursor-pointer ${isHeaderVisible ? "opacity-100" : "opacity-0"}`}
+          className={`fixed bottom-4 right-4 cursor-pointer ${
+            isHeaderVisible ? "opacity-100" : "opacity-0"
+          }`}
         >
-         <RefreshIcon/>
+          <RefreshIcon />
         </Link>
         <Element name="top" className="d-none"></Element>
       </div>
