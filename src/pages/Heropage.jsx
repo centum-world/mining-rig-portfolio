@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import rocket from "../assets/png/rocket.png";
+import HeroSection from "../components/HeroSection";
+import Features from "../components/Features";
 
 const Heropage = () => {
   return (

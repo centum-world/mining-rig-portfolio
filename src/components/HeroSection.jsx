@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
-import rocket from "../assets/png/rocket.png";
+import rocket from "../assets/png/Rocket-1.gif";
 
 const HeroSection = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -47,8 +47,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center w-[50%]">
-        <img src={rocket} alt="heroImg" className="w-3/4" />
+      <div className="flex items-center justify-center w-[50%] bg-gray-50">
+        <img src={rocket} alt="heroImg" className="w-3/4 " />
       </div>
     </section>
   );
