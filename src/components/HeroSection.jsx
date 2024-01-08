@@ -42,6 +42,7 @@ const HeroSection = () => {
               Purhcase now
             </Button>
             <Button
+              variant="outlined"
               onClick={handleMenuClick}
               style={{
                 background: selectedColor,
