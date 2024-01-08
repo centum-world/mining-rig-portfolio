@@ -17,7 +17,14 @@ const HeroSection = () => {
       <div className=" gap-10 flex  items-center justify-center w-[50%] mb-32">
         <div className="space-y-6">
           <h1 className="text-6xl font-bold  text-gray-700 font-sans ">
-            Turn your ideas <br /> into a success.
+            Turn your ideas <br /> into a{" "}
+            <span
+              style={{
+                color: selectedColor,
+              }}
+            >
+              success.
+            </span>
           </h1>
           <p className="text-gray-500 text-2xl font-sans">
             Webbee will make your product look modern <br /> professional while
