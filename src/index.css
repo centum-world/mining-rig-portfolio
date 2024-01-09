@@ -6,7 +6,7 @@
 
 @keyframes slideInLeft {
   from {
-    transform: translateX(-700px);
+    transform: translateX(-750px);
   }
   to {
     transform: translateX(0);
