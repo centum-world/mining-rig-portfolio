@@ -7,10 +7,10 @@ import GetStarted from "../components/GetStarted";
 
 const Heropage = () => {
   return (
-    <div className="space-y-10">
+    <div className="">
       <HeroSection />
-      {/* <Features />
-      <DemoSection/>
+      <Features />
+      {/* <DemoSection/>
       <GetStarted/> */}
     </div>
   );

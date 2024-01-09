@@ -17,21 +17,17 @@
   animation: slideInLeft 0.2s ease-in 1s 1 normal both;
 }
 
+@keyframes slideInLeft{
+  from {
+    transform: translateX(-1500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 
-@keyframes infiniteBounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-20px);
-    }
-    60% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  .text-highlight {
-    animation: infiniteBounce 1s infinite;
-  }
-  
+.slide-in-left1 {
+  animation: slideInLeft 0.2s ease-in 1s 1 normal both;
+}
+
   

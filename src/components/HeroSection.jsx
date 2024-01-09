@@ -7,7 +7,7 @@ const HeroSection = () => {
   const { selectedColor } = useSelector((state) => state.colors);
 
   return (
-    <section className="flex md:flex flex-col md:flex-row  bg-gray-50 h-[90vh]  p-6">
+    <section className="flex  md:flex flex-col md:flex-row  bg-gray-50 md:h-[90vh]  p-6">
       <div className="gap-10 flex items-center justify-center md:w-[50%] w-full md:pb-24 md:pl-24  slide-in-left">
         <div className="space-y-6">
           <h1 className="md:text-6xl text-5xl font-bold text-gray-700 font-sans">
