@@ -33,7 +33,7 @@ const Header = () => {
   const colorButtons = ["#00AB55", "#4169E1", "#800080", "#C2185B", "#303F9F"];
 
   return (
-    <div className="flex  w-full p-2 gap-4 shadow-md md:justify-between">
+    <div className="flex  w-full p-2 gap-4 shadow-2xl md:justify-between">
       <div className="flex md:w-64 w-26   items-center justify-center flex-row-reverse">
         <img
           src={logo}

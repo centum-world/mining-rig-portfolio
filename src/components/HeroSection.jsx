@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import rocket from "../assets/png/Rocket-2.gif";
 
