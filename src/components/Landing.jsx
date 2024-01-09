@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Card = ({ title, description, linkText, linkTo }) => (
-  <div className="flex items-center justify-between border h-36 w-1/3 overflow-hidden">
+  <div className="flex items-center justify-between border h-36 md:w-1/3 w-full overflow-hidden">
     <div className="flex flex-col  p-6">
       <div className="text-lg font-semibold text-gray-700">{title}</div>
       <div className="text-base text-gray-500">{description}</div>
@@ -92,7 +92,7 @@ const Landing = () => {
   ];
 
   return (
-    <div className="p-24">
+    <div className="md:p-24 pt-6">
       <div className="text-2xl font-semibold mb-4">Landing</div>
       <div className="flex flex-wrap">
         {cards.map((card, index) => (

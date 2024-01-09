@@ -24,7 +24,7 @@ const HeroSection = () => {
             Your Success, Our Priority: Join the journey to unparalleled success
             with the assurance of our unwavering commitment to your prosperity!
           </p>
-          <div className="flex md:flex-row flex-col gap-4">
+          <div className="flex md:flex-row flex-col gap-4 w-full">
             <Button
               onClick={() => {}}
               style={{

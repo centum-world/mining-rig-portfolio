@@ -15,14 +15,14 @@ export const DemoSection = () => {
   return (
     <div className="bg-gray-50 p-4">
       <div className="flex items-center justify-center flex-col space-y-4">
-        <div className="text-gray-500">DEMO PAGES</div>
-        <div className="text-gray-700 text-5xl font-semibold">
+        <div className="text-gray-500 pt-10 text-center">DEMO PAGES</div>
+        <div className="text-gray-700 md:text-5xl text-4xl font-semibold text-center">
           Webbee in action
         </div>
-        <div className="text-gray-500 text-2xl font-sans">
+        <div className="text-gray-500 md:text-2xl font-sans text-center">
           All examples you find below are included in the download package.
         </div>
-        <div className="flex gap-4">
+        <div className="flex md:flex-row flex-col  gap-4 md:w-auto w-full">
           <Button
             onClick={handleMenuClick}
             style={{
@@ -34,11 +34,12 @@ export const DemoSection = () => {
             Purchase now
           </Button>
           <Button
-            onClick={handleMenuClick}
+            variant="outlined"
+            onClick={() => {}}
             style={{
-              background: selectedColor,
+              borderColor: selectedColor,
               cursor: "pointer",
-              color: "white",
+              color: selectedColor,
             }}
           >
             View documents
@@ -46,10 +47,10 @@ export const DemoSection = () => {
         </div>
       </div>
       <div>
-        <Supporting />
+        <Landing />
       </div>
       <div>
-        <Landing />
+        <Supporting />
       </div>
     </div>
   );
