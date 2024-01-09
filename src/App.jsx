@@ -38,7 +38,7 @@ const App = () => {
             <Route path="/faq" element={<Faq />} />
           </Routes>
         </div>
-        <Footer />
+        {/* <Footer /> */}
         <ScrollLink
           to="top"
           smooth={true}

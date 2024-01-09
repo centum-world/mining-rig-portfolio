@@ -8,10 +8,11 @@ import logo from "../assets/png/clogo.png";
 import Drawer from "./Drawer";
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedColor } from "../redux/colorSlice";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  
+
   const { selectedColor } = useSelector((state) => state.colors);
 
   const dispatch = useDispatch();
@@ -29,16 +30,16 @@ const Header = () => {
     handleMenuClose();
   };
 
-  const colorButtons = ["#00AB55", "#FF6347", "#4169E1", "#FFD700", "#800080"];
+  const colorButtons = ["#00AB55", "#4169E1", "#800080", "#C2185B", "#303F9F"];
 
   return (
-    <div className="flex w-full p-2 shadow-md justify-between">
-      <div className="flex w-64 items-center flex-row-reverse">
-        <img src={logo} alt="Dummy Logo" className="h-14 w-14" />
+    <div className="flex w-full p-2 gap-4 shadow-md md:justify-between">
+      <div className="flex md:w-64 w-26   items-center justify-center flex-row-reverse">
+        <img src={logo} alt="Dummy Logo" className="md:h-14 h-12 md:w-14 w-12" />
         <Drawer />
       </div>
-      <div className="flex gap-5 w-2/5 items-center relative">
-        <div className="flex gap-2 items-center relative bg-gray-100 rounded-2xl p-2">
+      <div className="flex md:gap-5 gap-1 w-2/5 items-center relative">
+        <div className="flex gap-2 items-center relative bg-gray-100 rounded-3xl p-2">
           {colorButtons.map((color, index) => (
             <div
               key={index}
@@ -69,24 +70,30 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <Link to="/" className="cursor-pointer">
+        <span style={{ color: selectedColor }}>
+          <DarkModeOutlinedIcon />
+        </span>
+
+        <Link to="/" className="cursor-pointer  md:flex hidden">
           Home
         </Link>
-        <Link to="/documentation" className="cursor-pointer">
+        <Link to="/documentation" className="cursor-pointer md:flex hidden">
           Documentation
         </Link>
-        <Button
-          aria-controls="login-menu"
-          aria-haspopup="true"
-          onClick={handleMenuClick}
-          style={{
-            background: selectedColor,
-            cursor: "pointer",
-            color: "white",
-          }}
-        >
-          Login
-        </Button>
+        <div className="md:flex hidden">
+          <Button
+            aria-controls="login-menu"
+            aria-haspopup="true"
+            onClick={handleMenuClick}
+            style={{
+              background: selectedColor,
+              cursor: "pointer",
+              color: "white",
+            }}
+          >
+            Login
+          </Button>
+        </div>
         <Menu
           id="login-menu"
           anchorEl={anchorEl}
