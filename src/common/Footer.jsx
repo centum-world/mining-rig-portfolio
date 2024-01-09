@@ -1,6 +1,5 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import logo from "../assets/png/clogo.png";
 
@@ -14,14 +13,11 @@ const Footer = () => {
 
   return (
     <div className="p-4 space-y-10">
-      <div className="flex items-center justify-between">
+      <div className="flex md:flex-row flex-col items-center justify-between space-y-4">
         <div>
           <img src={logo} alt="Dummy Logo" className="h-14 w-14" />
         </div>
-        <div className="flex gap-4">
-          <RouterLink to="/" className="text-blue-500 hover:underline">
-            <Button>Home</Button>
-          </RouterLink>
+        <div className="flex  md:flex-row flex-col gap-6">
           <Button
             onClick={handleMenuClick}
             style={{
@@ -34,11 +30,11 @@ const Footer = () => {
           </Button>
           <Button
             variant="outlined"
-            onClick={handleMenuClick}
+            onClick={() => {}}
             style={{
-              background: selectedColor,
+              borderColor: selectedColor,
               cursor: "pointer",
-              color: "white",
+              color: selectedColor,
             }}
           >
             Purchase now

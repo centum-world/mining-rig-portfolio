@@ -1,14 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-const Card = ({ title, description, linkText, linkTo }) => (
+const Card = ({ title, description, linkText, linkTo,selectedColor }) => (
   <div className="flex items-center justify-between border h-36 md:w-1/3 w-full overflow-hidden">
     <div className="flex flex-col  p-6">
       <div className="text-lg  font-semibold text-gray-700">{title}</div>
       <div className="text-base text-gray-500">{description}</div>
     </div>
     <div className="flex items-center justify-center p-6">
-      <NavLink to={linkTo} className="text-blue-500  mt-14">
+      <NavLink to={linkTo}  className= "mt-14" style={{ color: selectedColor }}>
         {linkText}
       </NavLink>
     </div>
@@ -16,6 +17,7 @@ const Card = ({ title, description, linkText, linkTo }) => (
 );
 
 const Supporting = () => {
+  const { selectedColor } = useSelector((state) => state.colors);
     const cards = [
         {
           title: "Card 1",
@@ -97,7 +99,7 @@ const Supporting = () => {
       <div className="text-2xl font-semibold mb-4">Supporting</div>
       <div className="flex flex-wrap md:flex-row flex-col">
         {cards.map((card, index) => (
-          <Card key={index} {...card} />
+          <Card key={index} {...card} selectedColor={selectedColor} />
         ))}
       </div>
     </div>

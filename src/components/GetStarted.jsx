@@ -12,26 +12,28 @@ const GetStarted = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className="text-gray-500">GET STARTED</div>
-      <div className="text-5xl text-gray-700 font-semibold text-center">
+    <div className="flex flex-col items-center justify-center space-y-4 p-4">
+      <div className="text-gray-500 text-center">GET STARTED</div>
+      <div className="md:text-5xl  text-4xl text-gray-700 font-semibold text-center">
         Get started with Webbee today
       </div>
-      <div className="text-gray-500 text-2xl font-sans mb-10 ">
+      <div className="text-gray-500 md:text-2xl text-center font-sans mb-10 ">
         Build a beautiful, modern website with flexible, fully customizable,
         atomic Material-UI components.
       </div>
-      <Button
-        onClick={handleMenuClick}
-        style={{
-          background: selectedColor,
-          cursor: "pointer",
-          color: "white",
-        }}
-      >
-        Purchase now
-      </Button>
-      <div className="w-full border-t border-gray-300 "></div>
+      <div>
+        <Button
+          onClick={handleMenuClick}
+          style={{
+            background: selectedColor,
+            cursor: "pointer",
+            color: "white",
+          }}
+        >
+          Purchase now
+        </Button>
+      </div>
+      <div className="w-full border-t border-gray-300"></div>
     </div>
   );
 };

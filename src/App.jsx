@@ -9,10 +9,10 @@ import ArrowUpwardOutlinedIcon from "@mui/icons-material/ArrowUpwardOutlined";
 import HomePage from "./pages/HomePage";
 import Heropage from "./pages/Heropage";
 import Header from "./common/Header";
-import Footer from "./common/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
+import Footer from "./common/Footer";
 
 const App = () => {
   const [isHeaderVisible] = useState(true);
@@ -35,7 +35,7 @@ const App = () => {
           <Route path="/faq" element={<Faq />} />
         </Routes>
       </div>
-      {/* <Footer /> */}
+      <Footer />
       <ScrollLink
         to="top"
         smooth={true}
