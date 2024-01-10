@@ -22,13 +22,13 @@ const FeaturesCard = () => {
     <div className="flex justify-center flex-wrap gap-10">
       <FeatureCard
         icon={<SignalCellularNoSim className="text-blue-500 mb-2" size={24} />}
-        title="No Technical High Cost Device or, Setup neede"
+        title="No Technical High Cost Device or, Setup needed"
         description="Easy-to-use solution without the need for complex technical devices or setups."
       />
       <FeatureCard
         icon={<Power className="text-green-500 mb-2" size={24} />}
         title="NO Electricity Cost needed"
-        description="Operate without electricity, reducing costs and environmental impact."
+        description="Everything will be taken care of from our side"
       />
       <FeatureCard
         icon={<Business className="text-yellow-500 mb-2" size={24} />}
@@ -37,13 +37,13 @@ const FeaturesCard = () => {
       />
       <FeatureCard
         icon={<PeopleAlt className="text-purple-500 mb-2" size={24} />}
-        title="No Technical experts neede"
+        title="No Technical experts needed"
         description="No technical expertise required, ensuring a smooth user experience."
       />
       <FeatureCard
         icon={<AccountBalance className="text-red-500 mb-2" size={24} />}
         title="No Risk of lossing your Financial assests"
-        description="Secure your financial assets without the risk of loss."
+        description="Secure your financial assets without the Risk of loss."
       />
     </div>
   );

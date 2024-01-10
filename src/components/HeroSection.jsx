@@ -30,7 +30,7 @@ const HeroSection = () => {
             >
               Centum World
               <br />
-              Crypto Mutual Rig
+              Crypto Mutual RIG
             </span>
           </div>
 

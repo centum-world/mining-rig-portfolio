@@ -31,7 +31,7 @@ const Features = () => {
   const featuresData = [
     {
       icon: <AirplayOutlined className="text-blue-500" size={24} />,
-      title: "Distribution Management Ecosystem",
+      title: "Distribution Management Ecosystem (DMS)",
       description:
         "It refers to Distribution Management Ecosystem. We aim that we work, we earn and we share. The more we share the more we get.",
     },
@@ -39,13 +39,13 @@ const Features = () => {
       icon: <MonetizationOnOutlined className="text-green-500" size={24} />, // Change to a different icon
       title: "Infrastructure as a Services (IaaS)",
       description:
-        "It refers to Infrastructure as a Service. We build such a relationship with technology that grows rapidly and dynamically with us.",
+        "It refers to Infrastructure as a Service (IaaS). We build such a relationship with technology that grows rapidly and dynamically with us.",
     },
     {
       icon: <ComputerOutlined className="text-yellow-500" size={24} />, // Change to a different icon
-      title: "GPU Mining Rig",
+      title: "GPU MINING RIG",
       description:
-        "GPU states the Graphics Processing Unit. It’s a technology that assists in the development of Infrastructure as a Service with great growth and efficiency.",
+        "GPU states the Graphics Processing Unit. It’s a technology that assists in the development of Infrastructure as a Service (IaaS) with great growth and efficiency.",
     },
   ];
 
@@ -65,10 +65,10 @@ const Features = () => {
         <div className="text-gray-500">FEATURES</div>
         <div className="md:text-5xl text-4xl text-gray-700 font-semibold text-center">
           Experience the Power of Crypto
-          <br /> Advanced Mutual Rig with Us
+          <br /> Advanced Mutual RIG with Us
         </div>
         <div className="text-gray-500 md:text-xl font-medium text-center">
-          Superior Performance and Efficiency Our crypto mutual rig is equipped
+          Superior Performance and Efficiency Our crypto mutual RIG is equipped
           with state-of-the-art GPU technology,<br/> ensuring exceptional performance
           and efficiency in cryptocurrency mining.
         </div>
