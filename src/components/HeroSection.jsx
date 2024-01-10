@@ -2,15 +2,19 @@ import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import rocket from "../assets/png/Rocket-2.gif";
-import brochurePDF from '../assets/pdf/brochure.pdf';
-import { saveAs } from 'file-saver';
+import brochurePDF from "../assets/pdf/brochure.pdf";
+import { saveAs } from "file-saver";
 
 const HeroSection = () => {
   const { selectedColor } = useSelector((state) => state.colors);
 
   const handleDownload = () => {
-    const pdfFileName = 'brochure.pdf';
+    const pdfFileName = "brochure.pdf";
     saveAs(brochurePDF, pdfFileName);
+  };
+
+  const handlePurchaseNow = () => {
+    window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
   };
 
   return (
@@ -25,24 +29,20 @@ const HeroSection = () => {
               }}
             >
               Centum World
+              <br />
+              Crypto Mutual Rig
             </span>
           </div>
 
           <p className="text-gray-500 flex text-start md:text-2xl  font-sans">
-            CRYPTO MUTUAL RIG MINING INFRASTRUCTURE DEVELOPMENT AND SERVICES
-            PARTNERSHIP PROGRAM(Iaas)
+            Centum World offers a groundbreaking Infrastructure as a Service
+            (IaaS) solution for GPU mining rig enthusiasts. With our innovative
+            partnership programme, you can tap into the unlimited potential of
+            cryptocurrency mining without the complexities and challenges.
           </p>
-          <div
-            style={{
-              color: selectedColor,
-            }}
-            className=""
-          >
-            Be The Smart Rig Partner and maximize Your Liquidity{" "}
-          </div>
           <div className="flex md:flex-row flex-col gap-4 w-full">
             <Button
-              onClick={() => {}}
+              onClick={handlePurchaseNow}
               style={{
                 background: selectedColor,
                 cursor: "pointer",

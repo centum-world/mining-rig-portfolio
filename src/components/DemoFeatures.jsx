@@ -95,7 +95,7 @@ const Landing = () => {
 
   return (
     <div className="md:p-24 pt-6">
-      <div className="text-2xl font-semibold mb-4">Landing</div>
+      <div className="text-2xl font-semibold mb-4">Features</div>
       <div className="flex flex-wrap">
         {cards.map((card, index) => (
           <Card key={index} {...card} selectedColor={selectedColor} />

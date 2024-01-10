@@ -1,19 +1,19 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
-import Landing from "./Landing";
+import Landing from "./DemoFeatures";
 import Supporting from "./Supporting";
 import brochurePDF from '../assets/pdf/brochure.pdf';
 import { saveAs } from 'file-saver';
 
 export const DemoSection = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
   const { selectedColor } = useSelector((state) => state.colors);
 
-  const handleMenuClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handlePurchaseNow = () => {
+    window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
   };
+
 
   const handleDownload = () => {
     const pdfFileName = 'brochure.pdf';
@@ -34,7 +34,7 @@ export const DemoSection = () => {
         </div>
         <div className="flex md:flex-row flex-col  gap-4 md:w-auto w-full">
           <Button
-            onClick={handleMenuClick}
+            onClick={handlePurchaseNow}
             style={{
               background: selectedColor,
               cursor: "pointer",
