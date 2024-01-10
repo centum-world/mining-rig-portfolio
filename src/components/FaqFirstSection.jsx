@@ -57,12 +57,12 @@ const FaqFirstSection = () => {
             </h3>
           </div>
           <div
-            className=" flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white "
+            className="hover:scale-105 duration-100 flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white "
             style={{ transition: "transform 0.3s ease" }}
             onClick={handleArrowClick}
           >
             <div className="">
-              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">Who are GPU Mining RIG Partners?</h2>
+              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70 ">Who are GPU Mining RIG Partners?</h2>
               {isArrowDown ? (
                 <p className="text-sm ">
                   The GPU Mining RIG Partners are those who assist the (IAAS)
@@ -87,7 +87,7 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className=" flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className="hover:scale-105 duration-100 flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
               transition: "all 0.3s ease",
             }}
@@ -120,7 +120,7 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className=" flex w-full md:w-3/4 lg:w-3/4 p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className="hover:scale-105 duration-100 flex w-full md:w-3/4 lg:w-3/4 p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
             
               transition: "all 0.3s ease",
@@ -155,7 +155,7 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className="flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className="hover:scale-105 duration-100 flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
               transition: "all 0.3s ease",
             }}
@@ -188,7 +188,7 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className=" flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className="hover:scale-105 duration-100 flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
              
               transition: "all 0.3s ease",
@@ -218,7 +218,7 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className="flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className="hover:scale-105 duration-100 flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
               transition: "all 0.3s ease",
             }}

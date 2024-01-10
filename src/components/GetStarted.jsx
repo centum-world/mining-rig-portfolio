@@ -47,7 +47,6 @@ const GetStarted = () => {
           Purchase now
         </Button>
       </div>
-      <div className="w-full border-t border-gray-300"></div>
     </div>
   );
 };

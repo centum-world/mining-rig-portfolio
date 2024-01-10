@@ -9,6 +9,8 @@ import Drawer from "./Drawer";
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedColor } from "../redux/colorSlice";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import brochurePDF from "../assets/pdf/brochure.pdf";
+import { saveAs } from "file-saver";
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -28,6 +30,23 @@ const Header = () => {
   const handleColorButtonClick = (color) => {
     dispatch(setSelectedColor(color));
     handleMenuClose();
+  };
+
+  const handleDownload = () => {
+    const pdfFileName = "brochure.pdf";
+    saveAs(brochurePDF, pdfFileName);
+  };
+  const handlePartner = () => {
+    window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
+  };
+  const handleMember = () => {
+    window.open("https://apps.centumworldrig.com/memberlogin", "_blank");
+  };
+  const handleFranchise = () => {
+    window.open("https://apps.centumworldrig.com/franchiselogin", "_blank");
+  };
+  const handleBmm = () => {
+    window.open("https://apps.centumworldrig.com/statelogin", "_blank");
   };
 
   const colorButtons = ["#00AB55", "#4169E1", "#800080", "#C2185B", "#303F9F"];
@@ -81,9 +100,10 @@ const Header = () => {
         <Link to="/" className="cursor-pointer  md:flex hidden">
           Home
         </Link>
-        <Link to="/documentation" className="cursor-pointer md:flex hidden">
+        <div onClick={handleDownload} className="cursor-pointer md:flex hidden">
           Documentation
-        </Link>
+        </div>
+
         <div className="md:flex hidden">
           <Button
             aria-controls="login-menu"
@@ -112,10 +132,10 @@ const Header = () => {
             horizontal: "center",
           }}
         >
-          <MenuItem onClick={handleMenuClose}>Option 1</MenuItem>
-          <MenuItem onClick={handleMenuClose}>Option 2</MenuItem>
-          <MenuItem onClick={handleMenuClose}>Option 3</MenuItem>
-          <MenuItem onClick={handleMenuClose}>Option 4</MenuItem>
+          <MenuItem onClick={handlePartner}>Partner</MenuItem>
+          <MenuItem onClick={handleMember}>Referral</MenuItem>
+          <MenuItem onClick={handleFranchise}>Franchise</MenuItem>
+          <MenuItem onClick={handleBmm}>BMM</MenuItem>
         </Menu>
       </div>
     </div>

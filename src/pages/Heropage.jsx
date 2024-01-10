@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection";
 import Features from "../components/Features";
 import { DemoSection } from "../components/DemoSection";
 import GetStarted from "../components/GetStarted";
+import Contact from "./Contact";
 
 const Heropage = () => {
   return (
@@ -11,6 +12,7 @@ const Heropage = () => {
       <Features />
       <DemoSection />
       <GetStarted />
+      <Contact />
     </div>
   );
 };

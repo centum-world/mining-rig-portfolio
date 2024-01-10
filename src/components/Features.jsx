@@ -24,11 +24,9 @@ const FeatureCard = ({ icon, title, description }) => {
 const Features = () => {
   const { selectedColor } = useSelector((state) => state.colors);
 
-
   const handlePurchaseNow = () => {
     window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
   };
-
 
   const featuresData = [
     {
@@ -66,16 +64,13 @@ const Features = () => {
       <div className="flex flex-col justify-center items-center space-y-4">
         <div className="text-gray-500">FEATURES</div>
         <div className="md:text-5xl text-4xl text-gray-700 font-semibold text-center">
-          BE THE PART OF US!
-          <br />
-          WE PROMOTE EQUALITY
+          Experience the Power of Crypto
+          <br /> Advanced Mutual Rig with Us
         </div>
         <div className="text-gray-500 md:text-xl font-medium text-center">
-          Join us in fostering equality and inclusivity! Be a part of a
-          community that values diversity, promotes collaboration, and advocates
-          for
-          <br /> equal opportunities. Together, let's build a world where
-          everyone's voice is heard and respected.
+          Superior Performance and Efficiency Our crypto mutual rig is equipped
+          with state-of-the-art GPU technology,<br/> ensuring exceptional performance
+          and efficiency in cryptocurrency mining.
         </div>
 
         <Button
