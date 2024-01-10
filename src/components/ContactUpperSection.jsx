@@ -66,7 +66,7 @@ const ContactUpperSection = () => {
   return (
     <>
       <div className="flex flex-col md:flex-row lg:flex-row">
-        <div className="left-side flex pl-14 pt-14 ">
+        <div className="left-side flex p-4  md:pl-14 md:pt-14 lg:pl-14 pt:14 ">
           <div>
             <p className="mb-1 font- from-neutral-300 font-medium text-lg text-gray-900  text-opacity-70">
               CONTACT US
@@ -79,7 +79,7 @@ const ContactUpperSection = () => {
                 We'd love to talk about how we can help you.
               </p>
             </div>
-            <div>
+            <div className="flex justify-center items-center" >
               <img src={contact} alt="" />
             </div>
           </div>
@@ -97,8 +97,8 @@ const ContactUpperSection = () => {
                 }
               }}
             >
-              <div className="flex flex-wrap justify-center items-center pt-14 pl-14 mt-10 ">
-                <div className="h-auto w-full  md:w-auto lg:w-auto bg-white rounded-lg shadow-xl p-5">
+              <div className="flex flex-wrap justify-center items-center p-4 md:pt-14 md:pl-14 lg:pt-14 lg:pl-14 md:mt-10 lg:mt-10 ">
+                <div className="h-auto w-full  md:w-auto lg:w-auto bg-white rounded-lg shadow-xl  p-5">
                   <div className="flex">
                     <h1 className="text-2xl font-bold font-tomorrow text-gray-600">
                       Send a message

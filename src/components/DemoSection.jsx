@@ -3,6 +3,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Landing from "./Landing";
 import Supporting from "./Supporting";
+import brochurePDF from '../assets/pdf/brochure.pdf';
+import { saveAs } from 'file-saver';
 
 export const DemoSection = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -12,15 +14,23 @@ export const DemoSection = () => {
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+  const handleDownload = () => {
+    const pdfFileName = 'brochure.pdf';
+    saveAs(brochurePDF, pdfFileName);
+  };
+
   return (
     <div className="bg-gray-50 p-4">
       <div className="flex items-center justify-center flex-col space-y-4">
         <div className="text-gray-500 pt-10 text-center">DEMO PAGES</div>
         <div className="text-gray-700 md:text-5xl text-4xl font-semibold text-center">
-          Webbee in action
+          DESTRIBUTION MANAGEMENT ECOSYSTEM (DMS)
         </div>
         <div className="text-gray-500 md:text-2xl font-sans text-center">
-          All examples you find below are included in the download package.
+          Optimize operations with our Management System. Streamlined,
+          cost-effective, and precise control for<br/> excellence in your industry.
+          Join us for unparalleled efficiency!
         </div>
         <div className="flex md:flex-row flex-col  gap-4 md:w-auto w-full">
           <Button
@@ -35,7 +45,7 @@ export const DemoSection = () => {
           </Button>
           <Button
             variant="outlined"
-            onClick={() => {}}
+            onClick={handleDownload}
             style={{
               borderColor: selectedColor,
               cursor: "pointer",

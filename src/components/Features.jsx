@@ -69,13 +69,16 @@ const Features = () => {
       <div className="flex flex-col justify-center items-center space-y-4">
         <div className="text-gray-500">FEATURES</div>
         <div className="md:text-5xl text-4xl text-gray-700 font-semibold text-center">
-          The powerful and flexible theme
-          <br /> for all kinds of businesses
+          BE THE PART OF US!
+          <br />
+          WE PROMOTE EQUALITY
         </div>
         <div className="text-gray-500 md:text-xl font-medium text-center">
-          Build a beautiful, modern website with flexible, fully customizable,
-          atomic Material-UI components.
-          <br /> An experience you'd expect from a design system.
+          Join us in fostering equality and inclusivity! Be a part of a
+          community that values diversity, promotes collaboration, and advocates
+          for
+          <br /> equal opportunities. Together, let's build a world where
+          everyone's voice is heard and respected.
         </div>
 
         <Button
