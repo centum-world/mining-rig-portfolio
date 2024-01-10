@@ -3,8 +3,10 @@ import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import contact from "../assets/png/Contact-us3.gif";
+import { useSelector } from "react-redux";
 
 const ContactUpperSection = () => {
+  const { selectedColor } = useSelector((state) => state.colors);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -79,7 +81,7 @@ const ContactUpperSection = () => {
                 We'd love to talk about how we can help you.
               </p>
             </div>
-            <div className="flex justify-center items-center" >
+            <div className="flex justify-center items-center">
               <img src={contact} alt="" />
             </div>
           </div>
@@ -136,6 +138,11 @@ const ContactUpperSection = () => {
 
                     <button
                       type="submit"
+                      style={{
+                        background: selectedColor,
+                        cursor: "pointer",
+                        color: "white",
+                      }}
                       className="rounded-md p-3 text-lg bg-green-600 font-semibold text-white font-calibri col-span-2 sm:col-span-1"
                       disabled={sending}
                     >
