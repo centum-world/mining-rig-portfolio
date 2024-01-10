@@ -52,17 +52,17 @@ const FaqFirstSection = () => {
       <div className="faq-section">
         <div className="flex flex-col pt-20 pb-20 pl-5 pr-5 bg-gray-50 justify-center items-center">
           <div className="mb-8">
-            <h3 className="text-5xl font-tomorrow font-bold text-gray-900 text-opacity-90">
+            <h3 className="text-2xl md:text-5xl lg:text-5xl font-tomorrow font-bold text-gray-900 text-opacity-90">
               Frequently Asked Questions
             </h3>
           </div>
           <div
-            className=" flex w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white "
+            className=" flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white "
             style={{ transition: "transform 0.3s ease" }}
             onClick={handleArrowClick}
           >
             <div className="">
-              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-80">Who are GPU Mining RIG Partners?</h2>
+              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">Who are GPU Mining RIG Partners?</h2>
               {isArrowDown ? (
                 <p className="text-sm ">
                   The GPU Mining RIG Partners are those who assist the (IAAS)
@@ -87,14 +87,14 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className=" flex w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className=" flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
               transition: "all 0.3s ease",
             }}
             onClick={handleArrowClick2}
           >
             <div className="">
-              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-80 ">
+              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70 ">
                 What are the liquidity(amount) slabs in the GPU Mining RIG?
               </h2>
               {isArrowDown2 ? (
@@ -120,7 +120,7 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className=" flex w-3/4 p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className=" flex w-full md:w-3/4 lg:w-3/4 p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
             
               transition: "all 0.3s ease",
@@ -128,7 +128,7 @@ const FaqFirstSection = () => {
             onClick={handleArrowClick3}
           >
             <div className="">
-              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-80 ">
+              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70 ">
                 How much Payout a Referral RIG get from referring someone?
               </h2>
               {isArrowDown3 ? (
@@ -155,14 +155,14 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className="flex w-3/4 p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className="flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
               transition: "all 0.3s ease",
             }}
             onClick={handleArrowClick4}
           >
             <div className="">
-              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-80">
+              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">
                 Why shall you add the liquidity (amount) in the GPU Mining Rig ?
               </h2>
               {isArrowDown4 ? (
@@ -188,7 +188,7 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className=" flex w-3/4 p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className=" flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
              
               transition: "all 0.3s ease",
@@ -196,7 +196,7 @@ const FaqFirstSection = () => {
             onClick={handleArrowClick5}
           >
             <div className="">
-              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-80">What is the full form of GPU ?</h2>
+              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">What is the full form of GPU ?</h2>
               {isArrowDown5 ? (
                 <p className="text-sm ">
                   The full form of GPU is Graphics Processing Units.
@@ -218,14 +218,14 @@ const FaqFirstSection = () => {
           </div>
 
           <div
-            className="flex w-3/4 p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
+            className="flex w-full md:w-3/4 lg:w-3/4  p-5 h-auto rounded-md shadow-lg justify-between items-center mb-5 bg-white"
             style={{
               transition: "all 0.3s ease",
             }}
             onClick={handleArrowClick6}
           >
             <div className="">
-              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-80">
+              <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">
                 How much payout a RIG Partner get from adding the liquidity in
                 the GPU Mining Rig?
               </h2>
