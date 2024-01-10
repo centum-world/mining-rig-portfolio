@@ -14,8 +14,10 @@
 }
 
 .slide-in-left {
-  animation: slideInLeft 0.2s ease-in 1s 1 normal both;
+  animation: slideInLeft 0.5s ease-in 0.1s 1 normal both;
 }
+
+
 
 @keyframes slideInLeft{
   from {

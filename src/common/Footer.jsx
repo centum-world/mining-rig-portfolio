@@ -2,17 +2,18 @@ import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import logo from "../assets/png/clogo.png";
-import brochurePDF from '../assets/pdf/brochure.pdf';
-import { saveAs } from 'file-saver';
+import brochurePDF from "../assets/pdf/brochure.pdf";
+import { saveAs } from "file-saver";
 
 const Footer = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
   const { selectedColor } = useSelector((state) => state.colors);
 
-
+  const handlePurchaseNow = () => {
+    window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
+  };
 
   const handleDownload = () => {
-    const pdfFileName = 'brochure.pdf';
+    const pdfFileName = "brochure.pdf";
     saveAs(brochurePDF, pdfFileName);
   };
   return (
@@ -34,7 +35,7 @@ const Footer = () => {
           </Button>
           <Button
             variant="outlined"
-            onClick={() => {}}
+            onClick={handlePurchaseNow}
             style={{
               borderColor: selectedColor,
               cursor: "pointer",
@@ -46,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="felx flex-col justify-center items-center space-y-1">
-        <div className="text-center font-semibold font-tomorrow text-gray-800">
+        <div className="text-center font-semibold font-tomorrow text-gray-500">
           © 2024 CENTUM WORLD, All rights reserved
         </div>
         <div className="text-center text-gray-500 text-sm">

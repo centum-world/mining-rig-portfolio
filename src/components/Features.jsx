@@ -5,11 +5,8 @@ import { useSelector } from "react-redux";
 import FeaturesCard from "./FeaturesCard";
 import {
   AirplayOutlined,
-  AttachMoney,
-  Build,
-  Event,
-  Home,
-  SportsSoccer,
+  MonetizationOnOutlined, // Change to a different icon
+  ComputerOutlined, // Change to a different icon
 } from "@mui/icons-material";
 
 const FeatureCard = ({ icon, title, description }) => {
@@ -18,39 +15,39 @@ const FeatureCard = ({ icon, title, description }) => {
       <div className="bg-gray-100 rounded-full h-12 w-12 flex items-center justify-center">
         {icon}
       </div>
-      <div className="text-2xl text-center  text-gray-700">{title}</div>
+      <div className="text-2xl text-center text-gray-700">{title}</div>
       <p className="text-gray-500 text-center">{description}</p>
     </div>
   );
 };
 
 const Features = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
   const { selectedColor } = useSelector((state) => state.colors);
 
-  const handleMenuClick = (event) => {
-    setAnchorEl(event.currentTarget);
+
+  const handlePurchaseNow = () => {
+    window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
   };
+
 
   const featuresData = [
     {
       icon: <AirplayOutlined className="text-blue-500" size={24} />,
-      title: "Built for developers",
+      title: "Distribution Management Ecosystem",
       description:
-        "Webbee is built to make your life easier. Variables, build tooling, documentation, and reusable components.",
+        "It refers to Distribution Management Ecosystem. We aim that we work, we earn and we share. The more we share the more we get.",
     },
     {
-      icon: <AttachMoney className="text-green-500" size={24} />,
-      title: "Designed to be modern",
+      icon: <MonetizationOnOutlined className="text-green-500" size={24} />, // Change to a different icon
+      title: "Infrastructure as a Services (IaaS)",
       description:
-        "Designed with the latest design trends in mind. Webbee feels modern, minimal, and beautiful.",
+        "It refers to Infrastructure as a Service. We build such a relationship with technology that grows rapidly and dynamically with us.",
     },
     {
-      icon: <Build className="text-yellow-500" size={24} />,
-      title: "Documentation for everything",
+      icon: <ComputerOutlined className="text-yellow-500" size={24} />, // Change to a different icon
+      title: "GPU Mining Rig",
       description:
-        "We've written extensive documentation for components and tools, so you never have to reverse engineer anything.",
+        "GPU states the Graphics Processing Unit. It’s a technology that assists in the development of Infrastructure as a Service with great growth and efficiency.",
     },
   ];
 
@@ -82,7 +79,7 @@ const Features = () => {
         </div>
 
         <Button
-          onClick={handleMenuClick}
+          onClick={handlePurchaseNow}
           style={{
             background: selectedColor,
             cursor: "pointer",
