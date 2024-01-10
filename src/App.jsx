@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
 import Footer from "./common/Footer";
+import WhitePaper from "./pages/WhitePaper";
 
 const App = () => {
   const [isHeaderVisible] = useState(true);
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/white-paper" element={<WhitePaper/>} />
         </Routes>
       </div>
       <Footer />
