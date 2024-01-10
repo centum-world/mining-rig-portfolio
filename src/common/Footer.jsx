@@ -46,8 +46,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="felx flex-col justify-center items-center space-y-1">
-        <div className="text-center text-gray-700">
-          © Webbee. 2021, Maccarian. All rights reserved
+        <div className="text-center font-semibold font-tomorrow text-gray-800">
+          © 2024 CENTUM WORLD, All rights reserved
         </div>
         <div className="text-center text-gray-500 text-sm">
           When you visit or interact with our sites, services or tools, we or
