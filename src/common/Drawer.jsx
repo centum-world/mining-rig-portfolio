@@ -19,12 +19,13 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import LockOpenSharpIcon from '@mui/icons-material/LockOpenSharp';
 import { Collapse } from "@mui/material";
 
-
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     left: false,
     openLogin: false,
   });
+
+  const drawerRef = React.useRef(null);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -34,18 +35,13 @@ export default function TemporaryDrawer() {
       return;
     }
 
-    // Close the drawer on the first click outside
-    if (state.left && !event.target.closest(".MuiDrawer-root")) {
-      setState({ ...state, left: false });
-
-      // Close the login submenu when closing the drawer
-      if (state.openLogin) {
-        setState({ ...state, openLogin: false });
-      }
+    if (state.left && !drawerRef.current.contains(event.target)) {
+      // Close the drawer only if it's open and click is outside the drawer
+      setState({ left: false, openLogin: false });
       return;
     }
 
-    setState({ ...state, left: open });
+    setState({ left: open });
 
     // Close the login submenu when closing the drawer
     if (!open && state.openLogin) {
@@ -69,6 +65,7 @@ export default function TemporaryDrawer() {
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
+      ref={drawerRef}
     >
       <List>
         {[
