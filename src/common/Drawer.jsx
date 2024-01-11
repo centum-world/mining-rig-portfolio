@@ -16,9 +16,6 @@ import { AboutIcon, PaperIcon } from "../utils/icons";
 import QuizOutlinedIcon from "@mui/icons-material/QuizOutlined";
 import { HomeIcon } from "../utils/icons";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
-import Brightness4OutlinedIcon from "@mui/icons-material/Brightness4Outlined";
 import { Collapse } from "@mui/material";
 
 export default function TemporaryDrawer() {
@@ -35,9 +32,14 @@ export default function TemporaryDrawer() {
       return;
     }
 
+    // Close the drawer on the first click outside
     if (state.left && !event.target.closest(".MuiDrawer-root")) {
-      // Close the drawer only if it's open and click is outside the drawer
       setState({ ...state, left: false });
+
+      // Close the login submenu when closing the drawer
+      if (state.openLogin) {
+        setState({ ...state, openLogin: false });
+      }
       return;
     }
 
@@ -55,7 +57,7 @@ export default function TemporaryDrawer() {
 
     if (path) {
       // Redirect to the specified path
-      window.open(path,"_blank")
+      window.open(path, "_blank");
     }
   };
 
@@ -89,17 +91,17 @@ export default function TemporaryDrawer() {
               },
               {
                 text: "Referral",
-                icon: <SettingsOutlinedIcon />,
+                icon: <AccountCircleOutlinedIcon />,
                 path: "http://apps.centumworldrig.com/memberlogin",
               },
               {
                 text: "Franchise",
-                icon: <ExitToAppOutlinedIcon />,
+                icon: <AccountCircleOutlinedIcon />,
                 path: "http://apps.centumworldrig.com/franchiselogin",
               },
               {
                 text: "BMM",
-                icon: <Brightness4OutlinedIcon />,
+                icon: <AccountCircleOutlinedIcon />,
                 path: "http://apps.centumworldrig.com/statelogin",
               },
             ],
@@ -125,7 +127,9 @@ export default function TemporaryDrawer() {
                     <ListItem
                       key={subItem.text}
                       button
-                      onClick={(event) => handleLoginClick(event, subItem.path)}
+                      onClick={(event) =>
+                        handleLoginClick(event, subItem.path)
+                      }
                     >
                       <ListItemIcon>{subItem.icon}</ListItemIcon>
                       <ListItemText primary={subItem.text} />
