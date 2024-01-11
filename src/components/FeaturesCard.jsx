@@ -11,8 +11,8 @@ const FeatureCard = ({ icon, title, description }) => {
   return (
     <div className="flex flex-col items-start p-4 hover:scale-105 duration-500 shadow-lg rounded-md w-80">
       {icon}
-      <h3 className="text-lg font-semibold ">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-lg font-semibold font-roboto ">{title}</h3>
+      <p className="text-gray-600 font-tomorrow ">{description}</p>
     </div>
   );
 };
@@ -24,6 +24,7 @@ const FeaturesCard = () => {
         icon={<SignalCellularNoSim className="text-blue-500 mb-2" size={24} />}
         title="No Technical High Cost Device or, Setup needed"
         description="Easy-to-use solution without the need for complex technical devices or setups."
+        // className="font-calibri"
       />
       <FeatureCard
         icon={<Power className="text-green-500 mb-2" size={24} />}
