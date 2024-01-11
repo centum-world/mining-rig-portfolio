@@ -24,7 +24,7 @@ export const DemoSection = () => {
     <div className="bg-gray-50 p-4">
       <div className="flex items-center justify-center flex-col space-y-4">
         {/* <div className="text-gray-500 pt-10 text-center">DEMO PAGES</div> */}
-        <div className="text-gray-700 md:text-5xl text-4xl font-semibold font-roboto text-center pt-10">
+        <div className="text-gray-700  md:text-4xl text-3xl font-semibold font-roboto text-center pt-10">
           DESTRIBUTION MANAGEMENT ECOSYSTEM (DMS)
         </div>
         <div className="text-gray-500 md:text-2xl font-calibri text-center">
