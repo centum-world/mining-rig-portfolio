@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import contact from "../assets/png/Contact-us3.gif";
+import contact from "../assets/png/Contact.gif";
 import { useSelector } from "react-redux";
 
 const ContactUpperSection = () => {
@@ -82,7 +82,7 @@ const ContactUpperSection = () => {
               </p>
             </div>
             <div className="flex justify-center items-center">
-              <img src={contact} alt="" />
+              <img src={contact} alt="contact" />
             </div>
           </div>
         </div>

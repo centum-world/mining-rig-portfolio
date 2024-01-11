@@ -18,7 +18,7 @@ const WhitepaperSection = () => {
         <p className="text-2xl md:text-3xl font-calibri font-bold">
           Get Our Ideal White Paper & Future Road Map
         </p>
-        <div className="mt-10 w-3/5">
+        <div className="mt-10 md:w-3/5 w-full">
           <img src={roadMap} alt="" />
         </div>
       </div>
