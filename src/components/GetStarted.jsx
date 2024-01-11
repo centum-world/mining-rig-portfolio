@@ -16,8 +16,8 @@ const GetStarted = () => {
         Get started with{" "}
         <span style={{ color: selectedColor }}>CENTUM WORLD</span>
       </div>
-      <div className="text-gray-500 md:text-2xl flex items-center justify-center w-2/3  font-sans ">
-        <ul className="list-disc font-calibri ">
+      <div className="text-gray-500 md:text-2xl flex items-center justify-center w-2/3 ">
+        <ul className="list-disc font-calibri text-lg ">
           <li className="mb-2">Fill up the Contract Form</li>
           <li className="mb-2">Submit All Needful Documents</li>
           <li className="mb-2">Add Liquidity 6L/3L/2L/1L</li>
