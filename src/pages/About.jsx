@@ -14,14 +14,14 @@ const About = () => {
           CENTUM WORLD BLOCKCHAIN TECHNOLOGY
           <br /> DEVELOPMENT ECOSYSTEM
         </div>
-        <div
-          className="text-gray-500 md:text-xl font-medium text-center"
-          style={{ color: selectedColor }}
-        >
+        <div className="text-gray-500 md:text-xl font-medium text-center">
           START NEW WAY TO DO <br />
           BUSINESS
         </div>
-        <div className="text-gray-500 md:text-xl  font-medium text-center">
+        <div
+          style={{ color: selectedColor }}
+          className="text-gray-500 md:text-xl  font-medium text-center"
+        >
           JOIN WITH OUR STATE BUSINESS OFFICER AND CONDUCT MARKET RESEARCH
         </div>
         <div>
@@ -32,7 +32,10 @@ const About = () => {
           Analytics, AI Algorithm and in Crypto Industry. We have more than 100+
           Team Members and We are Growing Faster.
         </div>
-        <div className="text-gray-500 md:text-xl  font-medium text-center">
+        <div
+          style={{ color: selectedColor }}
+          className="text-gray-500 md:text-xl  font-medium text-center"
+        >
           Checkout our business module and products
         </div>
         <div>
@@ -40,7 +43,10 @@ const About = () => {
           business. It’s a roadmap for how to structure, run, and grow your new
           business with our advance Projects and Products.
         </div>
-        <div className="text-gray-500 md:text-xl  font-medium text-center">
+        <div
+          style={{ color: selectedColor }}
+          className="text-gray-500 md:text-xl  font-medium text-center"
+        >
           BLOCKCHAIN TECHNOLOGY DEVELOPMENT ECOSYSTEM
         </div>
         <div>
@@ -61,21 +67,33 @@ const About = () => {
             </li>
           </ul>
         </div>
-        <div className="text-gray-500 md:text-xl  font-medium text-center">
+        <div
+          style={{ color: selectedColor }}
+          className="text-gray-500 md:text-xl  font-medium text-center"
+        >
           fund your MARKET AND GOOD BUSINESS DEVELOPER TEAM
         </div>
         <div>The Bond with the Best to Grow Faster.</div>
-        <div className="text-gray-500 md:text-xl  font-medium text-center">
+        <div
+          style={{ color: selectedColor }}
+          className="text-gray-500 md:text-xl  font-medium text-center"
+        >
           OUR DMS (DISTRIBUTION MANAGEMENT SYSTEM) IS THE KEY OF OUR SUCCESS
         </div>
         <div>
           We at CENTUM WORLD, Distribute the Idea, Innovation and Work to create
           a Better Future and contribute to boost Empowerment
         </div>
-        <div className="text-gray-500 md:text-xl  font-medium text-center">
+        <div
+          style={{ color: selectedColor }}
+          className="text-gray-500 md:text-xl  font-medium text-center"
+        >
           #businessadvice
         </div>
-        <div className="text-gray-500 md:text-xl  font-medium text-center">
+        <div
+          style={{ color: selectedColor }}
+          className="text-gray-500 md:text-xl  font-medium text-center"
+        >
           FOR FURTHER ENQUIRY PLEASE CONNECT TO OUR State BUSINESS &amp;
           Marketing OFFICER
         </div>

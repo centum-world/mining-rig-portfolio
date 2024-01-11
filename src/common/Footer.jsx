@@ -1,4 +1,5 @@
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
+import { Instagram, Twitter, Facebook, LinkedIn } from "@mui/icons-material";
 import React from "react";
 import { useSelector } from "react-redux";
 import logo from "../assets/png/clogo.png";
@@ -16,13 +17,16 @@ const Footer = () => {
     const pdfFileName = "brochure.pdf";
     saveAs(brochurePDF, pdfFileName);
   };
+
   return (
-    <div className="p-4 space-y-10">
-      <div className="flex md:flex-row flex-col items-center justify-between space-y-4">
-        <div>
+    <div className="p-4 md:p-8 space-y-4 bg-gray-800 text-white">
+      <div className="flex flex-col md:flex-row items-center justify-between space-y-4">
+        <div className="flex items-center justify-center md:justify-start gap-4">
           <img src={logo} alt="Dummy Logo" className="h-14 w-14" />
+          <h3 className="text-2xl font-bold">Centum World</h3>
         </div>
-        <div className="flex  md:flex-row flex-col gap-6">
+
+        <div className="flex md:flex-row flex-col gap-6">
           <Button
             onClick={handleDownload}
             style={{
@@ -31,7 +35,7 @@ const Footer = () => {
               color: "white",
             }}
           >
-            Documents
+            Download Brochure
           </Button>
           <Button
             variant="outlined"
@@ -42,22 +46,55 @@ const Footer = () => {
               color: selectedColor,
             }}
           >
-            Purchase now
+            Purchase Now
           </Button>
         </div>
       </div>
-      <div className="felx flex-col justify-center items-center space-y-1">
-        <div className="text-center font-semibold font-tomorrow text-gray-500">
-          © 2024 CENTUM WORLD, All rights reserved
+      <div className="mx-auto flex flex-col md:flex-row justify-between items-center">
+        {/* Social Media Links */}
+        <div className="flex flex-col items-start mt-4 md:mt-0 md:w-1/3 ">
+          <h4 className="text-lg font-semibold mb-2 ml-2">Connect With Us</h4>
+          <div className="flex gap-4">
+            <IconButton
+              href="#"
+              className="text-gray-300 hover:text-white mr-4"
+              aria-label="Instagram"
+              style={{ color: selectedColor }}
+            >
+              <Instagram />
+            </IconButton>
+            <IconButton
+              href="#"
+              className="text-gray-300 hover:text-white mr-4"
+              aria-label="Twitter"
+              style={{ color: selectedColor }}
+            >
+              <Twitter />
+            </IconButton>
+            <IconButton
+              href="#"
+              className="text-gray-300 hover:text-white mr-4"
+              aria-label="Facebook"
+              style={{ color: selectedColor }}
+            >
+              <Facebook />
+            </IconButton>
+            <IconButton
+              href="#"
+              className="text-gray-300 hover:text-white"
+              aria-label="LinkedIn"
+              style={{ color: selectedColor }}
+            >
+              <LinkedIn />
+            </IconButton>
+          </div>
         </div>
-        <div className="text-center text-gray-500 text-sm">
-          When you visit or interact with our sites, services or tools, we or
-          our authorised service providers may use cookies for storing
-          information to help provide you with a better, faster and safer
-          experience and for
-        </div>
-        <div className="text-center text-gray-500 text-sm">
-          marketing purposes.
+
+        {/* Copyright and Disclaimer */}
+        <div className="mt-4 md:w-1/3 text-center">
+          <p className="text-sm">
+            &copy; 2024 Centum World. All rights reserved.
+          </p>
         </div>
       </div>
     </div>
