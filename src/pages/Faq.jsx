@@ -1,8 +1,11 @@
 import React from 'react'
+import FaqFirstSection from '../components/FaqFirstSection'
 
 const Faq = () => {
   return (
-    <div>Faq</div>
+    <>
+      <FaqFirstSection/>
+    </>
   )
 }
 
