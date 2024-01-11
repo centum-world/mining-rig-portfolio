@@ -67,10 +67,10 @@ const ContactUpperSection = () => {
   };
   return (
     <>
-      <div className="flex flex-col md:flex-row lg:flex-row">
+      <div className="flex flex-col w-full md:flex-row lg:flex-row justify-center items-center">
         <div className="left-side flex p-4  md:pl-14 md:pt-14 lg:pl-14 pt:14 ">
           <div>
-            <p className="mb-1 font- from-neutral-300 font-medium text-lg text-gray-900  text-opacity-70">
+            <p className="mb-1  from-neutral-300 font-medium text-lg text-gray-900  text-opacity-70">
               CONTACT US
             </p>
             <div className="pl-3">
@@ -99,8 +99,8 @@ const ContactUpperSection = () => {
                 }
               }}
             >
-              <div className="flex flex-wrap justify-center items-center p-4 md:pt-14 md:pl-14 lg:pt-14 lg:pl-14 md:mt-10 lg:mt-10 ">
-                <div className="h-auto w-full  md:w-auto lg:w-auto bg-white rounded-lg shadow-xl  p-5">
+              <div className="flex flex-wrap  justify-center items-center md:pl-14  lg:pl-14 md:mt-10 lg:mt-10 ">
+                <div className="h-auto w-full  md:w-auto lg:w-auto bg-white rounded-lg shadow-xl p-5">
                   <div className="flex">
                     <h1 className="text-2xl font-bold font-tomorrow text-gray-600">
                       Send a message

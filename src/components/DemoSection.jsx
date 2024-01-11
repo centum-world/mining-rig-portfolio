@@ -23,11 +23,11 @@ export const DemoSection = () => {
   return (
     <div className="bg-gray-50 p-4">
       <div className="flex items-center justify-center flex-col space-y-4">
-        <div className="text-gray-500 pt-10 text-center">DEMO PAGES</div>
-        <div className="text-gray-700 md:text-5xl text-4xl font-semibold text-center">
+        {/* <div className="text-gray-500 pt-10 text-center">DEMO PAGES</div> */}
+        <div className="text-gray-700 md:text-5xl text-4xl font-semibold font-roboto text-center pt-10">
           DESTRIBUTION MANAGEMENT ECOSYSTEM (DMS)
         </div>
-        <div className="text-gray-500 md:text-2xl font-sans text-center">
+        <div className="text-gray-500 md:text-2xl font-calibri text-center">
           Optimize operations with our Management System. Streamlined,
           cost-effective, and precise control for<br/> excellence in your industry.
           Join us for unparalleled efficiency!

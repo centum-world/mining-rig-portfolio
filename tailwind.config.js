@@ -10,6 +10,7 @@ export default {
         calibri: ['Calibri', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         tomorrow: ['Tomorrow', 'sans-serif'],
         sans: ['Inter', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
     },
   },
