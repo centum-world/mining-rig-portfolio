@@ -2,12 +2,12 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const Card = ({ title, description, selectedColor }) => (
-  <div className="flex flex-col border h-40 md:w-1/3 w-full overflow-hidden shadow-md rounded-md">
+  <div className="flex flex-col border h-44 md:w-1/3 w-full overflow-hidden shadow-md rounded-md">
     <div className="flex items-center justify-between p-4 bg-gray-100 rounded-t-md">
-      <div className="text-base font-semibold text-gray-700 font-roboto ">{title}</div>
+      <div className="text-lg md:text-base font-semibold text-gray-700 font-roboto ">{title}</div>
     </div>
-    <div className=" bg-white p-2 max-h-24 rounded-b-md overflow-y-auto scrollbar-hide overflow-hidden">
-      <div className="text-base text-gray-500 font-calibri">{description}</div>
+    <div className=" bg-white p-2 h-36 rounded-b-md overflow-y-auto scrollbar-hide overflow-hidden">
+      <div className="text-lg md:text-base text-gray-500 font-calibri">{description}</div>
     </div>
   </div>
 );
