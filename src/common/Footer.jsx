@@ -56,15 +56,8 @@ const Footer = () => {
           <h4 className="text-lg font-semibold mb-2 ml-2">Connect With Us</h4>
           <div className="flex gap-4">
             <IconButton
-              href="#"
-              className="text-gray-300 hover:text-white mr-4"
-              aria-label="Instagram"
-              style={{ color: selectedColor }}
-            >
-              <Instagram />
-            </IconButton>
-            <IconButton
-              href="#"
+              target="_blank"
+              href="https://twitter.com/centumworld?t=1XYIFt8eoKUo1HyZQUzd3Q&s=08"
               className="text-gray-300 hover:text-white mr-4"
               aria-label="Twitter"
               style={{ color: selectedColor }}
@@ -72,7 +65,8 @@ const Footer = () => {
               <Twitter />
             </IconButton>
             <IconButton
-              href="#"
+              target="_blank"
+              href="https://wwww.facebook.com/CENTUMWORLD?mibextid=ZbWKeL"
               className="text-gray-300 hover:text-white mr-4"
               aria-label="Facebook"
               style={{ color: selectedColor }}
@@ -80,7 +74,8 @@ const Footer = () => {
               <Facebook />
             </IconButton>
             <IconButton
-              href="#"
+              target="_blank"
+              href="https://www.linkedin.com/in/centumworld"
               className="text-gray-300 hover:text-white"
               aria-label="LinkedIn"
               style={{ color: selectedColor }}
