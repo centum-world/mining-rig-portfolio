@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
-import purchase from "../assets/png/purchase.gif";
+import purchase from "../assets/png/purchase.png";
 import { useSelector } from "react-redux";
 import FeaturesCard from "./FeaturesCard";
 import {

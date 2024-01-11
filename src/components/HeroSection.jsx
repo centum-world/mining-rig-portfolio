@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
-import rocket from "../assets/png/Bitcoin.gif";
+import Data1 from "../assets/png/Data1.gif";
 import brochurePDF from "../assets/pdf/brochure.pdf";
 import { saveAs } from "file-saver";
 
@@ -66,7 +66,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="flex items-center justify-center md:w-[50%] w-full">
-        <img src={rocket} alt="heroImg" className="md:w-3/4" />
+        <img src={Data1} alt="heroImg" className="md:w-3/4" />
       </div>
     </section>
   );
