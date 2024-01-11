@@ -54,7 +54,7 @@ const App = () => {
           borderRadius: "50%",
         }}
       >
-        <ArrowUpwardOutlinedIcon />
+        <ArrowUpwardOutlinedIcon  />
       </ScrollLink>
       <Element name="top" className="d-none"></Element>
     </Router>
