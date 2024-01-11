@@ -16,7 +16,9 @@ import { AboutIcon, PaperIcon } from "../utils/icons";
 import QuizOutlinedIcon from "@mui/icons-material/QuizOutlined";
 import { HomeIcon } from "../utils/icons";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import LockOpenSharpIcon from '@mui/icons-material/LockOpenSharp';
 import { Collapse } from "@mui/material";
+
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -81,7 +83,7 @@ export default function TemporaryDrawer() {
           { text: "White paper", path: "/white-paper", icon: <PaperIcon /> },
           {
             text: "Login",
-            icon: <AccountCircleOutlinedIcon />,
+            icon: <LockOpenSharpIcon />,
             onClick: (event) => handleLoginClick(event),
             subItems: [
               {
