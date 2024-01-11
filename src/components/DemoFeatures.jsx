@@ -21,12 +21,12 @@ const Landing = () => {
   const cards = [
     {
       title: "Expertise You Can Rely On",
-      description: "Our team of highly skilled technicians is here to provide you with top-notch technical support for your mining rig partnership. ",
+      description: "Our team of highly skilled technicians is here to provide you with top-notch technical support for your MINING RIG Partnership. ",
      
     },
     {
-      title: "Optimize Your Mining Rig Performance",
-      description: "We understand that maximizing the performance of your mining rig is crucial for your success. ",
+      title: "Optimize Your MINING RIG Performance",
+      description: "We understand that maximizing the performance of your MINING RIG is crucial for your success. ",
       // linkText: "view demo",
       // linkTo: "/discover/2",
     },
@@ -37,26 +37,26 @@ const Landing = () => {
       // linkTo: "/features/3",
     },
     {
-      title: "Maximize your mining rig's performance",
-      description: "Our dedicated team of experts will provide you with the technical support and guidance you need to optimize your mining rig's performance. ",
+      title: "Maximize your MINING RIG's performance",
+      description: "Our dedicated team of experts will provide you with the technical support and guidance you need to optimize your MINING RIG's performance. ",
       // linkText: "view demo",
       // linkTo: "/learn/4",
     },
     {
-      title: "A partnership built on trust",
-      description: "We understand that your mining rig is a valuable asset, and we take our partnership seriously. ",
+      title: "A Partnership Built on Trust",
+      description: "We understand that your MINING RIG is a valuable asset, and we take our Partnership seriously. ",
       // linkText: "view demo",
       // linkTo: "/inspire/5",
     },
     {
-      title: "Stay ahead of the competition",
-      description: "In the competitive world of cryptocurrency mining, staying ahead is crucial.",
+      title: "Stay ahead of the Competition",
+      description: "In the Competitive world of Crypto Currency MINING, staying ahead is crucial.",
       // linkText: "view demo",
       // inkTo: "/try/6",
     },
     {
       title: "A tailored approach for your needs",
-      description: "We understand that every mining rig is unique, which is why we offer personalized support based on your specific requirements.",
+      description: "We understand that every MINING MUTUAL RIG Partner is unique, which is why we offer Personalized support based on your specific requirements.",
       // linkText: "view demo",
       // linkTo: "/shop/7",
     },  
