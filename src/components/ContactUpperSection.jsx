@@ -99,8 +99,8 @@ const ContactUpperSection = () => {
                 }
               }}
             >
-              <div className="flex flex-wrap  justify-center items-center md:pl-14  lg:pl-14 md:mt-10 lg:mt-10 ">
-                <div className="h-auto w-full  md:w-auto lg:w-auto bg-white rounded-lg shadow-xl p-5">
+              <div className="flex flex-wrap justify-center items-center md:pl-14  lg:pl-14 md:mt-10 lg:mt-10 ">
+                <div className="h-auto  bg-white rounded-lg shadow-xl p-5">
                   <div className="flex">
                     <h1 className="text-2xl font-bold font-tomorrow text-gray-600">
                       Send a message
@@ -110,7 +110,7 @@ const ContactUpperSection = () => {
                     <input
                       type="text"
                       placeholder="Name"
-                      className="rounded-md p-3 border border-gray-400 border-solid border-1 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-green-600 col-span-2 sm:col-span-1"
+                      className="rounded-md p-3 border w-72 md:w-auto  border-gray-400 border-solid border-1 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-green-600 col-span-2 sm:col-span-1"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                     />
