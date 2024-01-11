@@ -5,7 +5,7 @@ import roadMap from "../assets/png/road-map.png";
 const WhitepaperSection = () => {
   return (
     <div className="w-full h-full">
-      <div className="pl-14 pt-14  pb-14 pr-14 sm:pr-0 flex flex-col justify-center items-center">
+      <div className="pl-6 pt-14  pb-14 pr-6 sm:pr-0 flex flex-col justify-center items-center">
         <p className="text-2xl md:text-3xl font-calibri font-bold">
           White Paper & Roadmap
         </p>
@@ -14,7 +14,7 @@ const WhitepaperSection = () => {
         </div>
       </div>
       <hr />
-      <div className="pl-14 pt-14  pb-14 pr-14 sm:pr-0 flex flex-col justify-center items-center">
+      <div className="pl-6 pt-14  pb-14 pr-6 sm:pr-0 flex flex-col justify-center items-center">
         <p className="text-2xl md:text-3xl font-calibri font-bold">
           Get Our Ideal White Paper & Future Road Map
         </p>

@@ -47,7 +47,7 @@ const App = () => {
         }`}
         onClick={scrollToTop}
       >
-        <ArrowUpwardOutlinedIcon />
+        <ArrowUpwardOutlinedIcon  />
       </ScrollLink>
       <Element name="top" className="d-none"></Element>
     </Router>
