@@ -37,16 +37,16 @@ const Header = () => {
     saveAs(brochurePDF, pdfFileName);
   };
   const handlePartner = () => {
-    window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
+    window.open("http://apps.centumworldrig.com/mininglogin", "_blank");
   };
   const handleMember = () => {
-    window.open("https://apps.centumworldrig.com/memberlogin", "_blank");
+    window.open("http://apps.centumworldrig.com/memberlogin", "_blank");
   };
   const handleFranchise = () => {
-    window.open("https://apps.centumworldrig.com/franchiselogin", "_blank");
+    window.open("http://apps.centumworldrig.com/franchiselogin", "_blank");
   };
   const handleBmm = () => {
-    window.open("https://apps.centumworldrig.com/statelogin", "_blank");
+    window.open("http://apps.centumworldrig.com/statelogin", "_blank");
   };
 
   const colorButtons = ["#00AB55", "#4169E1", "#800080", "#C2185B", "#303F9F"];

@@ -14,8 +14,10 @@ import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
 import Footer from "./common/Footer";
 import WhitePaper from "./pages/WhitePaper";
+import { useSelector } from "react-redux";
 
 const App = () => {
+  const { selectedColor } = useSelector((state) => state.colors);
   const [isHeaderVisible] = useState(true);
 
   const scrollToTop = () => {
@@ -34,7 +36,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/white-paper" element={<WhitePaper/>} />
+          <Route path="/white-paper" element={<WhitePaper />} />
         </Routes>
       </div>
       <Footer />
@@ -42,10 +44,15 @@ const App = () => {
         to="top"
         smooth={true}
         duration={500}
-        className={`fixed bottom-4 right-4 cursor-pointer ${
+        className={`fixed  bottom-4 right-4 cursor-pointer ${
           isHeaderVisible ? "opacity-100" : "opacity-0"
         }`}
         onClick={scrollToTop}
+        style={{
+          background: selectedColor,
+          color: "white",
+          borderRadius: "50%",
+        }}
       >
         <ArrowUpwardOutlinedIcon />
       </ScrollLink>

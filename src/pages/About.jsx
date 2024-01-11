@@ -1,124 +1,108 @@
-import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const { selectedColor } = useSelector((state) => state.colors);
+
   return (
-    <div className="p-4 space-y-10 flex flex-col items-center">
-      <div className="flex flex-col justify-center items-center space-y-4">
-        <div className="text-gray-500 underline text-lg">
-          ABOUT OF CENTUM WORLD
+    <div className="bg-gray-50 p-4 flex flex-col items-center space-y-4">
+      <div className="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-md space-y-8">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-gray-800">
+            ABOUT CENTUM  WORLD
+          </h1>
+          <p className="text-lg text-gray-600">
+            CENTUM WORLD BLOCKCHAIN TECHNOLOGY DEVELOPMENT ECOSYSTEM
+          </p>
+          <p className="text-lg text-gray-600">
+            START A NEW WAY TO DO BUSINESS
+          </p>
+          <p style={{ color: selectedColor }} className="text-lg font-semibold">
+            JOIN WITH OUR STATE BUSINESS OFFICER AND CONDUCT MARKET RESEARCH
+          </p>
         </div>
-        <div className="md:text-5xl text-4xl font-semibold text-center">
-          CENTUM WORLD BLOCKCHAIN TECHNOLOGY
-          <br /> DEVELOPMENT ECOSYSTEM
-        </div>
-        <div className="text-gray-500 md:text-xl font-medium text-center">
-          START NEW WAY TO DO <br />
-          BUSINESS
-        </div>
-        <div
-          style={{ color: selectedColor }}
-          className="text-gray-500 md:text-xl  font-medium text-center"
-        >
-          JOIN WITH OUR STATE BUSINESS OFFICER AND CONDUCT MARKET RESEARCH
-        </div>
-        <div>
-          By Joining with our Platform, you will get an opportunity to turn your
-          Franchise/ Marketing Business into a successful Career Frame and Fame.
-          <br />
-          We have Successful Business portfolio in Technology, Research and
-          Analytics, AI Algorithm and in Crypto Industry. We have more than 100+
-          Team Members and We are Growing Faster.
-        </div>
-        <div
-          style={{ color: selectedColor }}
-          className="text-gray-500 md:text-xl  font-medium text-center"
-        >
+
+        <p className="text-lg text-gray-800">
+          By joining our platform, you will have the opportunity to turn your
+          Franchise/Marketing Business into a successful career and fame. We
+          have a successful business portfolio in Technology, Research and
+          Analytics, AI Algorithm, and in the Crypto Industry. With 100+ team
+          members, we are growing rapidly.
+        </p>
+
+        <p style={{ color: selectedColor }} className="text-lg font-semibold">
           Checkout our business module and products
-        </div>
-        <div>
-          Our business Strategy and Module is the foundation of your franchise
-          business. It’s a roadmap for how to structure, run, and grow your new
-          business with our advance Projects and Products.
-        </div>
-        <div
-          style={{ color: selectedColor }}
-          className="text-gray-500 md:text-xl  font-medium text-center"
-        >
+        </p>
+
+        <p className="text-lg text-gray-800">
+          Our business strategy and module serve as the foundation for your
+          franchise business. It's a roadmap for structuring, running, and
+          growing your new business with our advanced projects and products.
+        </p>
+
+        <p style={{ color: selectedColor }} className="text-lg font-semibold">
           BLOCKCHAIN TECHNOLOGY DEVELOPMENT ECOSYSTEM
-        </div>
-        <div>
-          <ul className="list-disc">
-            <li className="mb-2">
-              CENTUM WORLD SaaS (Software as a Service) AI Apps
-            </li>
-            <li className="mb-2">CENTUMO TOKEN</li>
-            <li className="mb-2">CENTUMO SWAP</li>
-            <li className="mb-2">
-              CENTUMO RIG (IaaS - Infrastructure as a Service )
-            </li>
-            <li className="mb-2">
-              JET TRADE FX (AI based FOREX Trading Exchange)
-            </li>
-            <li className="mb-2">
-              CENTUMO NFT ( AI based Advance SaaS Ecosystem)
-            </li>
+        </p>
+
+        <ul className="list-disc pl-6">
+          <li>CENTUM WORLD SaaS (Software as a Service) AI Apps</li>
+          <li>CENTUMO TOKEN</li>
+          <li>CENTUMO SWAP</li>
+          <li>CENTUMO RIG (IaaS - Infrastructure as a Service)</li>
+          <li>JET TRADE FX (AI based FOREX Trading Exchange)</li>
+          <li>CENTUMO NFT (AI based Advance SaaS Ecosystem)</li>
+        </ul>
+
+        <p style={{ color: selectedColor }} className="text-lg font-semibold">
+          Fund your MARKET AND GOOD BUSINESS DEVELOPER TEAM
+        </p>
+
+        <p className="text-lg text-gray-800">
+          The bond with the best to grow faster.
+        </p>
+
+        <p style={{ color: selectedColor }} className="text-lg font-semibold">
+          OUR DMS (DISTRIBUTION MANAGEMENT SYSTEM) IS THE KEY TO OUR SUCCESS
+        </p>
+
+        <p className="text-lg text-gray-800">
+          We at CENTUM WORLD distribute ideas, innovation, and work to create a
+          better future and contribute to empowerment.
+        </p>
+
+        <p style={{ color: selectedColor }} className="text-lg font-semibold">
+          #businessadvice
+        </p>
+
+        <p className="text-lg text-gray-800">
+          FOR FURTHER ENQUIRY, PLEASE CONNECT TO OUR STATE BUSINESS &amp;
+          MARKETING OFFICER
+        </p>
+
+        <div className="text-start">
+          <h2
+            className="text-xl font-bold mb-2"
+            style={{ color: selectedColor }}
+          >
+            Upcoming Project
+          </h2>
+          <ul className="list-disc pl-6">
+            <li>CENTUMO Blockchain Technology Ecosystem</li>
+            <li>CENTUMO Coin (Crypto Asset)</li>
+            <li>AI Algorithm and Technology Development Ecosystem</li>
+            <li>Robotics Engineering</li>
           </ul>
         </div>
-        <div
-          style={{ color: selectedColor }}
-          className="text-gray-500 md:text-xl  font-medium text-center"
-        >
-          fund your MARKET AND GOOD BUSINESS DEVELOPER TEAM
+        <div className="text-end">
+          <Link
+            to="/contact"
+            className=" text-white font-bold py-2 px-4 rounded "
+            style={{ backgroundColor: selectedColor, color: "white" }}
+          >
+            Contact us
+          </Link>
         </div>
-        <div>The Bond with the Best to Grow Faster.</div>
-        <div
-          style={{ color: selectedColor }}
-          className="text-gray-500 md:text-xl  font-medium text-center"
-        >
-          OUR DMS (DISTRIBUTION MANAGEMENT SYSTEM) IS THE KEY OF OUR SUCCESS
-        </div>
-        <div>
-          We at CENTUM WORLD, Distribute the Idea, Innovation and Work to create
-          a Better Future and contribute to boost Empowerment
-        </div>
-        <div
-          style={{ color: selectedColor }}
-          className="text-gray-500 md:text-xl  font-medium text-center"
-        >
-          #businessadvice
-        </div>
-        <div
-          style={{ color: selectedColor }}
-          className="text-gray-500 md:text-xl  font-medium text-center"
-        >
-          FOR FURTHER ENQUIRY PLEASE CONNECT TO OUR State BUSINESS &amp;
-          Marketing OFFICER
-        </div>
-        <div>Upcoming Project</div>
-        <div>
-          <div>
-            <ul className="list-disc">
-              <li className="mb-2">CENTUMO Blockchain Technology Ecosystem</li>
-              <li className="mb-2">CENTUMO Coin (Crypto Asset)</li>
-              <li className="mb-2">
-                AI Algorithm and Technology Development Ecosystem
-              </li>
-              <li className="mb-2">Robotics Engineering</li>
-            </ul>
-          </div>
-        </div>
-        <Button
-          style={{
-            background: selectedColor,
-            cursor: "pointer",
-            color: "white",
-          }}
-        >
-          Conatct use
-        </Button>
       </div>
     </div>
   );
