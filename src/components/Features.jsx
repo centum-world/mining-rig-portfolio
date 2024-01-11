@@ -51,9 +51,9 @@ const Features = () => {
 
   return (
     <div className="flex flex-col items-center space-y-10 p-4">
-      <div className="flex md:flex-row flex-col items-center w-full">
+      <div className="flex md:flex-row flex-col items-center w-full font-tomorrow ">
         {featuresData.map((data, index) => (
-          <FeatureCard
+          <FeatureCard 
             key={index}
             icon={data.icon}
             title={data.title}
@@ -62,12 +62,12 @@ const Features = () => {
         ))}
       </div>
       <div className="flex flex-col justify-center items-center space-y-4">
-        <div className="text-gray-500">FEATURES</div>
-        <div className="md:text-5xl text-4xl text-gray-700 font-semibold text-center">
+        <div className="text-gray-600 text-xl font-roboto ">FEATURES</div>
+        <div className="md:text-5xl text-4xl text-gray-700 font-semibold text-center font-roboto ">
           Experience the Power of Crypto
           <br /> Advanced Mutual RIG with Us
         </div>
-        <div className="text-gray-500 md:text-xl font-medium text-center">
+        <div className="text-gray-500 md:text-xl font-medium text-center font-calibri ">
           Superior Performance and Efficiency Our crypto mutual RIG is equipped
           with state-of-the-art GPU technology,<br/> ensuring exceptional performance
           and efficiency in cryptocurrency mining.

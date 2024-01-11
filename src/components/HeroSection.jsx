@@ -21,7 +21,7 @@ const HeroSection = () => {
     <section className="flex  md:flex flex-col md:flex-row  bg-gray-50 md:h-[90vh]  p-6">
       <div className="gap-10 flex items-center justify-center md:w-[50%] w-full md:pb-24 md:pl-24  slide-in-left">
         <div className="space-y-6">
-          <div className="md:text-6xl  text-5xl font-bold text-gray-700 font-sans">
+          <div className="md:text-6xl  text-5xl font-bold text-gray-700 font-tomorrow">
             Welcome to <br />
             <span
               style={{
@@ -34,7 +34,7 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <p className="text-gray-500 flex text-start md:text-2xl  font-sans">
+          <p className="text-gray-500 flex text-start md:text-2xl font-tomorrow  ">
             Centum World offers a groundbreaking Infrastructure as a Service
             (IaaS) solution for GPU mining rig enthusiasts. With our innovative
             partnership programme, you can tap into the unlimited potential of
