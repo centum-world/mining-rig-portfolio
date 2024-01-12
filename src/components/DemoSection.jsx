@@ -25,7 +25,7 @@ export const DemoSection = () => {
       <div className="flex items-center justify-center flex-col space-y-4">
         {/* <div className="text-gray-500 pt-10 text-center">DEMO PAGES</div> */}
         <div className="text-gray-700  md:text-4xl text-3xl font-semibold font-roboto text-center pt-10">
-          DESTRIBUTION MANAGEMENT ECOSYSTEM (DMS)
+          DISTRIBUTION MANAGEMENT ECOSYSTEM (DMS)
         </div>
         <div className="text-gray-500 md:text-2xl font-calibri text-center">
           Optimize operations with our Management System. Streamlined,
