@@ -46,11 +46,11 @@ const Footer = () => {
               color: selectedColor,
             }}
           >
-            Purchase Now
+            Add liquidity
           </Button>
         </div>
       </div>
-      <div className="mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div className="mx-auto space-y-4  flex flex-col md:flex-row justify-between items-center">
         {/* Social Media Links */}
         <div className="flex flex-col items-start mt-4 md:mt-0 md:w-1/3 ">
           <h4 className="text-lg font-semibold mb-2 ml-2">Connect With Us</h4>
@@ -84,7 +84,14 @@ const Footer = () => {
             </IconButton>
           </div>
         </div>
-
+        <div className="text-center">
+          Office:{" "}
+          <span style={{ color: selectedColor }}>
+            <br /> *HSR Layout, Bangalore, Karnataka
+            <br />
+            *NewTown,Kolkata, West Bengal <br />*Jamshedpur, Jharkhand
+          </span>
+        </div>
         {/* Copyright and Disclaimer */}
         <div className="mt-4 md:w-1/3 text-center">
           <p className="text-sm">

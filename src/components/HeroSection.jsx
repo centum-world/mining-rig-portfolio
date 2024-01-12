@@ -49,7 +49,7 @@ const HeroSection = () => {
                 color: "white",
               }}
             >
-              Purchase now
+              Add liquidity
             </Button>
             <Button
               variant="outlined"

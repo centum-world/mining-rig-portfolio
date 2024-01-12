@@ -44,7 +44,7 @@ const GetStarted = () => {
             color: "white",
           }}
         >
-          Purchase now
+          Add liquidity
         </Button>
       </div>
     </div>

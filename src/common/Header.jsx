@@ -49,7 +49,7 @@ const Header = () => {
     window.open("http://apps.centumworldrig.com/statelogin", "_blank");
   };
 
-  const colorButtons = ["#00AB55", "#4169E1", "#800080", "#C2185B", "#303F9F"];
+  const colorButtons = ["#4169E1", "#00AB55", "#800080", "#C2185B", "#303F9F"];
 
   return (
     <div className="flex  w-full p-2 h-[10vh] gap-4 shadow-2xl md:justify-between">
