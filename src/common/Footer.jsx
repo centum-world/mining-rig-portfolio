@@ -85,11 +85,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center">
-          Office:{" "}
+          Office{" "}
           <span style={{ color: selectedColor }}>
-            <br /> *HSR Layout, Bangalore, Karnataka
+            <br /> HSR Layout, Bangalore, Karnataka
             <br />
-            *NewTown,Kolkata, West Bengal <br />*Jamshedpur, Jharkhand
+            NewTown,Kolkata, West Bengal <br />Jamshedpur, Jharkhand
           </span>
         </div>
         {/* Copyright and Disclaimer */}

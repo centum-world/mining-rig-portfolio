@@ -8,6 +8,11 @@ const FaqFirstSection = () => {
   const [isArrowDown4, setIsArrowDown4] = useState(false);
   const [isArrowDown5, setIsArrowDown5] = useState(false);
   const [isArrowDown6, setIsArrowDown6] = useState(false);
+  const [isArrowDown7, setIsArrowDown7] = useState(false);
+  const [isArrowDown8, setIsArrowDown8] = useState(false);
+  const [isArrowDown9, setIsArrowDown9] = useState(false);
+  const [isArrowDown10, setIsArrowDown10] = useState(false);
+  const [isArrowDown11, setIsArrowDown11] = useState(false);
 
   const handleArrowClick = () => {
     setIsArrowDown(!isArrowDown);
@@ -32,6 +37,21 @@ const FaqFirstSection = () => {
   const handleArrowClick6 = () => {
     setIsArrowDown6(!isArrowDown6);
   };
+  const handleArrowClick7 = () => {
+    setIsArrowDown7(!isArrowDown7);
+  };
+  const handleArrowClick8 = () => {
+    setIsArrowDown8(!isArrowDown8);
+  };
+  const handleArrowClick9 = () => {
+    setIsArrowDown9(!isArrowDown9);
+  };
+  const handleArrowClick10 = () => {
+    setIsArrowDown10(!isArrowDown10);
+  };
+  const handleArrowClick11 = () => {
+    setIsArrowDown11(!isArrowDown11);
+  };
   const arrowRotation = isArrowDown ? 180 : 0;
 
   const arrowRotation2 = isArrowDown2 ? 180 : 0;
@@ -43,6 +63,16 @@ const FaqFirstSection = () => {
   const arrowRotation5 = isArrowDown5 ? 180 : 0;
 
   const arrowRotation6 = isArrowDown6 ? 180 : 0;
+
+  const arrowRotation7 = isArrowDown7 ? 180 : 0;
+
+  const arrowRotation8 = isArrowDown8 ? 180 : 0;
+
+  const arrowRotation9 = isArrowDown9 ? 180 : 0;
+
+  const arrowRotation10 = isArrowDown10 ? 180 : 0;
+
+  const arrowRotation11 = isArrowDown11 ? 180 : 0;
 
   return (
     <>
@@ -256,13 +286,13 @@ const FaqFirstSection = () => {
             style={{
               transition: "all 0.3s ease",
             }}
-            onClick={handleArrowClick6}
+            onClick={handleArrowClick7}
           >
             <div className="">
               <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">
                 A Partnership Built on Trust and Reliability
               </h2>
-              {isArrowDown6 ? (
+              {isArrowDown7 ? (
                 <p className="text-sm text-gray-700 text-opacity-80">
                   At CENTUMO RIG, we value professional relationships and
                   prioritize trust and reliability. Join our Mutual RIG
@@ -276,7 +306,7 @@ const FaqFirstSection = () => {
             <div
               className="text-white cursor-pointer"
               style={{
-                transform: `rotate(${arrowRotation6}deg)`,
+                transform: `rotate(${arrowRotation7}deg)`,
                 transition: "transform 0.3s ease",
                 transformOrigin: "center",
               }}
@@ -290,13 +320,13 @@ const FaqFirstSection = () => {
             style={{
               transition: "all 0.3s ease",
             }}
-            onClick={handleArrowClick6}
+            onClick={handleArrowClick8}
           >
             <div className="">
               <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">
                 How Can Maximize Your Earnings with Our Profit-Sharing Model
               </h2>
-              {isArrowDown6 ? (
+              {isArrowDown8 ? (
                 <p className="text-sm text-gray-700 text-opacity-80">
                   With CENTUMO RIG, you can tap into the potential of crypto
                   mining and earn your share of the profits. We distribute 60%
@@ -310,7 +340,7 @@ const FaqFirstSection = () => {
             <div
               className="text-white cursor-pointer"
               style={{
-                transform: `rotate(${arrowRotation6}deg)`,
+                transform: `rotate(${arrowRotation8}deg)`,
                 transition: "transform 0.3s ease",
                 transformOrigin: "center",
               }}
@@ -323,13 +353,13 @@ const FaqFirstSection = () => {
             style={{
               transition: "all 0.3s ease",
             }}
-            onClick={handleArrowClick6}
+            onClick={handleArrowClick9}
           >
             <div className="">
               <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">
                 Privacy and Security Level
               </h2>
-              {isArrowDown6 ? (
+              {isArrowDown9 ? (
                 <p className="text-sm text-gray-700 text-opacity-80">
                   Your privacy and security are our top priorities. Rest assured
                   that we have implemented robust measures to safeguard your
@@ -343,7 +373,7 @@ const FaqFirstSection = () => {
             <div
               className="text-white cursor-pointer"
               style={{
-                transform: `rotate(${arrowRotation6}deg)`,
+                transform: `rotate(${arrowRotation9}deg)`,
                 transition: "transform 0.3s ease",
                 transformOrigin: "center",
               }}
@@ -357,13 +387,13 @@ const FaqFirstSection = () => {
             style={{
               transition: "all 0.3s ease",
             }}
-            onClick={handleArrowClick6}
+            onClick={handleArrowClick10}
           >
             <div className="">
               <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">
                 How Simple Partnership Process is ?
               </h2>
-              {isArrowDown6 ? (
+              {isArrowDown10 ? (
                 <p className="text-sm text-gray-700 text-opacity-80">
                   Becoming a partner is easy. Simply add liquidity ranging from
                   1L to 12L or more according to your preferences, sign a mutual
@@ -377,7 +407,7 @@ const FaqFirstSection = () => {
             <div
               className="text-white cursor-pointer"
               style={{
-                transform: `rotate(${arrowRotation6}deg)`,
+                transform: `rotate(${arrowRotation10}deg)`,
                 transition: "transform 0.3s ease",
                 transformOrigin: "center",
               }}
@@ -391,13 +421,13 @@ const FaqFirstSection = () => {
             style={{
               transition: "all 0.3s ease",
             }}
-            onClick={handleArrowClick6}
+            onClick={handleArrowClick11}
           >
             <div className="">
               <h2 className="text-xl font-calibri font-semibold text-gray-900 text-opacity-70">
                 Features and advantages of the GPU MINING RIG.
               </h2>
-              {isArrowDown6 ? (
+              {isArrowDown11 ? (
                 <p className="text-sm text-gray-700 text-opacity-80 ">
                   It has features and distinct advantages by which the RIG
                   Partners may take the benefits of it by merely adding the
@@ -410,7 +440,7 @@ const FaqFirstSection = () => {
             <div
               className="text-white cursor-pointer"
               style={{
-                transform: `rotate(${arrowRotation6}deg)`,
+                transform: `rotate(${arrowRotation11}deg)`,
                 transition: "transform 0.3s ease",
                 transformOrigin: "center",
               }}
