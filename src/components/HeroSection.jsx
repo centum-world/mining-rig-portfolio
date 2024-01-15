@@ -4,9 +4,11 @@ import { useSelector } from "react-redux";
 import Data1 from "../assets/png/Data1.gif";
 import brochurePDF from "../assets/pdf/brochure.pdf";
 import { saveAs } from "file-saver";
+import { selectDarkMode } from "../redux/darkModeSlice";
 
 const HeroSection = () => {
   const { selectedColor } = useSelector((state) => state.colors);
+  const darkModeEnabled = useSelector(selectDarkMode);
 
   const handleDownload = () => {
     const pdfFileName = "brochure.pdf";
@@ -18,10 +20,18 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="flex  md:flex flex-col md:flex-row  bg-gray-50 md:h-[90vh]  p-6">
+    <section
+      className={`flex  md:flex flex-col md:flex-row  ${
+        darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+      } md:h-[90vh]  p-6`}
+    >
       <div className="gap-10 flex items-center justify-center md:w-[50%] w-full md:pb-24 md:pl-24  slide-in-left">
         <div className="space-y-6">
-          <div className="md:text-6xl text-4xl font-bold text-gray-700 font-tomorrow">
+          <div
+            className={`md:text-6xl text-4xl font-bold ${
+              darkModeEnabled ? "text-white" : "text-gray-700 "
+            } font-tomorrow`}
+          >
             Welcome to <br />
             <span
               style={{
@@ -34,7 +44,11 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <p className="text-gray-500 flex text-start md:text-2xl font-tomorrow  ">
+          <p
+            className={`${
+              darkModeEnabled ? "text-gray-300" : "text-gray-500"
+            } flex text-start md:text-2xl font-tomorrow  `}
+          >
             Centum World offers a groundbreaking Infrastructure as a Service
             (IaaS) solution for GPU mining rig enthusiasts. With our innovative
             partnership programme, you can tap into the unlimited potential of
@@ -66,7 +80,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="flex items-center justify-center md:w-[50%] w-full">
-        <img src={Data1} alt="heroImg" className="md:w-3/4" />
+        <img src={Data1} alt="heroImg"  className="md:w-3/4 " />
       </div>
     </section>
   );

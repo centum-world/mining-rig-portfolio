@@ -5,10 +5,13 @@ import Landing from "./DemoFeatures";
 import Supporting from "./Supporting";
 import brochurePDF from '../assets/pdf/brochure.pdf';
 import { saveAs } from 'file-saver';
+import { selectDarkMode } from "../redux/darkModeSlice";
 
 export const DemoSection = () => {
 
   const { selectedColor } = useSelector((state) => state.colors);
+  const darkModeEnabled = useSelector(selectDarkMode);
+
 
   const handlePurchaseNow = () => {
     window.open("https://apps.centumworldrig.com/mininglogin", "_blank");

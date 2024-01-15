@@ -1,14 +1,18 @@
+// Header.js
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
 import CheckIcon from "@mui/icons-material/Check";
-import logo from "../assets/png/clogo.png";
-import Drawer from "./Drawer";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import LightModeIcon from '@mui/icons-material/LightMode';
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedColor } from "../redux/colorSlice";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import { toggleDarkMode, selectDarkMode } from "../redux/darkModeSlice";
+import Drawer from "./Drawer";
+import logo from "../assets/png/clogo.png";
 import brochurePDF from "../assets/pdf/brochure.pdf";
 import { saveAs } from "file-saver";
 
@@ -16,6 +20,7 @@ const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const { selectedColor } = useSelector((state) => state.colors);
+  const darkModeEnabled = useSelector(selectDarkMode);
 
   const dispatch = useDispatch();
 
@@ -32,19 +37,27 @@ const Header = () => {
     handleMenuClose();
   };
 
+  const handleToggleDarkMode = () => {
+    dispatch(toggleDarkMode());
+  };
+
   const handleDownload = () => {
     const pdfFileName = "brochure.pdf";
     saveAs(brochurePDF, pdfFileName);
   };
+
   const handlePartner = () => {
     window.open("http://apps.centumworldrig.com/mininglogin", "_blank");
   };
+
   const handleMember = () => {
     window.open("http://apps.centumworldrig.com/memberlogin", "_blank");
   };
+
   const handleFranchise = () => {
     window.open("http://apps.centumworldrig.com/franchiselogin", "_blank");
   };
+
   const handleBmm = () => {
     window.open("http://apps.centumworldrig.com/statelogin", "_blank");
   };
@@ -52,17 +65,26 @@ const Header = () => {
   const colorButtons = ["#00AB55", "#4169E1", "#800080", "#C2185B", "#303F9F"];
 
   return (
-    <div className="flex  w-full p-2 h-[10vh] gap-4 shadow-2xl md:justify-between">
-      <div className="flex md:w-64 w-26   items-center justify-center flex-row-reverse">
+    <div
+      className={`flex w-full p-2 h-[10vh] gap-4 shadow-2xl md:justify-between ${
+        darkModeEnabled ? "bg-gray-700 text-white" : "bg-white text-black"
+      }`}
+    >
+      <div className="flex md:w-64 w-26 items-center justify-center flex-row-reverse">
         <img
           src={logo}
           alt="Dummy Logo"
           className="md:h-14 h-12 md:w-14 w-12"
         />
+
         <Drawer />
       </div>
       <div className="flex md:gap-5 gap-1 w-2/5 items-center relative">
-        <div className="flex gap-2 items-center relative bg-gray-100 rounded-3xl p-2">
+        <div
+          className={`flex gap-2 items-center relative rounded-3xl p-2 ${
+            darkModeEnabled ? "bg-gray-800 " : " bg-gray-100"
+          } `}
+        >
           {colorButtons.map((color, index) => (
             <div
               key={index}
@@ -93,17 +115,15 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <span style={{ color: selectedColor }}>
-          <DarkModeOutlinedIcon />
+        <span style={{ color: selectedColor ,cursor:"pointer"}} onClick={handleToggleDarkMode}>
+          {darkModeEnabled ? <LightModeIcon style={{color:"#FFFF66"}} /> : <DarkModeOutlinedIcon />}
         </span>
-
-        <Link to="/" className="cursor-pointer  md:flex hidden">
+        <Link to="/" className="cursor-pointer md:flex hidden">
           Home
         </Link>
         <div onClick={handleDownload} className="cursor-pointer md:flex hidden">
           Documentation
         </div>
-
         <div className="md:flex hidden">
           <Button
             aria-controls="login-menu"

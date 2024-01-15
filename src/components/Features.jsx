@@ -8,6 +8,7 @@ import {
   MonetizationOnOutlined, // Change to a different icon
   ComputerOutlined, // Change to a different icon
 } from "@mui/icons-material";
+import { selectDarkMode } from "../redux/darkModeSlice";
 
 const FeatureCard = ({ icon, title, description }) => {
   return (
@@ -23,6 +24,7 @@ const FeatureCard = ({ icon, title, description }) => {
 
 const Features = () => {
   const { selectedColor } = useSelector((state) => state.colors);
+  const darkModeEnabled = useSelector(selectDarkMode);
 
   const handlePurchaseNow = () => {
     window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
@@ -50,10 +52,15 @@ const Features = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center space-y-10 p-4">
+    // <div className="">
+    <div
+      className={`${
+        darkModeEnabled ? "bg-gray-700 text-white" : "bg-gray-50"
+      } flex flex-col items-center space-y-10 p-4`}
+    >
       <div className="flex md:flex-row flex-col items-center w-full font-tomorrow ">
         {featuresData.map((data, index) => (
-          <FeatureCard 
+          <FeatureCard
             key={index}
             icon={data.icon}
             title={data.title}
@@ -69,8 +76,9 @@ const Features = () => {
         </div>
         <div className="text-gray-500 md:text-xl font-medium text-center font-calibri ">
           Superior Performance and Efficiency Our crypto mutual RIG is equipped
-          with state-of-the-art GPU technology,<br/> ensuring exceptional performance
-          and efficiency in cryptocurrency mining.
+          with state-of-the-art GPU technology,
+          <br /> ensuring exceptional performance and efficiency in
+          cryptocurrency mining.
         </div>
 
         <Button

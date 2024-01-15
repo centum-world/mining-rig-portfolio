@@ -7,7 +7,7 @@ import Contact from "./Contact";
 
 const Heropage = () => {
   return (
-    <div className="space-y-4">
+    <div className="">
       <HeroSection />
       <Features />
       <DemoSection />

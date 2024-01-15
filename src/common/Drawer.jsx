@@ -16,8 +16,10 @@ import { AboutIcon, PaperIcon } from "../utils/icons";
 import QuizOutlinedIcon from "@mui/icons-material/QuizOutlined";
 import { HomeIcon } from "../utils/icons";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import LockOpenSharpIcon from '@mui/icons-material/LockOpenSharp';
+import LockOpenSharpIcon from "@mui/icons-material/LockOpenSharp";
 import { Collapse } from "@mui/material";
+import { useSelector } from "react-redux";
+import { selectDarkMode } from "../redux/darkModeSlice";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -26,6 +28,7 @@ export default function TemporaryDrawer() {
   });
 
   const drawerRef = React.useRef(null);
+  const darkModeEnabled = useSelector(selectDarkMode);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -126,9 +129,7 @@ export default function TemporaryDrawer() {
                     <ListItem
                       key={subItem.text}
                       button
-                      onClick={(event) =>
-                        handleLoginClick(event, subItem.path)
-                      }
+                      onClick={(event) => handleLoginClick(event, subItem.path)}
                     >
                       <ListItemIcon>{subItem.icon}</ListItemIcon>
                       <ListItemText primary={subItem.text} />
@@ -149,7 +150,11 @@ export default function TemporaryDrawer() {
         sx={{ color: "gray", fontWeight: "900" }}
         onClick={toggleDrawer(true)}
       >
-        {state.left ? <ClearIcon /> : <MenuIcon />}
+        {state.left ? (
+          <ClearIcon />
+        ) : (
+          <MenuIcon className={darkModeEnabled ? "text-white" : ""} />
+        )}
       </Button>
       <Drawer anchor="left" open={state.left} onClose={toggleDrawer(false)}>
         {list()}
