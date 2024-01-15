@@ -3,10 +3,12 @@ import { Button } from "@mui/material";
 import purchase from "../assets/png/purchase.png";
 import { useSelector } from "react-redux";
 import FeaturesCard from "./FeaturesCard";
+import World from "../assets/png/World.gif";
+
 import {
   AirplayOutlined,
   MonetizationOnOutlined, // Change to a different icon
-  ComputerOutlined, // Change to a different icon
+  ComputerOutlined,// Change to a different icon
 } from "@mui/icons-material";
 import { selectDarkMode } from "../redux/darkModeSlice";
 
@@ -69,6 +71,7 @@ const Features = () => {
         ))}
       </div>
       <div className="flex flex-col justify-center items-center space-y-4">
+        <img src={World} alt="world gif" />
         <div className="text-gray-600 text-xl font-roboto ">FEATURES</div>
         <div className="md:text-5xl text-4xl text-gray-700 font-semibold text-center font-roboto ">
           Experience the Power of Crypto
@@ -89,7 +92,7 @@ const Features = () => {
             color: "white",
           }}
         >
-          Purchase now
+          Add liquidity
         </Button>
         <img src={purchase} alt="purchase" className="md:w-1/3 w-full" />
       </div>

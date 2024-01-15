@@ -7,6 +7,7 @@ import {
   AccountBalance,
 } from "@mui/icons-material";
 
+
 const FeatureCard = ({ icon, title, description }) => {
   return (
     <div className="flex flex-col items-start p-4 hover:scale-105 duration-500 shadow-lg rounded-md w-80">

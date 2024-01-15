@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import about from "../assets/png/About.png";
+import NFT from "../assets/png/NFT.gif";
 
 const About = () => {
   const { selectedColor } = useSelector((state) => state.colors);
@@ -9,9 +11,10 @@ const About = () => {
     <div className="bg-gray-50 p-4 flex flex-col items-center space-y-4">
       <div className="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-md space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-800">
-            ABOUT CENTUM  WORLD
-          </h1>
+          <h1 className="text-3xl  font-bold text-gray-800">About Us</h1>
+          <div className="flex justify-center items-center w-full">
+            <img src={about} alt="about" className="md:w-1/2 w-full" />
+          </div>
           <p className="text-lg text-gray-600">
             CENTUM WORLD BLOCKCHAIN TECHNOLOGY DEVELOPMENT ECOSYSTEM
           </p>
@@ -79,7 +82,9 @@ const About = () => {
           FOR FURTHER ENQUIRY, PLEASE CONNECT TO OUR STATE BUSINESS &amp;
           MARKETING OFFICER
         </p>
-
+        <div className="flex justify-center items-center w-full">
+          <img src={NFT} alt="nft" className="md:w-1/3 w-full" />
+        </div>
         <div className="text-start">
           <h2
             className="text-xl font-bold mb-2"
