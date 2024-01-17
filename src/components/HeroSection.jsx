@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import Data1 from "../assets/png/Data1.gif";
+import Data2 from "../assets/png/Data2.gif";
 import brochurePDF from "../assets/pdf/brochure.pdf";
 import { saveAs } from "file-saver";
 import { selectDarkMode } from "../redux/darkModeSlice";
@@ -19,10 +20,12 @@ const HeroSection = () => {
     window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
   };
 
+  const heroImg = darkModeEnabled ? Data2 : Data1
+
   return (
     <section
       className={`flex  md:flex flex-col md:flex-row  ${
-        darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+        darkModeEnabled ? "bg-gray-900" : "bg-gray-50"
       } md:h-[90vh]  p-6`}
     >
       <div className="gap-10 flex items-center justify-center md:w-[50%] w-full md:pb-24 md:pl-24  slide-in-left">
@@ -80,7 +83,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="flex items-center justify-center md:w-[50%] w-full">
-        <img src={Data1} alt="heroImg"  className="md:w-3/4 " />
+        <img src={heroImg} alt="heroImg"  className="md:w-3/4 " />
       </div>
     </section>
   );

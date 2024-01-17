@@ -1,22 +1,42 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
+import { selectDarkMode } from "../redux/darkModeSlice";
 
 const GetStarted = () => {
   const { selectedColor } = useSelector((state) => state.colors);
+  const darkModeEnabled = useSelector(selectDarkMode);
 
   const handlePurchaseNow = () => {
     window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 p-4">
-      <div className="text-gray-500 text-center font-roboto ">GET STARTED</div>
-      <div className="md:text-5xl  text-4xl text-gray-700 font-semibold text-center font-roboto">
+    <div
+      className={`${
+        darkModeEnabled ? "bg-gray-800" : "bg-white"
+      } flex flex-col items-center justify-center space-y-4 p-4`}
+    >
+      <div
+        className={`${
+          darkModeEnabled ? "text-gray-400" : "text-gray-500"
+        } text-center font-roboto`}
+      >
+        GET STARTED
+      </div>
+      <div
+        className={`${
+          darkModeEnabled ? "text-white" : "text-gray-700"
+        } md:text-5xl  text-4xl  font-semibold text-center font-roboto`}
+      >
         Get started with{" "}
         <span style={{ color: selectedColor }}>CENTUM WORLD</span>
       </div>
-      <div className="text-gray-500 md:text-2xl flex items-center justify-center w-2/3 ">
+      <div
+        className={`${
+          darkModeEnabled ? "text-gray-400" : "text-gray-500"
+        }  md:text-2xl flex items-center justify-center w-2/3`}
+      >
         <ul className="list-disc font-calibri text-lg ">
           <li className="mb-2">Fill up the Contract Form</li>
           <li className="mb-2">Submit All Needful Documents</li>

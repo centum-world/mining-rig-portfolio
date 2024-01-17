@@ -3,14 +3,16 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import about from "../assets/png/About.png";
 import NFT from "../assets/png/NFT.gif";
+import { selectDarkMode } from "../redux/darkModeSlice";
 
 const About = () => {
   const { selectedColor } = useSelector((state) => state.colors);
+  const darkModeEnabled = useSelector(selectDarkMode)
 
   return (
-    <div className="bg-gray-50 p-4 flex flex-col items-center space-y-4">
+    <div className={` ${darkModeEnabled ? 'bg-gray-900' : 'bg-gray-50'} p-4 flex flex-col items-center space-y-4`}>
       <div className="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-md space-y-8">
-        <div className="text-center">
+        <div className="text-center ">
           <h1 className="text-3xl  font-bold text-gray-800">About Us</h1>
           <div className="flex justify-center items-center w-full">
             <img src={about} alt="about" className="md:w-1/2 w-full" />

@@ -6,19 +6,22 @@ import {
   PeopleAlt,
   AccountBalance,
 } from "@mui/icons-material";
-
+import { useSelector } from "react-redux";
+import { selectDarkMode } from "../redux/darkModeSlice";
 
 const FeatureCard = ({ icon, title, description }) => {
+  const darkModeEnabled = useSelector(selectDarkMode);
   return (
     <div className="flex flex-col items-start p-4 hover:scale-105 duration-500 shadow-lg rounded-md w-80">
       {icon}
-      <h3 className="text-lg font-semibold font-roboto ">{title}</h3>
-      <p className="text-gray-600 font-tomorrow ">{description}</p>
+      <h3 className={`${darkModeEnabled ? 'text-gray-100' : ''} text-lg font-semibold font-roboto`}>{title}</h3>
+      <p className={`${darkModeEnabled ? 'text-gray-400' : 'text-gray-600'} font-roboto`}>{description}</p>
     </div>
   );
 };
 
 const FeaturesCard = () => {
+
   return (
     <div className="flex justify-center flex-wrap gap-10">
       <FeatureCard

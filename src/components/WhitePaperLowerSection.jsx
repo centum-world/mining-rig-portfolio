@@ -8,6 +8,8 @@ import noDataFound from "../assets/noDataFound/nodata.gif";
 import BmmAvtar from "../assets/franchise-avatar.png";
 import "../css/WhitePaper.css";
 import baseUrl from "../../baseUrl";
+import { useSelector } from "react-redux";
+import { selectDarkMode } from "../redux/darkModeSlice";
 
 const WhitePaperLowerSection = () => {
   const [selectedState, setSelectedState] = useState("");
@@ -16,6 +18,7 @@ const WhitePaperLowerSection = () => {
   const [selectedValue, setSelectedValue] = useState(""); // State to hold selected value
   const [selectedFranchiseValue, setSelectedFranchiseValue] = useState();
   const states = allState.states.map((stateData) => stateData.state);
+  const darkModeEnabled = useSelector(selectDarkMode)
 
   const handleSelectChange = (event) => {
     setSelectedValue(event.target.value); // Update selected value
@@ -93,8 +96,8 @@ const WhitePaperLowerSection = () => {
   };
   return (
     <>
-      <div className="flex flex-col justify-center items-center p-6 md:p-10 lg:p-10 bg-gray-100 ">
-        <div className="w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20">
+      <div className={`flex flex-col justify-center items-center p-6 md:p-10 lg:p-10 ${darkModeEnabled ? 'bg-gray-900'  : 'bg-gray-50'} `}>
+        <div className={`w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 `}>
           <p className="text-gray-800 text-opacity-80 text-center font-black text-xl md:text-2xl lg:text-2xl mb-20">
             BMM Team
           </p>

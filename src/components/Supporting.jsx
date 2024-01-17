@@ -1,19 +1,42 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { selectDarkMode } from "../redux/darkModeSlice";
 
-const Card = ({ title, description, selectedColor }) => (
-  <div className="flex flex-col border h-44 md:w-1/3 w-full overflow-hidden shadow-md rounded-md">
-    <div className="flex items-center justify-between p-4 bg-gray-100 rounded-t-md">
-      <div className="text-lg md:text-base font-semibold text-gray-700 font-roboto ">{title}</div>
+const Card = ({ title, description, selectedColor, darkModeEnabled }) => (
+  <div className="flex flex-col border h-44 md:w-1/3 w-full overflow-hidden shadow-md ">
+    <div
+      className={`${
+        darkModeEnabled ? "bg-gray-900" : "bg-gray-50"
+      } flex items-center justify-between p-4  `}
+    >
+      <div
+        className={`${
+          darkModeEnabled ? "text-gray-50 " : "text-gray-700 "
+        } text-lg md:text-base font-semibold font-roboto `}
+      >
+        {title}
+      </div>
     </div>
-    <div className=" bg-white p-2 h-36 rounded-b-md overflow-y-auto scrollbar-hide overflow-hidden">
-      <div className="text-lg md:text-base text-gray-500 font-calibri">{description}</div>
+    {/* <div className=" "> */}
+    <div
+      className={`${
+        darkModeEnabled ? "bg-gray-900" : "bg-gray-50"
+      }  p-2 h-36 overflow-y-auto scrollbar-hide overflow-hidden`}
+    >
+      <div
+        className={`${
+          darkModeEnabled ? "text-gray-400" : "text-gray-500"
+        } text-lg md:text-base font-calibri`}
+      >
+        {description}
+      </div>
     </div>
   </div>
 );
 
 const Supporting = () => {
   const { selectedColor } = useSelector((state) => state.colors);
+  const darkModeEnabled = useSelector(selectDarkMode);
   const cards = [
     {
       title: "IaaS Virtual RIG Partnership",
@@ -47,10 +70,21 @@ const Supporting = () => {
 
   return (
     <div className="md:p-24 pt-6">
-      <div className="text-2xl font-semibold mb-4">Supporting</div>
+      <div
+        className={`${
+          darkModeEnabled ? "text-white" : ""
+        } text-2xl font-semibold mb-4`}
+      >
+        Supporting
+      </div>
       <div className="flex flex-wrap md:flex-row flex-col">
         {cards.map((card, index) => (
-          <Card key={index} {...card} selectedColor={selectedColor} />
+          <Card
+            key={index}
+            {...card}
+            selectedColor={selectedColor}
+            darkModeEnabled={darkModeEnabled}
+          />
         ))}
       </div>
     </div>
