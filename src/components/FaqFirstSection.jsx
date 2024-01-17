@@ -115,7 +115,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"}/>
             </div>
           </div>
 
@@ -148,7 +148,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
 
@@ -182,7 +182,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
 
@@ -215,7 +215,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
 
@@ -246,7 +246,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
 
@@ -281,7 +281,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
 
@@ -315,7 +315,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
 
@@ -349,7 +349,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
           <div
@@ -382,7 +382,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
 
@@ -416,7 +416,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
 
@@ -449,7 +449,7 @@ const FaqFirstSection = () => {
                 transformOrigin: "center",
               }}
             >
-              <DownArrewIcon color="black" />
+              <DownArrewIcon  color={darkModeEnabled ? "white" : "black"} />
             </div>
           </div>
         </div>
