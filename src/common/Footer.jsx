@@ -19,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="p-4 md:p-8 space-y-4 bg-gray-700 text-white">
+    <div className="p-4 md:p-8 space-y-4 bg-gray-900 text-white">
       <div className="flex flex-col md:flex-row items-center justify-between space-y-4">
         <div className="flex items-center justify-center md:justify-start gap-4">
           <img src={logo} alt="Dummy Logo" className="h-14 w-14" />
