@@ -53,7 +53,7 @@ export const DemoSection = () => {
               color: selectedColor,
             }}
           >
-            View documents
+            View Documentation
           </Button>
         </div>
       </div>

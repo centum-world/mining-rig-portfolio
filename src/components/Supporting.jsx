@@ -46,7 +46,7 @@ const Supporting = () => {
     {
       title: "High-Cost GPU Integration",
       description:
-        "WE Integrating high-cost GPU Mining Devices for the CENTUM WORLD RIG PARTNERSHIP PROGRAM and configuring them as per Node.",
+        "We Integrating high-cost GPU Mining Devices for the CENTUM WORLD RIG PARTNERSHIP PROGRAM and configuring them as per Node.",
     },
     {
       title: "Electricity Bill Payment",

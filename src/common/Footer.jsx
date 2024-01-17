@@ -35,7 +35,7 @@ const Footer = () => {
               color: "white",
             }}
           >
-            Download Brochure
+            View Documentation
           </Button>
           <Button
             variant="outlined"
@@ -89,7 +89,8 @@ const Footer = () => {
           <span style={{ color: selectedColor }}>
             <br /> HSR Layout, Bangalore, Karnataka
             <br />
-            NewTown,Kolkata, West Bengal <br />Jamshedpur, Jharkhand
+            NewTown,Kolkata, West Bengal <br />
+            Jamshedpur, Jharkhand
           </span>
         </div>
         {/* Copyright and Disclaimer */}

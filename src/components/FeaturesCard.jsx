@@ -32,7 +32,7 @@ const FeaturesCard = () => {
       />
       <FeatureCard
         icon={<Power className="text-green-500 mb-2" size={24} />}
-        title="NO Electricity Cost needed"
+        title="No Electricity Cost needed"
         description="Everything will be taken care of from our side"
       />
       <FeatureCard

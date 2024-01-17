@@ -39,7 +39,7 @@ const Features = () => {
       icon: <AirplayOutlined className="text-blue-500" size={24} />,
       title: "Distribution Management Ecosystem (DMS)",
       description:
-      "It refers to Distribution Management Ecosystem. We aim that we work, we earn and we share. The more we share the more we get.",
+      "It refers to Distribution Management Ecosystem. We aim that we work, we earn and we share.",
     },
     {
       icon: <MonetizationOnOutlined className="text-green-500" size={24} />, // Change to a different icon
