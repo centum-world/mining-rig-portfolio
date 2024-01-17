@@ -35,7 +35,7 @@ const GetStarted = () => {
       <div
         className={`${
           darkModeEnabled ? "text-gray-400" : "text-gray-500"
-        }  md:text-2xl flex items-center justify-center w-2/3`}
+        }  md:text-2xl flex items-center justify-center md:w-2/3 w-full pl-8`}
       >
         <ul className="list-disc font-calibri text-lg ">
           <li className="mb-2">Fill up the Contract Form</li>
