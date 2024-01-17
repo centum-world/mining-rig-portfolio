@@ -66,7 +66,7 @@ const Header = () => {
 
   return (
     <div
-      className={`flex w-full p-2 h-[10vh] gap-4 shadow-2xl md:justify-between ${
+      className={`flex w-full p-2 h-[10vh] gap-10 shadow-2xl md:justify-between ${
         darkModeEnabled ? "bg-gray-700 text-white" : "bg-white text-black"
       }`}
     >
@@ -79,7 +79,7 @@ const Header = () => {
 
         <Drawer />
       </div>
-      <div className="flex md:gap-5 gap-1 w-2/5 items-center relative">
+      <div className="flex md:gap-5 gap-3 w-2/5 items-center relative">
         <div
           className={`flex gap-2 items-center relative rounded-3xl p-2 ${
             darkModeEnabled ? "bg-gray-800 " : " bg-gray-100"
