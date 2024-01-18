@@ -136,7 +136,7 @@ const WhitePaperLowerSection = () => {
                         </p>
                       </div>
                     </div>
-                    <p className=" font-tomorrow text-xl ">
+                    <p className={` font-tomorrow text-xl ${darkModeEnabled ? 'text-white' : ''} `}>
                       {`${bmm.fname.charAt(0).toUpperCase()}${bmm.fname.slice(
                         1
                       )}`}{" "}
@@ -203,7 +203,7 @@ const WhitePaperLowerSection = () => {
                         </p>
                       </div>
                     </div>
-                    <p className="font-tomorrow text-xl ">
+                    <p className={`font-tomorrow text-xl ${darkModeEnabled ? 'text-white' : ''} `}>
                       {`${franchise.fname
                         .charAt(0)
                         .toUpperCase()}${franchise.fname.slice(1)}`}{" "}
@@ -241,7 +241,7 @@ const WhitePaperLowerSection = () => {
                     <img src={items.imageUrl} alt="" />
                   </div>
                 </div>
-                <p className=" font-tomorrow text-2xl ">{items.name}</p>
+                <p className={` font-tomorrow text-2xl ${darkModeEnabled ? 'text-white' : ''}  `}>{items.name}</p>
               </div>
             ))}
           </div>
@@ -259,7 +259,7 @@ const WhitePaperLowerSection = () => {
                     <img src={items.imageUrl} alt="" />
                   </div>
                 </div>
-                <p className="font-tomorrow text-2xl">{items.name}</p>
+                <p className={` font-tomorrow text-2xl ${darkModeEnabled ? 'text-white' : ''} `}>{items.name}</p>
               </div>
             ))}
           </div>
@@ -277,7 +277,7 @@ const WhitePaperLowerSection = () => {
                     <img src={items.imageUrl} alt="" />
                   </div>
                 </div>
-                <p className="font-tomorrow text-2xl">{items.name}</p>
+                <p className={`font-tomorrow text-2xl ${darkModeEnabled ? 'text-white' : ''}`}>{items.name}</p>
               </div>
             ))}
           </div>
