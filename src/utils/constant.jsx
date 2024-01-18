@@ -15,6 +15,7 @@ import vikrant from '../assets/techTeam/vikrant.png';
 import jitendra from '../assets/founder/coFounder.jpeg';
 import jayanta from '../assets/founder/founder.jpeg';
 import anupriya from '../assets/founder/HR.jpeg';
+import technical2 from '../assets/franchise-avatar.png'
 
 
 export const NavMenu = [
@@ -85,34 +86,53 @@ export const Management = [
 
 export const Technical = [
   {
-    imageUrl:badal,
-    name:"Badal Mandal"
+    imageUrl:vikrant,
+    name:"V. Kumar"
   },
   {
-    imageUrl:lakhan,
-    name:"Lakhan Mahto"
+    imageUrl:badal,
+    name:"B. Mandal"
   },
   {
     imageUrl:prashant,
-    name:"Prashant Kumar"
+    name:"P. Kumar"
   },
   {
-    imageUrl:vikrant,
-    name:"Vikrant Kumar"
+    imageUrl:lakhan,
+    name:"L. Mahto"
+  },
+]
+
+export const Technical2 = [
+  {
+    imageUrl:technical2,
+    name:"S. Kumaran"
+  },
+  {
+    imageUrl:technical2,
+    name:"P. Krishnamurty"
+  },
+  {
+    imageUrl:technical2,
+    name:"T. Lyer"
+  },
+  {
+    imageUrl:technical2,
+    name:"A. Shetty"
   },
 ]
 
 export const Founder = [
   {
     imageUrl:jitendra,
-    name:"Mr. J.Barik(Founder & CMO) "
+    name:"Mr. J.Barik(CMO) "
   },
   {
     imageUrl:jayanta,
-    name:"J.Bose(Founder & CEO)"
+    name:"J.Bose(CEO / AI Algorithm & Blockchain Security)"
   },
   {
     imageUrl:anupriya,
-    name:"A.Das(GM & HR)"
+    name:"A.Das(HR Head/ GM)"
   },
 ]
