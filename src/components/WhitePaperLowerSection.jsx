@@ -105,7 +105,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
-          } w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 `}
+          } w-full h-auto bg-gradient-to-custom p-8  md:p-20 lg:p-20 `}
         >
           <p
             className={`${
@@ -137,30 +137,29 @@ const WhitePaperLowerSection = () => {
                 data.map((bmm, index) => (
                   <div className="text-center" key={index}>
                     <div className="hexagon-container mb-5">
-                      <div className="flex flex-col justify-center items-center hexagon ">
-                        <img
-                          src={BmmAvtar}
-                          alt={`BMM ${index + 1}`}
-                          className="w-40 h-32"
-                        />
-                        <p className="font-tomorrow text-lg text-white">
+                      <div className=" hexagon ">
+                        <div className="Banner">
+                          <div className="circle-draw">
+                            <img
+                              src={BmmAvtar}
+                              alt={`BMM ${index + 1}`}
+                              className="object-contain w-full h-full "
+                            />
+                          </div>
+                        </div>
+                        <p className="font-tomorrow absolute text-lg text-white">
                           {bmm.stateHandlerId}
+                          <br />
+                          {`${bmm.fname
+                            .charAt(0)
+                            .toUpperCase()}${bmm.fname.slice(1)}`}{" "}
+                          {`${bmm.lname
+                            .charAt(0)
+                            .toUpperCase()}${bmm.lname.slice(1)}`}
                           {/* Assuming 'name' is the property containing the BMM name */}
                         </p>
                       </div>
                     </div>
-                    <p
-                      className={` font-tomorrow text-xl ${
-                        darkModeEnabled ? "text-white" : ""
-                      } `}
-                    >
-                      {`${bmm.fname.charAt(0).toUpperCase()}${bmm.fname.slice(
-                        1
-                      )}`}{" "}
-                      {`${bmm.lname.charAt(0).toUpperCase()}${bmm.lname.slice(
-                        1
-                      )}`}
-                    </p>
                   </div>
                 ))
               ) : (
@@ -216,30 +215,30 @@ const WhitePaperLowerSection = () => {
                 franchiseData.map((franchise, index) => (
                   <div className="text-center" key={index}>
                     <div className="hexagon-container mb-5">
-                      <div className="flex flex-col justify-center items-center hexagon ">
-                        <img
-                          src={BmmAvtar}
-                          alt={`FRANCHISE ${index + 1}`}
-                          className="w-40 h-32"
-                        />
-                        <p className="text-white font-calibri text-lg font-black">
+                      <div className="hexagon ">
+                        <div className="Banner">
+                          <div className="circle-draw">
+                            <img
+                              src={BmmAvtar}
+                              alt={`FRANCHISE ${index + 1}`}
+                              className="object-contain w-full h-full"
+                            />
+                          </div>
+                        </div>
+                        <p className="text-white font-calibri absolute text-lg font-black">
                           {franchise.franchiseId}
+                          <br />
+                          {`${franchise.fname
+                            .charAt(0)
+                            .toUpperCase()}${franchise.fname.slice(1)}`}{" "}
+                          {`${franchise.lname
+                            .charAt(0)
+                            .toUpperCase()}${franchise.lname.slice(1)}`}
                           {/* Assuming 'name' is the property containing the BMM name */}
                         </p>
+                        <br />
                       </div>
                     </div>
-                    <p
-                      className={`font-tomorrow text-xl ${
-                        darkModeEnabled ? "text-white" : ""
-                      } `}
-                    >
-                      {`${franchise.fname
-                        .charAt(0)
-                        .toUpperCase()}${franchise.fname.slice(1)}`}{" "}
-                      {`${franchise.lname
-                        .charAt(0)
-                        .toUpperCase()}${franchise.lname.slice(1)}`}
-                    </p>
                   </div>
                 ))
               ) : (
@@ -261,7 +260,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
-          } w-full h-auto bg-gradient-to-custom  p-16 md:p-20 lg:p-20 mt-10`}
+          } w-full h-auto bg-gradient-to-custom fle  p-16 md:p-20 lg:p-20 mt-10`}
         >
           <p
             className={`${
@@ -270,21 +269,29 @@ const WhitePaperLowerSection = () => {
           >
             Management Eco-System
           </p>
-          <div className="flex w-full mt-10 flex-wrap justify-between">
+          <div className="flex w-full mt-10 flex-wrap justify-center md:justify-between lg:justify-between">
             {Management.map((items, index) => (
               <div className="text-center" key={index}>
                 <div className="hexagon-container mb-5">
                   <div className="hexagon pt-5">
-                    <img src={items.imageUrl} alt="" />
+                    <div className="Banner">
+                      <div className="circle-draw">
+                        <img
+                          className="object-contain w-full h-full"
+                          src={items.imageUrl}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <p
+                      className={` font-tomorrow text-lg absolute  ${
+                        darkModeEnabled ? "text-white" : "text-white"
+                      } `}
+                    >
+                      {items.name}
+                    </p>
                   </div>
                 </div>
-                <p
-                  className={` font-tomorrow text-2xl ${
-                    darkModeEnabled ? "text-white" : ""
-                  }  `}
-                >
-                  {items.name}
-                </p>
               </div>
             ))}
           </div>
@@ -309,21 +316,25 @@ const WhitePaperLowerSection = () => {
           >
             Saas, AI Apps Development, NFT
           </p>
-          <div className="flex w-full mt-10 flex-wrap justify-between">
+          <div className="flex w-full mt-10 flex-wrap justify-center md:justify-between lg:justify-between">
             {Technical.map((items, index) => (
               <div className="text-center" key={index}>
                 <div className="hexagon-container mb-5">
                   <div className="hexagon pt-5">
-                    <img src={items.imageUrl} alt="" />
+                    <div className="Banner">
+                      <div className="circle-draw">
+                        <img src={items.imageUrl} alt="" />
+                      </div>
+                    </div>
+                    <p
+                      className={` font-tomorrow text-lg absolute ${
+                        darkModeEnabled ? "text-white" : "text-white"
+                      } `}
+                    >
+                      {items.name}
+                    </p>
                   </div>
                 </div>
-                <p
-                  className={` font-tomorrow text-2xl ${
-                    darkModeEnabled ? "text-white" : ""
-                  } `}
-                >
-                  {items.name}
-                </p>
               </div>
             ))}
           </div>
@@ -334,21 +345,25 @@ const WhitePaperLowerSection = () => {
           >
             Saas, AI Apps Development, Blockchain Technology,System Security
           </p>
-          <div className="flex w-full mt-10 flex-wrap justify-between">
+          <div className="flex w-full mt-10 flex-wrap justify-center md:justify-between lg:justify-between">
             {Technical2.map((items, index) => (
               <div className="text-center" key={index}>
                 <div className="hexagon-container mb-5">
                   <div className="hexagon pt-5">
-                    <img src={items.imageUrl} alt="" />
+                    <div className="Banner">
+                      <div className="circle-draw">
+                        <img src={items.imageUrl} alt="" />
+                      </div>
+                    </div>
+                    <p
+                      className={` font-tomorrow text-lg absolute ${
+                        darkModeEnabled ? "text-white" : "text-white"
+                      } `}
+                    >
+                      {items.name}
+                    </p>
                   </div>
                 </div>
-                <p
-                  className={` font-tomorrow text-2xl ${
-                    darkModeEnabled ? "text-white" : ""
-                  } `}
-                >
-                  {items.name}
-                </p>
               </div>
             ))}
           </div>
@@ -371,16 +386,20 @@ const WhitePaperLowerSection = () => {
               <div className="text-center" key={index}>
                 <div className="hexagon-container mb-5">
                   <div className="hexagon pt-5">
-                    <img src={items.imageUrl} alt="" />
+                    <div className="Banner">
+                      <div className="circle-draw">
+                        <img src={items.imageUrl} alt="" />
+                      </div>
+                    </div>
+                    <p
+                      className={` font-tomorrow text-lg absolute  ${
+                        darkModeEnabled ? "text-white" : "text-white"
+                      } `}
+                    >
+                      {items.name}
+                    </p>
                   </div>
                 </div>
-                <p
-                  className={`font-tomorrow text-2xl ${
-                    darkModeEnabled ? "text-white" : ""
-                  }`}
-                >
-                  {items.name}
-                </p>
               </div>
             ))}
           </div>

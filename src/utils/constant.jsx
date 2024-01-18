@@ -7,14 +7,14 @@ import surendra from '../assets/managment/surendra.png';
 import sanjay from '../assets/managment/sanjay.png';
 import sanjay2 from '../assets/managment/sanjay2..png';
 import pacharia from '../assets/managment/pacharia.png';
-import raju from '../assets/managment/raju.jpeg';
+import raju from '../assets/managment/raju1.png';
 import badal from '../assets/techTeam/badal.png';
 import lakhan from '../assets/techTeam/lakhan.png';
 import prashant from '../assets/techTeam/prashant.png';
 import vikrant from '../assets/techTeam/vikrant.png';
-import jitendra from '../assets/founder/coFounder.jpeg';
-import jayanta from '../assets/founder/founder.jpeg';
-import anupriya from '../assets/founder/HR.jpeg';
+import jitendra from '../assets/founder/coFounder1.png';
+import jayanta from '../assets/founder/founder1.png';
+import anupriya from '../assets/founder/HR1.png';
 import technical2 from '../assets/franchise-avatar.png'
 
 
