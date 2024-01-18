@@ -11,15 +11,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Close";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
-import { AboutIcon, PaperIcon } from "../utils/icons";
-import QuizOutlinedIcon from "@mui/icons-material/QuizOutlined";
-import { HomeIcon } from "../utils/icons";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import LockOpenSharpIcon from "@mui/icons-material/LockOpenSharp";
 import { Collapse } from "@mui/material";
 import { useSelector } from "react-redux";
 import { selectDarkMode } from "../redux/darkModeSlice";
+import {
+  AccountBoxOutlined,
+  AddBoxOutlined,
+  ContactMail,
+  DashboardOutlined,
+  LoginOutlined,
+  QuestionAnswerOutlined,
+} from "@mui/icons-material";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -29,6 +32,7 @@ export default function TemporaryDrawer() {
 
   const drawerRef = React.useRef(null);
   const darkModeEnabled = useSelector(selectDarkMode);
+  const { selectedColor } = useSelector((state) => state.colors);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -64,7 +68,12 @@ export default function TemporaryDrawer() {
 
   const list = () => (
     <Box
-      sx={{ width: 250 }}
+      sx={{
+        width: 250,
+        height: "100%",
+        color: darkModeEnabled ? "gray" : "",
+      }}
+      className={`${darkModeEnabled ? "bg-gray-800" : ""}`}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
@@ -72,18 +81,22 @@ export default function TemporaryDrawer() {
     >
       <List>
         {[
-          { text: "Home", path: "/", icon: <HomeIcon color="gray" /> },
-          { text: "About", path: "/about", icon: <AboutIcon color="gray" /> },
+          { text: "Home", path: "/", icon: <DashboardOutlined /> },
+          { text: "About", path: "/about", icon: <AddBoxOutlined /> },
           {
             text: "Contact",
             path: "/contact",
-            icon: <ContactMailOutlinedIcon />,
+            icon: <ContactMail />,
           },
-          { text: "FAQ", path: "/faq", icon: <QuizOutlinedIcon /> },
-          { text: "White paper", path: "/white-paper", icon: <PaperIcon /> },
+          { text: "FAQ", path: "/faq", icon: <QuestionAnswerOutlined /> },
+          {
+            text: "White paper",
+            path: "/white-paper",
+            icon: <AccountBoxOutlined />,
+          },
           {
             text: "Login",
-            icon: <LockOpenSharpIcon />,
+            icon: <LoginOutlined />,
             onClick: (event) => handleLoginClick(event),
             subItems: [
               {
@@ -116,7 +129,7 @@ export default function TemporaryDrawer() {
                 href={item.path}
                 onClick={(event) => item.onClick(event, item.path)}
               >
-                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemIcon   style={{ color: darkModeEnabled ? 'gray'  : '' }}>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.text} />
                 {item.subItems &&
                   (state.openLogin ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
@@ -131,7 +144,7 @@ export default function TemporaryDrawer() {
                       button
                       onClick={(event) => handleLoginClick(event, subItem.path)}
                     >
-                      <ListItemIcon>{subItem.icon}</ListItemIcon>
+                      <ListItemIcon style={{ color: darkModeEnabled ? 'gray'  : '' }}>{subItem.icon}</ListItemIcon>
                       <ListItemText primary={subItem.text} />
                     </ListItem>
                   ))}
