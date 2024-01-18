@@ -153,7 +153,7 @@ export default function TemporaryDrawer() {
         {state.left ? (
           <ClearIcon />
         ) : (
-          <MenuIcon className={darkModeEnabled ? "text-white" : ""} />
+          <MenuIcon className={`${darkModeEnabled ? "text-white" : ""} `} />
         )}
       </Button>
       <Drawer anchor="left" open={state.left} onClose={toggleDrawer(false)}>

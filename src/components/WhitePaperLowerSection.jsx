@@ -97,8 +97,8 @@ const WhitePaperLowerSection = () => {
   return (
     <>
       <div className={`flex flex-col justify-center items-center p-6 md:p-10 lg:p-10 ${darkModeEnabled ? 'bg-gray-900'  : 'bg-gray-50'} `}>
-        <div className={`w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 `}>
-          <p className="text-gray-800 text-opacity-80 text-center font-black text-xl md:text-2xl lg:text-2xl mb-20">
+        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 `}>
+          <p className={`${darkModeEnabled ? 'text-white' : 'text-gray-800'}  text-opacity-80 text-center font-black text-xl md:text-2xl lg:text-2xl mb-20`}>
             BMM Team
           </p>
           <div className="text-black flex justify-end ">
@@ -162,8 +162,8 @@ const WhitePaperLowerSection = () => {
           </div>
         </div>
 
-        <div className="w-full h-auto bg-gradient-to-custom p-12 md:p-20 lg:p-20 mt-10">
-          <p className="text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20">
+        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom p-12 md:p-20 lg:p-20 mt-10`}>
+          <p className={`${darkModeEnabled ? 'text-white' : 'text-gray-800'}  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}>
             Franchise Team
           </p>
           <div className="text-black flex justify-end ">
@@ -229,8 +229,8 @@ const WhitePaperLowerSection = () => {
           </div>
         </div>
 
-        <div className="w-full h-auto bg-gradient-to-custom  p-16 md:p-20 lg:p-20 mt-10">
-          <p className="text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20">
+        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom  p-16 md:p-20 lg:p-20 mt-10`}>
+          <p className={`${darkModeEnabled ? 'text-white' : 'text-gray-800'}  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}>
             Management Eco-System
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-between">
@@ -247,8 +247,8 @@ const WhitePaperLowerSection = () => {
           </div>
         </div>
 
-        <div className="w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 mt-10">
-          <p className="text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20">
+        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 mt-10`}>
+          <p className={`${darkModeEnabled ? 'text-white' : 'text-gray-800'}  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}>
             Technical Team
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-between">
@@ -265,8 +265,8 @@ const WhitePaperLowerSection = () => {
           </div>
         </div>
 
-        <div className="w-full h-auto bg-gradient-to-custom p-10 md:p-20 lg:-20 mt-10 ">
-          <p className="text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20">
+        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom p-10 md:p-20 lg:-20 mt-10`}>
+          <p className={` ${darkModeEnabled ? 'text-white' : 'text-gray-800'} text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}>
             Founder & Co-Founder
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-center md:justify-between lg:justify-between ">
