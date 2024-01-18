@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Management } from "../utils/constant";
 import { Technical } from "../utils/constant";
+import { Technical2 } from "../utils/constant";
 import { Founder } from "../utils/constant";
 import allState from "../utils/AllState";
 import noDataFound from "../assets/noDataFound/nodata.gif";
@@ -18,7 +19,7 @@ const WhitePaperLowerSection = () => {
   const [selectedValue, setSelectedValue] = useState(""); // State to hold selected value
   const [selectedFranchiseValue, setSelectedFranchiseValue] = useState();
   const states = allState.states.map((stateData) => stateData.state);
-  const darkModeEnabled = useSelector(selectDarkMode)
+  const darkModeEnabled = useSelector(selectDarkMode);
 
   const handleSelectChange = (event) => {
     setSelectedValue(event.target.value); // Update selected value
@@ -96,9 +97,21 @@ const WhitePaperLowerSection = () => {
   };
   return (
     <>
-      <div className={`flex flex-col justify-center items-center p-6 md:p-10 lg:p-10 ${darkModeEnabled ? 'bg-gray-900'  : 'bg-gray-50'} `}>
-        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 `}>
-          <p className={`${darkModeEnabled ? 'text-white' : 'text-gray-800'}  text-opacity-80 text-center font-black text-xl md:text-2xl lg:text-2xl mb-20`}>
+      <div
+        className={`flex flex-col justify-center items-center p-6 md:p-10 lg:p-10 ${
+          darkModeEnabled ? "bg-gray-900" : "bg-gray-50"
+        } `}
+      >
+        <div
+          className={`${
+            darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+          } w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 `}
+        >
+          <p
+            className={`${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            }  text-opacity-80 text-center font-black text-xl md:text-2xl lg:text-2xl mb-20`}
+          >
             BMM Team
           </p>
           <div className="text-black flex justify-end ">
@@ -136,7 +149,11 @@ const WhitePaperLowerSection = () => {
                         </p>
                       </div>
                     </div>
-                    <p className={` font-tomorrow text-xl ${darkModeEnabled ? 'text-white' : ''} `}>
+                    <p
+                      className={` font-tomorrow text-xl ${
+                        darkModeEnabled ? "text-white" : ""
+                      } `}
+                    >
                       {`${bmm.fname.charAt(0).toUpperCase()}${bmm.fname.slice(
                         1
                       )}`}{" "}
@@ -162,8 +179,16 @@ const WhitePaperLowerSection = () => {
           </div>
         </div>
 
-        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom p-12 md:p-20 lg:p-20 mt-10`}>
-          <p className={`${darkModeEnabled ? 'text-white' : 'text-gray-800'}  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}>
+        <div
+          className={`${
+            darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+          } w-full h-auto bg-gradient-to-custom p-12 md:p-20 lg:p-20 mt-10`}
+        >
+          <p
+            className={`${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}
+          >
             Franchise Team
           </p>
           <div className="text-black flex justify-end ">
@@ -203,7 +228,11 @@ const WhitePaperLowerSection = () => {
                         </p>
                       </div>
                     </div>
-                    <p className={`font-tomorrow text-xl ${darkModeEnabled ? 'text-white' : ''} `}>
+                    <p
+                      className={`font-tomorrow text-xl ${
+                        darkModeEnabled ? "text-white" : ""
+                      } `}
+                    >
                       {`${franchise.fname
                         .charAt(0)
                         .toUpperCase()}${franchise.fname.slice(1)}`}{" "}
@@ -229,8 +258,16 @@ const WhitePaperLowerSection = () => {
           </div>
         </div>
 
-        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom  p-16 md:p-20 lg:p-20 mt-10`}>
-          <p className={`${darkModeEnabled ? 'text-white' : 'text-gray-800'}  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}>
+        <div
+          className={`${
+            darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+          } w-full h-auto bg-gradient-to-custom  p-16 md:p-20 lg:p-20 mt-10`}
+        >
+          <p
+            className={`${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}
+          >
             Management Eco-System
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-between">
@@ -241,15 +278,36 @@ const WhitePaperLowerSection = () => {
                     <img src={items.imageUrl} alt="" />
                   </div>
                 </div>
-                <p className={` font-tomorrow text-2xl ${darkModeEnabled ? 'text-white' : ''}  `}>{items.name}</p>
+                <p
+                  className={` font-tomorrow text-2xl ${
+                    darkModeEnabled ? "text-white" : ""
+                  }  `}
+                >
+                  {items.name}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 mt-10`}>
-          <p className={`${darkModeEnabled ? 'text-white' : 'text-gray-800'}  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}>
-            Technical Team
+        <div
+          className={`${
+            darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+          } w-full h-auto bg-gradient-to-custom p-16 md:p-20 lg:p-20 mt-10`}
+        >
+          <p
+            className={`${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl mb-20`}
+          >
+            Technical / Software Team
+          </p>
+          <p
+            className={`${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            } text-center md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-semibold text-xl md:text-xl lg:text-xl `}
+          >
+            Saas, AI Apps Development, NFT
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-between">
             {Technical.map((items, index) => (
@@ -259,14 +317,53 @@ const WhitePaperLowerSection = () => {
                     <img src={items.imageUrl} alt="" />
                   </div>
                 </div>
-                <p className={` font-tomorrow text-2xl ${darkModeEnabled ? 'text-white' : ''} `}>{items.name}</p>
+                <p
+                  className={` font-tomorrow text-2xl ${
+                    darkModeEnabled ? "text-white" : ""
+                  } `}
+                >
+                  {items.name}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p
+            className={`${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            } text-center md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-semibold text-xl md:text-xl lg:text-xl mt-20 `}
+          >
+            Saas, AI Apps Development, Blockchain Technology,System Security
+          </p>
+          <div className="flex w-full mt-10 flex-wrap justify-between">
+            {Technical2.map((items, index) => (
+              <div className="text-center" key={index}>
+                <div className="hexagon-container mb-5">
+                  <div className="hexagon pt-5">
+                    <img src={items.imageUrl} alt="" />
+                  </div>
+                </div>
+                <p
+                  className={` font-tomorrow text-2xl ${
+                    darkModeEnabled ? "text-white" : ""
+                  } `}
+                >
+                  {items.name}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className={`${darkModeEnabled ? 'bg-gray-800' : 'bg-gray-50'} w-full h-auto bg-gradient-to-custom p-10 md:p-20 lg:-20 mt-10`}>
-          <p className={` ${darkModeEnabled ? 'text-white' : 'text-gray-800'} text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}>
+        <div
+          className={`${
+            darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+          } w-full h-auto bg-gradient-to-custom p-10 md:p-20 lg:-20 mt-10`}
+        >
+          <p
+            className={` ${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            } text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}
+          >
             Founder & Co-Founder
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-center md:justify-between lg:justify-between ">
@@ -277,7 +374,13 @@ const WhitePaperLowerSection = () => {
                     <img src={items.imageUrl} alt="" />
                   </div>
                 </div>
-                <p className={`font-tomorrow text-2xl ${darkModeEnabled ? 'text-white' : ''}`}>{items.name}</p>
+                <p
+                  className={`font-tomorrow text-2xl ${
+                    darkModeEnabled ? "text-white" : ""
+                  }`}
+                >
+                  {items.name}
+                </p>
               </div>
             ))}
           </div>
