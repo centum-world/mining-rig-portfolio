@@ -44,21 +44,103 @@ export const NavMenu = [
 export const Management = [
   {
     imageUrl:sushil,
-    name:"S. Purty"
+    name:"CORE TEAM : S. Purty"
   },
   {
     imageUrl:sanjay2,
-    name:"S. Banra"
+    name:"CORE TEAM : S. Banra"
   },
   {
     imageUrl:ajay,
-    name:"M. Singh Biruli"
+    name:"CORE TEAM : M. Singh Biruli"
   },
   {
     imageUrl:gangaram,
-    name:"M. Birua"
+    name:"CORE TEAM : M. Birua"
   },
 
+];
+
+export const BMMDATANEW = [
+  {
+    imageUrl:pacharia,
+    name:"BMM : S. Thakur"
+  },
+  {
+    imageUrl:sanjay2,
+    name:"BMM : S. Rajak"
+  },
+  {
+    imageUrl:ajay,
+    name:"BMM : B. B. Gope"
+  },
+  {
+    imageUrl:gangaram,
+    name:"BMM : R. Balakrishnan"
+  },
+  {
+    imageUrl:gangaram,
+    name:"BMM : P. Bansal"
+  },
+  {
+    imageUrl:gangaram,
+    name:"BMM : S. Mukherjee"
+  },
+  {
+    imageUrl:gangaram,
+    name:"BMM : B. Sardar"
+  },
+
+]
+export const FranchiseData = [
+  {
+    imageUrl:pacharia,
+    name:"N. Pachari"
+  },
+  {
+    imageUrl:sanjay2,
+    name:"G. Deogam"
+  },
+  {
+    imageUrl:ajay,
+    name:"H.K. Balmuchu"
+  },
+  {
+    imageUrl:gangaram,
+    name:"R. Desai"
+  },
+  {
+    imageUrl:gangaram,
+    name:"N. Ghai"
+  },
+
+]
+
+export const BackOffice = [
+  {
+    imageUrl:sushil,
+    name:"BACK OFFICE : S. Laguri"
+  },
+  {
+    imageUrl:sanjay2,
+    name:"BACK OFFICE : S. Nayak"
+  },
+]
+export const AsstHRD = [
+  {
+    imageUrl:sushil,
+    name:"ASST. HRD : A. Pal"
+  },
+]
+export const DigitalMarketing = [
+  {
+    imageUrl:sushil,
+    name:"DIGITAL MARKETING : R. Balmuchu"
+  },
+  {
+    imageUrl:sushil,
+    name:"DIGITAL MARKETING : R. Barik"
+  },
 ]
 
 export const Technical = [
@@ -102,14 +184,14 @@ export const Technical2 = [
 export const Founder = [
   {
     imageUrl:jitendra,
-    name:"Mr. J.Barik(CMO) "
+    name:"CMO / BUSINESS : J.BARIK "
   },
   {
     imageUrl:jayanta,
-    name:"J.Bose(CEO / AI Algorithm & Blockchain Security)"
+    name:"CEO / AI AlGORITHM / BLOCKCHAIN SECURITY : J.BASU"
   },
   {
     imageUrl:anupriya,
-    name:"A.Das(HR Head/ GM)"
+    name:"HR HEAD / GM : A. DAS"
   },
 ]
