@@ -22,7 +22,7 @@ import balakrishnan from '../assets/franchise/balakrishnan.png';
 import bansal from '../assets/franchise/bansal.png';
 import gope from '../assets/franchise/gope.png';
 import mukherjee from '../assets/franchise/mukherjee.png';
-import purty from '../assets/franchise/purty.png';
+import purty from '../assets/coreTeam/purty.png';
 import rajak from '../assets/franchise/rajak.png';
 import thakur from '../assets/franchise/thakur.png';
 import raju from '../assets/DigitalMarketing/raju.png';
