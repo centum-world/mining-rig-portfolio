@@ -117,7 +117,7 @@ const WhitePaperLowerSection = () => {
           <div className="text-black flex justify-end ">
             {" "}
             <select
-              className="bg-transparent border rounded-md  appearance-none"
+              className={`${ darkModeEnabled ? "text-white":""}bg-transparent border rounded-md  appearance-none`  }
               id="AllState"
               value={selectedValue}
               onChange={handleSelectChange}
@@ -169,7 +169,7 @@ const WhitePaperLowerSection = () => {
                     alt="No BMM data available"
                     className="w-48 h-48 md:w-72 md:h-72 lg:w-72 lg:h-72"
                   />
-                  <p className="font-tomorrow text-lg  ">
+                  <p className={`${darkModeEnabled ? "text-white":""} font-tomorrow text-lg `}>
                     No BMM data available
                   </p>
                 </div>
@@ -193,7 +193,7 @@ const WhitePaperLowerSection = () => {
           <div className="text-black flex justify-end ">
             {" "}
             <select
-              className="bg-transparent border rounded-md appearance-none"
+              className={`${ darkModeEnabled ? "text-white":""}bg-transparent border rounded-md  appearance-none`  }
               id="AllState"
               value={selectedFranchiseValue}
               onChange={handleSelectFranchiseChange}
@@ -248,7 +248,7 @@ const WhitePaperLowerSection = () => {
                     alt="No BMM data available"
                     className="w-48 h-48 md:w-72 md:h-72 lg:w-72 lg:h-72"
                   />
-                  <p className="font-tomorrow text-lg ">
+                  <p className={`${darkModeEnabled ? "text-white":""} font-tomorrow text-lg `}>
                     No Franchise data available
                   </p>
                 </div>
@@ -275,9 +275,9 @@ const WhitePaperLowerSection = () => {
                 <div className="hexagon-container mb-5">
                   <div className="hexagon pt-5">
                     <div className="Banner">
-                      <div className="circle-draw">
+                      <div className="circle-draw object-cover overflow-hidden">
                         <img
-                          className="object-contain w-full h-full"
+                          className="object-cover w-full h-full"
                           src={items.imageUrl}
                           alt=""
                         />
@@ -322,8 +322,8 @@ const WhitePaperLowerSection = () => {
                 <div className="hexagon-container mb-5">
                   <div className="hexagon pt-5">
                     <div className="Banner">
-                      <div className="circle-draw">
-                        <img src={items.imageUrl} alt="" />
+                      <div className="circle-draw object-cover overflow-hidden ">
+                        <img className="object-cover h-full w-full" src={items.imageUrl} alt="" />
                       </div>
                     </div>
                     <p
@@ -351,8 +351,8 @@ const WhitePaperLowerSection = () => {
                 <div className="hexagon-container mb-5">
                   <div className="hexagon pt-5">
                     <div className="Banner">
-                      <div className="circle-draw">
-                        <img src={items.imageUrl} alt="" />
+                      <div className="circle-draw object-cover overflow-hidden ">
+                        <img className="object-cover w-full h-full" src={items.imageUrl} alt="" />
                       </div>
                     </div>
                     <p
@@ -387,8 +387,8 @@ const WhitePaperLowerSection = () => {
                 <div className="hexagon-container mb-5">
                   <div className="hexagon pt-5">
                     <div className="Banner">
-                      <div className="circle-draw">
-                        <img src={items.imageUrl} alt="" />
+                      <div className="circle-draw object-cover overflow-hidden ">
+                        <img className="object-cover w-full h-full" src={items.imageUrl} alt="" />
                       </div>
                     </div>
                     <p
