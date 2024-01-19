@@ -268,7 +268,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-6 mt-10 py-10`}
+          } w-full h-auto bg-gradient-to-custom space-y-6 mt-10 py-10 `}
         >
           <p
             className={`${
@@ -277,7 +277,7 @@ const WhitePaperLowerSection = () => {
           >
             Core team
           </p>
-          <div className="flex w-full  flex-wrap justify-center gap-4">
+          <div className="flex gap-4 justify-center overflow-x-auto">
             {Management.map((items, index) => (
               // <div
               //   key={index}
@@ -316,7 +316,7 @@ const WhitePaperLowerSection = () => {
           >
             Back Office
           </p>
-          <div className="flex w-full  flex-wrap justify-center  gap-4">
+          <div className="flex gap-4 justify-center overflow-x-auto">
             {BackOffice.map((items, index) => (
               // <div
               //   key={index}
@@ -354,7 +354,7 @@ const WhitePaperLowerSection = () => {
           >
             Asst. HRD
           </p>
-          <div className="flex w-full  flex-wrap justify-center gap-4">
+          <div className="flex gap-4 justify-center overflow-x-auto">
             {AsstHRD.map((items, index) => (
               // <div
               //   key={index}
@@ -391,7 +391,7 @@ const WhitePaperLowerSection = () => {
           >
             Digital Marketing
           </p>
-          <div className="flex w-full  flex-wrap justify-center gap-4">
+          <div className="flex gap-4 justify-center overflow-x-auto">
             {DigitalMarketing.map((items, index) => (
               // <div
               //   key={index}
@@ -436,7 +436,7 @@ const WhitePaperLowerSection = () => {
           >
             Saas, AI Apps Development, NFT
           </p>
-          <div className="flex w-full mt-10 flex-wrap justify-center gap-4">
+          <div className="flex gap-4 justify-center overflow-x-auto">
             {Technical.map((items, index) => (
               // <div
               //   key={index}
@@ -467,7 +467,7 @@ const WhitePaperLowerSection = () => {
           >
             Saas, AI Apps Development, Blockchain Technology,System Security
           </p>
-          <div className="flex w-full flex-wrap justify-center gap-4">
+          <div className="flex gap-4 justify-center overflow-x-auto">
             {Technical2.map((items, index) => (
               // <div
               //   key={index}
@@ -505,7 +505,7 @@ const WhitePaperLowerSection = () => {
           >
             Founder & Co-Founder
           </p>
-          <div className="flex w-full mt-10 flex-wrap justify-center gap-4">
+          <div className="flex gap-4 justify-center overflow-x-auto">
             {Founder.map((items, index) => (
               // <div
               //   key={index}
