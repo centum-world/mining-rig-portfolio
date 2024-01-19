@@ -38,6 +38,7 @@ import iyer from '../assets/techTeam/iyer.png';
 import shetty from '../assets/techTeam/shetty.png';
 import kMurty from '../assets/techTeam/krishnamurty.png';
 import kumaran from '../assets/techTeam/kumaran.png';
+import hrd from '../assets/hrd/23.png'
 
 export const NavMenu = [
   {
@@ -64,19 +65,19 @@ export const NavMenu = [
 
 export const Management = [
   {
-    imageUrl:sushil,
+    imageUrl:purty,
     name:"CORE TEAM : S. Purty"
   },
   {
-    imageUrl:sanjay2,
+    imageUrl:banra,
     name:"CORE TEAM : S. Banra"
   },
   {
-    imageUrl:ajay,
+    imageUrl:biruli,
     name:"CORE TEAM : M. Singh Biruli"
   },
   {
-    imageUrl:gangaram,
+    imageUrl:birua,
     name:"CORE TEAM : M. Birua"
   },
 
@@ -139,27 +140,27 @@ export const BMMdataNew = [
 
 export const BackOffice = [
   {
-    imageUrl:sushil,
+    imageUrl:laguri,
     name:"BACK OFFICE : S. Laguri"
   },
   {
-    imageUrl:sanjay2,
+    imageUrl:nayak,
     name:"BACK OFFICE : S. Nayak"
   },
 ]
 export const AsstHRD = [
   {
-    imageUrl:sushil,
+    imageUrl:hrd,
     name:"ASST. HRD : A. Pal"
   },
 ]
 export const DigitalMarketing = [
   {
-    imageUrl:sushil,
+    imageUrl:raju,
     name:"DIGITAL MARKETING : R. Balmuchu"
   },
   {
-    imageUrl:sushil,
+    imageUrl:rakesh,
     name:"DIGITAL MARKETING : R. Barik"
   },
 ]

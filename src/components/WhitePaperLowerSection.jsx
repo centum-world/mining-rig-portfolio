@@ -223,27 +223,27 @@ const WhitePaperLowerSection = () => {
               Array.isArray(franchiseData) &&
               franchiseData.length > 0 ? (
                 FranchiseData.map((franchise, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-center  items-center h-auto"
-                  >
-                    <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                      <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                        <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-10 text-center">
-                          {/* {franchise.franchiseId} */}
-                          FRANCHISE/CONSULTANT :<br/>                       
-                          {franchise.name}
-                        </p>
-                      </div>
-                      <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                  // <div
+                  //   key={index}
+                  //   className="flex justify-center  items-center h-auto"
+                  // >
+                  //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                  //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
+                  //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-10 text-center">
+                  //         {/* {franchise.franchiseId} */}
+                  //         FRANCHISE/CONSULTANT :<br/>                       
+                  //         {franchise.name}
+                  //       </p>
+                  //     </div>
+                  //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                         <img
-                          src={BMMAvatar}
+                          src={franchise.imageUrl}
                           alt="Profile"
-                          className="h-40 w-40 object-cover transform rotate-5"
+                          className="h-64 w-80"
                         />
-                      </div>
-                    </div>
-                  </div>
+                  //     </div>
+                  //   </div>
+                  // </div>
                 ))
               ) : (
                 <div className=" flex flex-col justify-center text-center">
@@ -279,27 +279,27 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full  flex-wrap justify-center gap-4">
             {Management.map((items, index) => (
-              <div
-                key={index}
-                className="flex justify-center  items-center"
-              >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                    <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-                      <br />
+              // <div
+              //   key={index}
+              //   className="flex justify-center  items-center"
+              // >
+              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
+              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+              //         <br />
 
-                      {items.name}
-                    </p>
-                  </div>
-                  <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+              //         {items.name}
+              //       </p>
+              //     </div>
+              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                     <img
-                      src={BMMAvatar}
+                      src={items.imageUrl}
                       alt="Profile"
-                      className="h-40 w-40 object-cover transform rotate-5"
+                      className="h-64 w-80"
                     />
-                  </div>
-                </div>
-              </div>
+              //     </div>
+              //   </div>
+              // </div>
             ))}
           </div>
         </div>
@@ -318,26 +318,26 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full  flex-wrap justify-center  gap-4">
             {BackOffice.map((items, index) => (
-              <div
-                key={index}
-                className="flex justify-center  items-center"
-              >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                    <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-                      <br />
-                      {items.name}
-                    </p>
-                  </div>
-                  <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+              // <div
+              //   key={index}
+              //   className="flex justify-center  items-center"
+              // >
+              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
+              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+              //         <br />
+              //         {items.name}
+              //       </p>
+              //     </div>
+              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                     <img
-                      src={BMMAvatar}
+                      src={items.imageUrl}
                       alt="Profile"
-                      className="h-40 w-40 object-cover transform rotate-5"
+                      className="h-64 w-80"
                     />
-                  </div>
-                </div>
-              </div>
+              //     </div>
+              //   </div>
+              // </div>
             ))}
           </div>
         </div>
@@ -356,26 +356,26 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full  flex-wrap justify-center gap-4">
             {AsstHRD.map((items, index) => (
-              <div
-                key={index}
-                className="flex justify-center  items-center"
-              >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                    <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-                      <br />
-                      {items.name}
-                    </p>
-                  </div>
-                  <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+              // <div
+              //   key={index}
+              //   className="flex justify-center  items-center"
+              // >
+              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
+              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+              //         <br />
+              //         {items.name}
+              //       </p>
+              //     </div>
+              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                     <img
-                      src={BMMAvatar}
+                      src={items.imageUrl}
                       alt="Profile"
-                      className="h-40 w-40 object-cover transform rotate-5"
+                      className="h-64 w-80"
                     />
-                  </div>
-                </div>
-              </div>
+              //     </div>
+              //   </div>
+              // </div>
             ))}
           </div>
         </div>
@@ -393,26 +393,26 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full  flex-wrap justify-center gap-4">
             {DigitalMarketing.map((items, index) => (
-              <div
-                key={index}
-                className="flex justify-center  items-center"
-              >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                    <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-                      <br />
-                      {items.name}
-                    </p>
-                  </div>
-                  <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+              // <div
+              //   key={index}
+              //   className="flex justify-center  items-center"
+              // >
+              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
+              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+              //         <br />
+              //         {items.name}
+              //       </p>
+              //     </div>
+              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                     <img
-                      src={BMMAvatar}
+                      src={items.imageUrl}
                       alt="Profile"
-                      className="h-40 w-40 object-cover transform rotate-5"
+                      className="h-64 w-80"
                     />
-                  </div>
-                </div>
-              </div>
+              //     </div>
+              //   </div>
+              // </div>
             ))}
           </div>
         </div>
