@@ -43,45 +43,22 @@ export const NavMenu = [
 
 export const Management = [
   {
-    imageUrl:ajay,
-    name:"A Pareya"
-  },
-  {
-    imageUrl:gangaram,
-    name:"G. Deogram"
-  },
-  {
-    imageUrl:hemant,
-    name:"H.K Balmuchu"
-  },
-  {
-    imageUrl:pacharia,
-    name:"N. Pachari"
-  },
-  {
-    imageUrl:raju,
-    name:"R. Balmuchu"
-  },
-  {
-    imageUrl:sanjay,
-    name:"S. Thakur"
+    imageUrl:sushil,
+    name:"S. Purty"
   },
   {
     imageUrl:sanjay2,
-    name:"S.K Banra"
+    name:"S. Banra"
   },
   {
-    imageUrl:surendra,
-    name:"S. Rajak"
+    imageUrl:ajay,
+    name:"M. Singh Biruli"
   },
   {
-    imageUrl:yogendra,
-    name:"Y. Giri"
+    imageUrl:gangaram,
+    name:"M. Birua"
   },
-  {
-    imageUrl:sushil,
-    name:"S. Purty"
-  }
+
 ]
 
 export const Technical = [

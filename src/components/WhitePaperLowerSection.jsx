@@ -7,6 +7,7 @@ import { Founder } from "../utils/constant";
 import allState from "../utils/AllState";
 import noDataFound from "../assets/noDataFound/nodata.gif";
 import BmmAvtar from "../assets/franchise-avatar.png";
+import BMMAvatar from "../assets/png/BMMAvatar.png";
 import "../css/WhitePaper.css";
 import baseUrl from "../../baseUrl";
 import { useSelector } from "react-redux";
@@ -56,7 +57,7 @@ const WhitePaperLowerSection = () => {
       .post(
         `${baseUrl.apiUrl}` + "/portfolio/portfolio/filter-franchise-by-state",
         data
-      ) //localhost:4000/portfolio/filter-franchise-by-state{
+      )
 
       .then((res) => {
         setFranchiseData(res.data.FilterFranchiseData);
@@ -112,12 +113,14 @@ const WhitePaperLowerSection = () => {
               darkModeEnabled ? "text-white" : "text-gray-800"
             }  text-opacity-80 text-center font-black text-xl md:text-2xl lg:text-2xl mb-20`}
           >
-            BMM Team
+            BMM
           </p>
           <div className="text-black flex justify-end ">
             {" "}
             <select
-              className={`${ darkModeEnabled ? "text-white":""}bg-transparent border rounded-md  appearance-none`  }
+              className={`${
+                darkModeEnabled ? "text-white" : ""
+              }bg-transparent border rounded-md  appearance-none`}
               id="AllState"
               value={selectedValue}
               onChange={handleSelectChange}
@@ -135,29 +138,29 @@ const WhitePaperLowerSection = () => {
               {/* Check if setData has data and is an array */}
               {data && Array.isArray(data) && data.length > 0 ? (
                 data.map((bmm, index) => (
-                  <div className="text-center" key={index}>
-                    <div className="hexagon-container mb-5">
-                      <div className=" hexagon ">
-                        <div className="Banner">
-                          <div className="circle-draw">
-                            <img
-                              src={BmmAvtar}
-                              alt={`BMM ${index + 1}`}
-                              className="object-contain w-full h-full "
-                            />
-                          </div>
-                        </div>
-                        <p className="font-tomorrow absolute text-lg text-white">
-                          {bmm.stateHandlerId}
+                  <div
+                    key={index}
+                    className="flex justify-center  items-center h-screen"
+                  >
+                    <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                      <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                        <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
                           <br />
+                          BMM :{" "}
                           {`${bmm.fname
                             .charAt(0)
                             .toUpperCase()}${bmm.fname.slice(1)}`}{" "}
                           {`${bmm.lname
                             .charAt(0)
                             .toUpperCase()}${bmm.lname.slice(1)}`}
-                          {/* Assuming 'name' is the property containing the BMM name */}
                         </p>
+                      </div>
+                      <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                        <img
+                          src={BMMAvatar}
+                          alt="Profile"
+                          className="h-40 w-40 object-cover transform rotate-5"
+                        />
                       </div>
                     </div>
                   </div>
@@ -169,7 +172,11 @@ const WhitePaperLowerSection = () => {
                     alt="No BMM data available"
                     className="w-48 h-48 md:w-72 md:h-72 lg:w-72 lg:h-72"
                   />
-                  <p className={`${darkModeEnabled ? "text-white":""} font-tomorrow text-lg `}>
+                  <p
+                    className={`${
+                      darkModeEnabled ? "text-white" : ""
+                    } font-tomorrow text-lg `}
+                  >
                     No BMM data available
                   </p>
                 </div>
@@ -188,12 +195,14 @@ const WhitePaperLowerSection = () => {
               darkModeEnabled ? "text-white" : "text-gray-800"
             }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}
           >
-            Franchise Team
+            Franchise/Business Consultant
           </p>
           <div className="text-black flex justify-end ">
             {" "}
             <select
-              className={`${ darkModeEnabled ? "text-white":""}bg-transparent border rounded-md  appearance-none`  }
+              className={`${
+                darkModeEnabled ? "text-white" : ""
+              }bg-transparent border rounded-md  appearance-none`}
               id="AllState"
               value={selectedFranchiseValue}
               onChange={handleSelectFranchiseChange}
@@ -213,21 +222,16 @@ const WhitePaperLowerSection = () => {
               Array.isArray(franchiseData) &&
               franchiseData.length > 0 ? (
                 franchiseData.map((franchise, index) => (
-                  <div className="text-center" key={index}>
-                    <div className="hexagon-container mb-5">
-                      <div className="hexagon ">
-                        <div className="Banner">
-                          <div className="circle-draw">
-                            <img
-                              src={BmmAvtar}
-                              alt={`FRANCHISE ${index + 1}`}
-                              className="object-contain w-full h-full"
-                            />
-                          </div>
-                        </div>
-                        <p className="text-white font-calibri absolute text-lg font-black">
-                          {franchise.franchiseId}
+                  <div
+                  key={index}
+                  className="flex justify-center  items-center h-screen"
+                >
+                  <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                    <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                        <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words text-center mt-3">
+                          {/* {franchise.franchiseId} */}
                           <br />
+                          FRANCHISE/CONSULTANT :<br/>
                           {`${franchise.fname
                             .charAt(0)
                             .toUpperCase()}${franchise.fname.slice(1)}`}{" "}
@@ -236,19 +240,29 @@ const WhitePaperLowerSection = () => {
                             .toUpperCase()}${franchise.lname.slice(1)}`}
                           {/* Assuming 'name' is the property containing the BMM name */}
                         </p>
-                        <br />
-                      </div>
+                    </div>
+                    <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                      <img
+                        src={BMMAvatar}
+                        alt="Profile"
+                        className="h-40 w-40 object-cover transform rotate-5"
+                      />
                     </div>
                   </div>
+                </div>
                 ))
               ) : (
-                <div className=" flex flex-col justify-center text-center ">
+                <div className=" flex flex-col justify-center text-center">
                   <img
                     src={noDataFound}
                     alt="No BMM data available"
                     className="w-48 h-48 md:w-72 md:h-72 lg:w-72 lg:h-72"
                   />
-                  <p className={`${darkModeEnabled ? "text-white":""} font-tomorrow text-lg `}>
+                  <p
+                    className={`${
+                      darkModeEnabled ? "text-white" : ""
+                    } font-tomorrow text-lg `}
+                  >
                     No Franchise data available
                   </p>
                 </div>
@@ -260,39 +274,155 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
-          } w-full h-auto bg-gradient-to-custom fle  p-16 md:p-20 lg:p-20 mt-10`}
+          } w-full h-auto bg-gradient-to-custom fle  mt-10 p-4`}
         >
           <p
             className={`${
               darkModeEnabled ? "text-white" : "text-gray-800"
             }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}
           >
-            Management Eco-System
+           Core team
           </p>
-          <div className="flex w-full mt-10 flex-wrap justify-center md:justify-between lg:justify-between">
+          <div className="flex w-full  flex-wrap justify-center md:justify-between lg:justify-between">
             {Management.map((items, index) => (
-              <div className="text-center" key={index}>
-                <div className="hexagon-container mb-5">
-                  <div className="hexagon pt-5">
-                    <div className="Banner">
-                      <div className="circle-draw object-cover overflow-hidden">
-                        <img
-                          className="object-cover w-full h-full"
-                          src={items.imageUrl}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <p
-                      className={` font-tomorrow text-lg absolute  ${
-                        darkModeEnabled ? "text-white" : "text-white"
-                      } `}
-                    >
-                      {items.name}
-                    </p>
-                  </div>
+              <div
+              key={index}
+              className="flex justify-center  items-center h-screen"
+            >
+              <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                  <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+                    <br />
+                    CORE TEAM :{" "}
+                    {items.name}
+                  </p>
+                </div>
+                <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                  <img
+                    src={BMMAvatar}
+                    alt="Profile"
+                    className="h-40 w-40 object-cover transform rotate-5"
+                  />
                 </div>
               </div>
+            </div>
+            ))}
+          </div>
+        </div>
+
+        <div
+          className={`${
+            darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+          } w-full h-auto bg-gradient-to-custom fle  mt-10 p-4`}
+        >
+          <p
+            className={`${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}
+          >
+          Back Office
+          </p>
+          <div className="flex w-full  flex-wrap justify-center md:justify-between lg:justify-between">
+            {Management.map((items, index) => (
+              <div
+              key={index}
+              className="flex justify-center  items-center h-screen"
+            >
+              <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                  <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+                    <br />
+                    CORE TEAM :{" "}
+                    {items.name}
+                  </p>
+                </div>
+                <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                  <img
+                    src={BMMAvatar}
+                    alt="Profile"
+                    className="h-40 w-40 object-cover transform rotate-5"
+                  />
+                </div>
+              </div>
+            </div>
+            ))}
+          </div>
+        </div>
+
+
+        <div
+          className={`${
+            darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+          } w-full h-auto bg-gradient-to-custom fle  mt-10 p-4`}
+        >
+          <p
+            className={`${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}
+          >
+          Asst. HRD
+          </p>
+          <div className="flex w-full  flex-wrap justify-center md:justify-between lg:justify-between">
+            {Management.map((items, index) => (
+              <div
+              key={index}
+              className="flex justify-center  items-center h-screen"
+            >
+              <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                  <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+                    <br />
+                    CORE TEAM :{" "}
+                    {items.name}
+                  </p>
+                </div>
+                <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                  <img
+                    src={BMMAvatar}
+                    alt="Profile"
+                    className="h-40 w-40 object-cover transform rotate-5"
+                  />
+                </div>
+              </div>
+            </div>
+            ))}
+          </div>
+        </div>
+        <div
+          className={`${
+            darkModeEnabled ? "bg-gray-800" : "bg-gray-50"
+          } w-full h-auto bg-gradient-to-custom fle  mt-10 p-4`}
+        >
+          <p
+            className={`${
+              darkModeEnabled ? "text-white" : "text-gray-800"
+            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl mb-20`}
+          >
+          Digital Marketing
+          </p>
+          <div className="flex w-full  flex-wrap justify-center md:justify-between lg:justify-between">
+            {Management.map((items, index) => (
+              <div
+              key={index}
+              className="flex justify-center  items-center h-screen"
+            >
+              <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                  <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+                    <br />
+                   DIGITAL MARKETING :{" "}
+                    {items.name}
+                  </p>
+                </div>
+                <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                  <img
+                    src={BMMAvatar}
+                    alt="Profile"
+                    className="h-40 w-40 object-cover transform rotate-5"
+                  />
+                </div>
+              </div>
+            </div>
             ))}
           </div>
         </div>
@@ -307,7 +437,7 @@ const WhitePaperLowerSection = () => {
               darkModeEnabled ? "text-white" : "text-gray-800"
             }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl mb-20`}
           >
-            Technical / Software Team
+            Technical
           </p>
           <p
             className={`${
@@ -318,24 +448,27 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-center md:justify-between lg:justify-between">
             {Technical.map((items, index) => (
-              <div className="text-center" key={index}>
-                <div className="hexagon-container mb-5">
-                  <div className="hexagon pt-5">
-                    <div className="Banner">
-                      <div className="circle-draw object-cover overflow-hidden ">
-                        <img className="object-cover h-full w-full" src={items.imageUrl} alt="" />
-                      </div>
-                    </div>
-                    <p
-                      className={` font-tomorrow text-lg absolute ${
-                        darkModeEnabled ? "text-white" : "text-white"
-                      } `}
-                    >
-                      {items.name}
-                    </p>
-                  </div>
+              <div
+              key={index}
+              className="flex justify-center  items-center h-screen"
+            >
+              <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                  <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+                    <br />
+                    TECHNICAL DEV :{" "}
+                    {items.name}
+                  </p>
+                </div>
+                <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                  <img
+                    src={BMMAvatar}
+                    alt="Profile"
+                    className="h-40 w-40 object-cover transform rotate-5"
+                  />
                 </div>
               </div>
+            </div>
             ))}
           </div>
           <p
@@ -347,24 +480,27 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-center md:justify-between lg:justify-between">
             {Technical2.map((items, index) => (
-              <div className="text-center" key={index}>
-                <div className="hexagon-container mb-5">
-                  <div className="hexagon pt-5">
-                    <div className="Banner">
-                      <div className="circle-draw object-cover overflow-hidden ">
-                        <img className="object-cover w-full h-full" src={items.imageUrl} alt="" />
-                      </div>
-                    </div>
-                    <p
-                      className={` font-tomorrow text-lg absolute ${
-                        darkModeEnabled ? "text-white" : "text-white"
-                      } `}
-                    >
-                      {items.name}
-                    </p>
-                  </div>
-                </div>
+            <div
+            key={index}
+            className="flex justify-center  items-center h-screen"
+          >
+            <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+              <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+                  <br />
+                  TECHNICAL DEV :{" "}
+                  {items.name}
+                </p>
               </div>
+              <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                <img
+                  src={BMMAvatar}
+                  alt="Profile"
+                  className="h-40 w-40 object-cover transform rotate-5"
+                />
+              </div>
+            </div>
+          </div>
             ))}
           </div>
         </div>
@@ -388,7 +524,11 @@ const WhitePaperLowerSection = () => {
                   <div className="hexagon pt-5">
                     <div className="Banner">
                       <div className="circle-draw object-cover overflow-hidden ">
-                        <img className="object-cover w-full h-full" src={items.imageUrl} alt="" />
+                        <img
+                          className="object-cover w-full h-full"
+                          src={items.imageUrl}
+                          alt=""
+                        />
                       </div>
                     </div>
                     <p
