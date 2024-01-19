@@ -139,7 +139,7 @@ const WhitePaperLowerSection = () => {
             </select> */}
           </div>
           <div className="overflow-x-auto flex ">
-            <div className=" flex gap-4 justify-center ">
+            <div className="flex gap-4 ">
               {/* Check if setData has data and is an array */}
               {data && Array.isArray(data) && data.length > 0 ? (
                 BMMdataNew.map((bmm, index) => (
@@ -217,7 +217,7 @@ const WhitePaperLowerSection = () => {
             </select> */}
           </div>
           <div className="overflow-x-auto ">
-            <div className="flex gap-4 justify-center">
+            <div className="flex gap-4 ">
               {/* Check if setData has data and is an array */}
               {franchiseData &&
               Array.isArray(franchiseData) &&
@@ -277,7 +277,7 @@ const WhitePaperLowerSection = () => {
           >
             Core team
           </p>
-          <div className="flex gap-4 justify-center overflow-x-auto">
+          <div className="flex gap-4  overflow-x-auto">
             {Management.map((items, index) => (
               // <div
               //   key={index}
@@ -316,7 +316,7 @@ const WhitePaperLowerSection = () => {
           >
             Back Office
           </p>
-          <div className="flex gap-4 justify-center overflow-x-auto">
+          <div className="flex gap-4 overflow-x-auto">
             {BackOffice.map((items, index) => (
               // <div
               //   key={index}
@@ -354,7 +354,7 @@ const WhitePaperLowerSection = () => {
           >
             Asst. HRD
           </p>
-          <div className="flex gap-4 justify-center overflow-x-auto">
+          <div className="flex gap-4  overflow-x-auto">
             {AsstHRD.map((items, index) => (
               // <div
               //   key={index}
@@ -391,7 +391,7 @@ const WhitePaperLowerSection = () => {
           >
             Digital Marketing
           </p>
-          <div className="flex gap-4 justify-center overflow-x-auto">
+          <div className="flex gap-4 overflow-x-auto">
             {DigitalMarketing.map((items, index) => (
               // <div
               //   key={index}
@@ -436,7 +436,7 @@ const WhitePaperLowerSection = () => {
           >
             Saas, AI Apps Development, NFT
           </p>
-          <div className="flex gap-4 justify-center overflow-x-auto">
+          <div className="flex gap-4 overflow-x-auto">
             {Technical.map((items, index) => (
               // <div
               //   key={index}
@@ -467,7 +467,7 @@ const WhitePaperLowerSection = () => {
           >
             Saas, AI Apps Development, Blockchain Technology,System Security
           </p>
-          <div className="flex gap-4 justify-center overflow-x-auto">
+          <div className="flex  gap-4 overflow-x-auto">
             {Technical2.map((items, index) => (
               // <div
               //   key={index}
@@ -505,7 +505,7 @@ const WhitePaperLowerSection = () => {
           >
             Founder & Co-Founder
           </p>
-          <div className="flex gap-4 justify-center overflow-x-auto">
+          <div className="flex gap-4 overflow-x-auto">
             {Founder.map((items, index) => (
               // <div
               //   key={index}
