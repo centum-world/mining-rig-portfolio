@@ -147,8 +147,8 @@ const WhitePaperLowerSection = () => {
                     key={index}
                     className="flex justify-center items-center h-auto"
                   >
-                    <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                      <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                    <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                      <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
                         <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
                           <br />
                           {bmm.name}
@@ -164,7 +164,8 @@ const WhitePaperLowerSection = () => {
                     </div>
                   </div>
                 ))
-              ) : (
+              ) : 
+              (
                 <div className=" flex flex-col justify-center text-center ">
                   <img
                     src={noDataFound}
@@ -226,8 +227,8 @@ const WhitePaperLowerSection = () => {
                     key={index}
                     className="flex justify-center  items-center h-auto"
                   >
-                    <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                      <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                    <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                      <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
                         <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-10 text-center">
                           {/* {franchise.franchiseId} */}
                           FRANCHISE/CONSULTANT :<br/>                       
@@ -282,8 +283,8 @@ const WhitePaperLowerSection = () => {
                 key={index}
                 className="flex justify-center  items-center"
               >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
                     <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
                       <br />
 
@@ -321,8 +322,8 @@ const WhitePaperLowerSection = () => {
                 key={index}
                 className="flex justify-center  items-center"
               >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
                     <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
                       <br />
                       {items.name}
@@ -359,8 +360,8 @@ const WhitePaperLowerSection = () => {
                 key={index}
                 className="flex justify-center  items-center"
               >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
                     <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
                       <br />
                       {items.name}
@@ -396,8 +397,8 @@ const WhitePaperLowerSection = () => {
                 key={index}
                 className="flex justify-center  items-center"
               >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
                     <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
                       <br />
                       {items.name}
@@ -431,7 +432,7 @@ const WhitePaperLowerSection = () => {
           <p
             className={`${
               darkModeEnabled ? "text-white" : "text-gray-800"
-            } text-center md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-semibold text-xl md:text-xl lg:text-xl `}
+            } text-center md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-semibold text-lg px-4`}
           >
             Saas, AI Apps Development, NFT
           </p>
@@ -441,8 +442,8 @@ const WhitePaperLowerSection = () => {
                 key={index}
                 className="flex justify-center  items-center"
               >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
                     <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
                       <br />
                       TECHNICAL DEV : {items.name}
@@ -462,7 +463,7 @@ const WhitePaperLowerSection = () => {
           <p
             className={`${
               darkModeEnabled ? "text-white" : "text-gray-800"
-            }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-semibold text-xl md:text-xl lg:text-xl space-y-6  text-start px-4`}
+            }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-semibold text-lg space-y-6  text-start px-4`}
           >
             Saas, AI Apps Development, Blockchain Technology,System Security
           </p>
@@ -472,8 +473,8 @@ const WhitePaperLowerSection = () => {
                 key={index}
                 className="flex justify-center  items-center"
               >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
                     <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
                       <br />
                       TECHNICAL DEV : {items.name}
@@ -510,8 +511,8 @@ const WhitePaperLowerSection = () => {
                 key={index}
                 className="flex justify-center  items-center"
               >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
                     <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
                       <br />
                       {items.name}
