@@ -519,28 +519,27 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-center md:justify-between lg:justify-between ">
             {Founder.map((items, index) => (
-              <div className="text-center" key={index}>
-                <div className="hexagon-container mb-5">
-                  <div className="hexagon pt-5">
-                    <div className="Banner">
-                      <div className="circle-draw object-cover overflow-hidden ">
-                        <img
-                          className="object-cover w-full h-full"
-                          src={items.imageUrl}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <p
-                      className={` font-tomorrow text-lg absolute  ${
-                        darkModeEnabled ? "text-white" : "text-white"
-                      } `}
-                    >
-                      {items.name}
-                    </p>
-                  </div>
+              <div
+              key={index}
+              className="flex justify-center  items-center h-screen"
+            >
+              <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-700 from-indigo-10% via-sky-30% from-emerald-500 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                <div className="relative z-10 bg-indigo-700 h-28 w-full flex items-center justify-center ">
+                  <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+                    <br />
+                    TECHNICAL DEV :{" "}
+                    {items.name}
+                  </p>
+                </div>
+                <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                  <img
+                    src={items.imageUrl}
+                    alt="Profile"
+                    className="h-40 w-40 object-cover transform rotate-5"
+                  />
                 </div>
               </div>
+            </div>
             ))}
           </div>
         </div>
