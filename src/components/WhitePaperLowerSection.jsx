@@ -450,7 +450,7 @@ const WhitePaperLowerSection = () => {
                   </div>
                   <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                     <img
-                      src={BMMAvatar}
+                      src={items.imageUrl}
                       alt="Profile"
                       className="h-40 w-40 object-cover transform rotate-5"
                     />
