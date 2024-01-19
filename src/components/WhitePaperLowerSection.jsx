@@ -106,12 +106,12 @@ const WhitePaperLowerSection = () => {
       <div
         className={`flex flex-col justify-center items-center ${
           darkModeEnabled ? "bg-gray-900" : "bg-gray-50"
-        } `}
+        } p-4`}
       >
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full  h-auto space-y-6 py-10 bg-gradient-to-custom`}
+          } w-full  h-auto space-y-4 py-10 bg-gradient-to-custom`}
         >
           <p
             className={`${
@@ -139,7 +139,7 @@ const WhitePaperLowerSection = () => {
             </select> */}
           </div>
           <div className="overflow-x-auto flex ">
-            <div className=" flex gap-4 justify-center">
+            <div className=" flex gap-4 justify-center ">
               {/* Check if setData has data and is an array */}
               {data && Array.isArray(data) && data.length > 0 ? (
                 BMMdataNew.map((bmm, index) => (
@@ -189,7 +189,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom mt-10 space-y-6 py-10`}
+          } w-full h-auto bg-gradient-to-custom mt-10 space-y-4 py-10`}
         >
           <p
             className={`${
@@ -268,7 +268,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom space-y-6 mt-10 py-10 `}
+          } w-full h-auto bg-gradient-to-custom space-y-4 mt-10 py-10 `}
         >
           <p
             className={`${
@@ -307,7 +307,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-6  mt-10 py-10`}
+          } w-full h-auto bg-gradient-to-custom fle space-y-4  mt-10 py-10`}
         >
           <p
             className={`${
@@ -345,7 +345,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-6 mt-10 py-10`}
+          } w-full h-auto bg-gradient-to-custom fle space-y-4 mt-10 py-10`}
         >
           <p
             className={`${
@@ -382,7 +382,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-6 mt-10 py-10`}
+          } w-full h-auto bg-gradient-to-custom fle space-y-4 mt-10 py-10`}
         >
           <p
             className={`${
@@ -420,7 +420,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom space-y-6 py-10 mt-10`}
+          } w-full h-auto bg-gradient-to-custom space-y-4 py-10 mt-10`}
         >
           <p
             className={`${
@@ -496,7 +496,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom p-10 md:p-20 lg:-20 space-y-6 py-10 mt-10`}
+          } w-full h-auto bg-gradient-to-custom md:p-20 lg:-20 space-y-6 py-10 mt-10`}
         >
           <p
             className={` ${
