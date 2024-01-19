@@ -18,7 +18,13 @@ import nayak from '../assets/backOffice/nayak.png';
 import birua from '../assets/coreTeam/birua.png';
 import biruli from '../assets/coreTeam/biruli.png';
 import banra from '../assets/coreTeam/banra.png';
-import balakrishnan from '../assets/franchise/balakrishnan.png'
+import balakrishnan from '../assets/franchise/balakrishnan.png';
+import bansal from '../assets/franchise/bansal.png';
+import gope from '../assets/franchise/gope.png';
+import mukherjee from '../assets/franchise/mukherjee.png';
+import purty from '../assets/franchise/purty.png';
+import rajak from '../assets/franchise/rajak.png';
+import thakur from '../assets/franchise/thakur.png';
 import raju from '../assets/DigitalMarketing/raju.png';
 import rakesh from '../assets/DigitalMarketing/rakesh.png';
 import badal from '../assets/techTeam/badal.png';
@@ -78,27 +84,27 @@ export const Management = [
 
 export const FranchiseData = [
   {
-    imageUrl:pacharia,
+    imageUrl:thakur,
     name:"BMM : S. Thakur"
   },
   {
-    imageUrl:sanjay2,
+    imageUrl:rajak,
     name:"BMM : S. Rajak"
   },
   {
-    imageUrl:ajay,
+    imageUrl:gope,
     name:"BMM : B. B. Gope"
   },
   {
-    imageUrl:gangaram,
+    imageUrl:balakrishnan,
     name:"BMM : R. Balakrishnan"
   },
   {
-    imageUrl:gangaram,
+    imageUrl:bansal,
     name:"BMM : P. Bansal"
   },
   {
-    imageUrl:gangaram,
+    imageUrl:mukherjee,
     name:"BMM : S. Mukherjee"
   },
   {
