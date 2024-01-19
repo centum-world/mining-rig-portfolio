@@ -20,87 +20,87 @@ import { BMMdataNew } from "../utils/constant";
 
 const WhitePaperLowerSection = () => {
   const [selectedState, setSelectedState] = useState("");
-  const [data, setData] = useState([]);
-  const [franchiseData, setFranchiseData] = useState([]);
+  // const [data, setData] = useState([]);
+  // const [franchiseData, setFranchiseData] = useState([]);
   const [selectedValue, setSelectedValue] = useState(""); // State to hold selected value
   const [selectedFranchiseValue, setSelectedFranchiseValue] = useState();
   const states = allState.states.map((stateData) => stateData.state);
   const darkModeEnabled = useSelector(selectDarkMode);
 
-  const handleSelectChange = (event) => {
-    setSelectedValue(event.target.value); // Update selected value
-    setData([]);
-    const state = event.target.value;
-    console.log(state);
-    let data = {
-      state: event.target.value,
-    };
-    axios
-      .post(
-        `${baseUrl.apiUrl}` + "/portfolio/portfolio/filter-bmm-by-state",
-        data
-      ) //localhost:4000/portfolio/filter-franchise-by-state{
+  // const handleSelectChange = (event) => {
+  //   setSelectedValue(event.target.value); // Update selected value
+  //   setData([]);
+  //   const state = event.target.value;
+  //   console.log(state);
+  //   let data = {
+  //     state: event.target.value,
+  //   };
+  //   axios
+  //     .post(
+  //       `${baseUrl.apiUrl}` + "/portfolio/portfolio/filter-bmm-by-state",
+  //       data
+  //     ) //localhost:4000/portfolio/filter-franchise-by-state{
 
-      .then((res) => {
-        setData(res.data.FilterBmmData);
-        console.log(res.data.FilterBmmData);
-      })
-      .catch((err) => {
-        console.log(err.response.data.message);
-      });
-  };
+  //     .then((res) => {
+  //       setData(res.data.FilterBmmData);
+  //       console.log(res.data.FilterBmmData);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.response.data.message);
+  //     });
+  // };
 
-  const handleSelectFranchiseChange = (event) => {
-    setSelectedFranchiseValue(event.target.value); // Update selected value
-    setFranchiseData([]);
-    const state = event.target.value;
-    console.log(state);
-    let data = {
-      state: event.target.value,
-    };
-    axios
-      .post(
-        `${baseUrl.apiUrl}` + "/portfolio/portfolio/filter-franchise-by-state",
-        data
-      )
+  // const handleSelectFranchiseChange = (event) => {
+  //   setSelectedFranchiseValue(event.target.value); // Update selected value
+  //   setFranchiseData([]);
+  //   const state = event.target.value;
+  //   console.log(state);
+  //   let data = {
+  //     state: event.target.value,
+  //   };
+  //   axios
+  //     .post(
+  //       `${baseUrl.apiUrl}` + "/portfolio/portfolio/filter-franchise-by-state",
+  //       data
+  //     )
 
-      .then((res) => {
-        setFranchiseData(res.data.FilterFranchiseData);
-        console.log(res.data.FilterFranchiseData);
-      })
-      .catch((err) => {
-        console.log(err.response.data.message);
-      });
-  };
+  //     .then((res) => {
+  //       setFranchiseData(res.data.FilterFranchiseData);
+  //       console.log(res.data.FilterFranchiseData);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.response.data.message);
+  //     });
+  // };
 
-  useEffect(() => {
-    fetchBMMData();
-    fetchFranchiseData();
-  }, []);
+  // useEffect(() => {
+  //   fetchBMMData();
+  //   fetchFranchiseData();
+  // }, []);
 
-  const fetchBMMData = async () => {
-    try {
-      const response = await axios.get(
-        `${baseUrl.apiUrl}` + "/portfolio/portfolio/fetch-all-bmm"
-      );
-      console.log("Data fetched", response.data.BmmData);
-      setData(response.data.BmmData); // Assuming the response contains an array of BMM names
-    } catch (error) {
-      console.error("Error fetching BMM data:", error);
-    }
-  };
+  // const fetchBMMData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       `${baseUrl.apiUrl}` + "/portfolio/portfolio/fetch-all-bmm"
+  //     );
+  //     console.log("Data fetched", response.data.BmmData);
+  //     setData(response.data.BmmData); // Assuming the response contains an array of BMM names
+  //   } catch (error) {
+  //     console.error("Error fetching BMM data:", error);
+  //   }
+  // };
 
-  const fetchFranchiseData = async () => {
-    try {
-      const response = await axios.get(
-        `${baseUrl.apiUrl}` + "/portfolio/portfolio/fetch-all-franchise"
-      );
-      console.log("Data fetched", response.data.FranchiseData);
-      setFranchiseData(response.data.FranchiseData);
-    } catch (error) {
-      console.error("Error fetching Franchise data:", error);
-    }
-  };
+  // const fetchFranchiseData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       `${baseUrl.apiUrl}` + "/portfolio/portfolio/fetch-all-franchise"
+  //     );
+  //     console.log("Data fetched", response.data.FranchiseData);
+  //     setFranchiseData(response.data.FranchiseData);
+  //   } catch (error) {
+  //     console.error("Error fetching Franchise data:", error);
+  //   }
+  // };
   return (
     <>
       <div
@@ -141,7 +141,7 @@ const WhitePaperLowerSection = () => {
           <div className="overflow-x-auto flex ">
             <div className="flex gap-4 ">
               {/* Check if setData has data and is an array */}
-              {data && Array.isArray(data) && data.length > 0 ? (
+              {BMMdataNew && Array.isArray(BMMdataNew) && BMMdataNew.length > 0 ? (
                 BMMdataNew.map((bmm, index) => (
                   // <div
                   //   key={index}
@@ -219,9 +219,9 @@ const WhitePaperLowerSection = () => {
           <div className="overflow-x-auto ">
             <div className="flex gap-4 ">
               {/* Check if setData has data and is an array */}
-              {franchiseData &&
-              Array.isArray(franchiseData) &&
-              franchiseData.length > 0 ? (
+              {FranchiseData &&
+              Array.isArray(FranchiseData) &&
+              FranchiseData.length > 0 ? (
                 FranchiseData.map((franchise, index) => (
                   // <div
                   //   key={index}
