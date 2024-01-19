@@ -33,7 +33,6 @@ import shetty from '../assets/techTeam/shetty.png';
 import kMurty from '../assets/techTeam/krishnamurty.png';
 import kumaran from '../assets/techTeam/kumaran.png';
 
-
 export const NavMenu = [
   {
     id: "home",
@@ -77,7 +76,7 @@ export const Management = [
 
 ];
 
-export const BMMDATANEW = [
+export const FranchiseData = [
   {
     imageUrl:pacharia,
     name:"BMM : S. Thakur"
@@ -108,25 +107,25 @@ export const BMMDATANEW = [
   },
 
 ]
-export const FranchiseData = [
+export const BMMdataNew = [
   {
-    imageUrl:pacharia,
+    imageUrl:pachari,
     name:"N. Pachari"
   },
   {
-    imageUrl:sanjay2,
+    imageUrl:deogam,
     name:"G. Deogam"
   },
   {
-    imageUrl:ajay,
+    imageUrl:balmuchu,
     name:"H.K. Balmuchu"
   },
   {
-    imageUrl:gangaram,
+    imageUrl:desai,
     name:"R. Desai"
   },
   {
-    imageUrl:gangaram,
+    imageUrl:ghai,
     name:"N. Ghai"
   },
 

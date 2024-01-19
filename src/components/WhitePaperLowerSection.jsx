@@ -10,13 +10,13 @@ import { FranchiseData } from "../utils/constant";
 import { DigitalMarketing } from "../utils/constant";
 import allState from "../utils/AllState";
 import noDataFound from "../assets/noDataFound/nodata.gif";
-import { BMMDATANEW } from "../utils/constant";
 import BmmAvtar from "../assets/franchise-avatar.png";
 import BMMAvatar from "../assets/png/BMMAvatar.png";
 import "../css/WhitePaper.css";
 import baseUrl from "../../baseUrl";
 import { useSelector } from "react-redux";
 import { selectDarkMode } from "../redux/darkModeSlice";
+import { BMMdataNew } from "../utils/constant";
 
 const WhitePaperLowerSection = () => {
   const [selectedState, setSelectedState] = useState("");
@@ -142,27 +142,27 @@ const WhitePaperLowerSection = () => {
             <div className=" flex gap-4 justify-center">
               {/* Check if setData has data and is an array */}
               {data && Array.isArray(data) && data.length > 0 ? (
-                BMMDATANEW.map((bmm, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-center items-center h-auto"
-                  >
-                    <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                      <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                        <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-                          <br />
-                          {bmm.name}
-                        </p>
-                      </div>
-                      <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+                BMMdataNew.map((bmm, index) => (
+                  // <div
+                  //   key={index}
+                  //   className="flex justify-center items-center h-auto"
+                  // >
+                  //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+                  //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
+                  //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+                  //         <br />
+                  //         {bmm.name}
+                  //       </p>
+                  //     </div>
+                  //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                         <img
-                          src={BMMAvatar}
+                          src={bmm.imageUrl}
                           alt="Profile"
-                          className="h-40 w-40 object-cover transform rotate-5"
+                          className="h-64 w-80"
                         />
-                      </div>
-                    </div>
-                  </div>
+                  //     </div>
+                  //   </div>
+                  // </div>
                 ))
               ) : 
               (
@@ -438,26 +438,26 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-center gap-4">
             {Technical.map((items, index) => (
-              <div
-                key={index}
-                className="flex justify-center  items-center"
-              >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                    <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-                      <br />
-                      TECHNICAL DEV : {items.name}
-                    </p>
-                  </div>
-                  <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+              // <div
+              //   key={index}
+              //   className="flex justify-center  items-center"
+              // >
+              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
+              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+              //         <br />
+              //         TECHNICAL DEV : {items.name}
+              //       </p>
+              //     </div>
+              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                     <img
                       src={items.imageUrl}
                       alt="Profile"
-                      className="h-40 w-40 object-cover transform rotate-5"
+                      className="h-64 w-80"
                     />
-                  </div>
-                </div>
-              </div>
+              //     </div>
+              //   </div>
+              // </div>
             ))}
           </div>
           <p
@@ -469,26 +469,26 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full flex-wrap justify-center gap-4">
             {Technical2.map((items, index) => (
-              <div
-                key={index}
-                className="flex justify-center  items-center"
-              >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                    <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-                      <br />
-                      TECHNICAL DEV : {items.name}
-                    </p>
-                  </div>
-                  <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+              // <div
+              //   key={index}
+              //   className="flex justify-center  items-center"
+              // >
+              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
+              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+              //         <br />
+              //         TECHNICAL DEV : {items.name}
+              //       </p>
+              //     </div>
+              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                     <img
-                      src={BMMAvatar}
+                      src={items.imageUrl}
                       alt="Profile"
-                      className="h-40 w-40 object-cover transform rotate-5"
+                      className="h-64 w-80"
                     />
-                  </div>
-                </div>
-              </div>
+              //     </div>
+              //   </div>
+              // </div>
             ))}
           </div>
         </div>
@@ -507,26 +507,26 @@ const WhitePaperLowerSection = () => {
           </p>
           <div className="flex w-full mt-10 flex-wrap justify-center gap-4">
             {Founder.map((items, index) => (
-              <div
-                key={index}
-                className="flex justify-center  items-center"
-              >
-                <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                    <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-                      <br />
-                      {items.name}
-                    </p>
-                  </div>
-                  <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
+              // <div
+              //   key={index}
+              //   className="flex justify-center  items-center"
+              // >
+              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
+              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
+              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
+              //         <br />
+              //         {items.name}
+              //       </p>
+              //     </div>
+              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
                     <img
                       src={items.imageUrl}
                       alt="Profile"
-                      className="h-40 w-40 object-cover transform rotate-5"
+                      className="h-64 w-80"
                     />
-                  </div>
-                </div>
-              </div>
+              //     </div>
+              //   </div>
+              // </div>
             ))}
           </div>
         </div>
