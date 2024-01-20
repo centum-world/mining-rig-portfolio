@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,34 +13,11 @@ import { selectDarkMode } from "../redux/darkModeSlice";
 import { BackOffice } from "../utils/constant";
 import { AsstHRD } from "../utils/constant";
 
-const CustomArrow = ({ onClick, className, icon }) => {
-    const mediaQueryStyles = {
-      padding: "0 75px 0 30px",
-    };
-  
-    return (
-      <div
-        className={`${className}`}
-        onClick={onClick}
-        style={{
-          padding: "0 100px 0 30px",
-          zIndex: "99",
-          ...((window.innerWidth || document.documentElement.clientWidth) <= 768 && mediaQueryStyles),
-        }}
-      >
-        {icon}
-      </div>
-    );
-  };
 
 const WhitePaperLowerSection = () => {
   const darkModeEnabled = useSelector(selectDarkMode);
   const { selectedColor } = useSelector((state) => state.colors);
 
-  const customPrevArrow = (
-    <CustomArrow className="slick-prev" icon="Previous" />
-  );
-  const customNextArrow = <CustomArrow className="slick-next" icon="Next" />;
 
   const sliderSettings = {
     dots: false,
@@ -48,11 +25,9 @@ const WhitePaperLowerSection = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay:true,
     autoplaySpeed: 3000,
     arrows: true,
-    prevArrow: customPrevArrow,
-    nextArrow: customNextArrow,
     responsive: [
       {
         breakpoint: 1024,
@@ -91,7 +66,10 @@ const WhitePaperLowerSection = () => {
 
   return (
     <>
-      <p style={{ color: selectedColor }}  className="mt-10 text-opacity-80 text-center font-tomorrow font-semibold  text-xl md:text-3xl lg:text-3xl">
+      <p
+        style={{ color: selectedColor }}
+        className="mt-10 text-opacity-80 text-center font-tomorrow font-semibold  text-xl md:text-3xl lg:text-3xl"
+      >
         Meet Our Efficient Team
       </p>
       {/* BMM Section */}

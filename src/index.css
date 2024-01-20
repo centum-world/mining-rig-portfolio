@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.slick-prev,
+.slick-next {
+  display: block;
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+ right :0 
+}
 
 
 @keyframes slideInLeft {
