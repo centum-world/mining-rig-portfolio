@@ -17,13 +17,6 @@ import { AsstHRD } from "../utils/constant";
 
 const WhitePaperLowerSection = () => {
  
-  const [selectedState, setSelectedState] = useState("");
-  const [selectedValue, setSelectedValue] = useState("");
-  const [selectedFranchiseValue, setSelectedFranchiseValue] = useState();
- 
-  const states = allState.states.map((stateData) => stateData.state);
-
-
   const darkModeEnabled = useSelector(selectDarkMode);
 
   
@@ -63,7 +56,7 @@ const WhitePaperLowerSection = () => {
       <div
         className={`${
           darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto space-y-4 flex flex-col  py-10 px-4 bg-gradient-to-custom rounded-md shadow-md`}
+        } w-full h-auto space-y-4 flex flex-col pl-[22px] mt-[10px]  py-10 px-4 bg-gradient-to-custom rounded-md shadow-md`}
       >
         <p
           className={`${
@@ -87,13 +80,12 @@ const WhitePaperLowerSection = () => {
           ))}
         </Slider>
       </div>
-      // ... (previous code)
 
 {/* Franchise Section */}
 <div
   className={`${
     darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom  space-y-4 py-10 px-4 rounded-md shadow-md`}
+  } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
 >
   <p
     className={`${
@@ -122,14 +114,14 @@ const WhitePaperLowerSection = () => {
 <div
   className={`${
     darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+  } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
 >
   <p
     className={`${
       darkModeEnabled ? "text-white" : "text-gray-800"
     }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
   >
-    Core team
+    Core Team
   </p>
   <Slider {...sliderSettings}>
     {Management.map((items, index) => (
@@ -151,7 +143,7 @@ const WhitePaperLowerSection = () => {
 <div
   className={`${
     darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+  } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
 >
   <p
     className={`${
@@ -180,7 +172,7 @@ const WhitePaperLowerSection = () => {
 <div
   className={`${
     darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+  } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
 >
   <p
     className={`${
@@ -209,7 +201,7 @@ const WhitePaperLowerSection = () => {
 <div
   className={`${
     darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+  } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
 >
   <p
     className={`${
@@ -238,21 +230,21 @@ const WhitePaperLowerSection = () => {
 <div
   className={`${
     darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md  shadow-md`}
+  } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md  shadow-md`}
 >
   <p
     className={`${
       darkModeEnabled ? "text-white" : "text-gray-800"
     }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl`}
   >
-    Technical
+    Technical/Software
   </p>
   <p
     className={`${
       darkModeEnabled ? "text-white" : "text-gray-800"
     }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
   >
-    Saas, AI Apps Development, NFT
+    SaaS, AI Apps Development, NFT
   </p>
   <Slider {...sliderSettings}>
     {Technical.map((items, index) => (
@@ -273,7 +265,7 @@ const WhitePaperLowerSection = () => {
       darkModeEnabled ? "text-white" : "text-gray-800"
     }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
   >
-    Saas, AI Apps Development, NFT
+    SaaS, AI Apps & Blockchain Dev
   </p>
   <Slider {...sliderSettings}>
     {Technical2.map((items, index) => (
@@ -295,7 +287,7 @@ const WhitePaperLowerSection = () => {
 <div
   className={`${
     darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom md:p-20 lg:-20 space-y-6 py-10 px-4 rounded-md shadow-md`}
+  } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] mb-[10px] md:p-20 lg:-20 space-y-6 py-10 px-4 rounded-md shadow-md`}
 >
   <p
     className={`${
