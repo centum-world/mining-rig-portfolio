@@ -53,7 +53,7 @@ const Footer = () => {
       <div className="mx-auto space-y-4  flex flex-col md:flex-row justify-between items-center">
         {/* Social Media Links */}
         <div className="flex flex-col items-start mt-4 md:mt-0 md:w-1/3 ">
-          <h4 className="text-lg font-semibold mb-2 ml-2">Connect With Us</h4>
+          <h4 className="text-xl font-semibold mb-2 ml-2">Connect With Us</h4>
           <a
             href={`mailto:${"worldcentum@gmail.com"}`}
             className="font-calibri"
