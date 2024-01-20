@@ -15,6 +15,13 @@ import { selectDarkMode } from "../redux/darkModeSlice";
 import { BackOffice } from "../utils/constant";
 import { AsstHRD } from "../utils/constant";
 
+
+const CustomArrow = ({ onClick, className, icon }) => (
+    <div className={className} onClick={onClick} style={{  padding: "0 75px 0 30px", zIndex:"99" }}>
+      {icon}
+    </div>
+  );
+
 const WhitePaperLowerSection = () => {
   const [selectedState, setSelectedState] = useState("");
   const [selectedValue, setSelectedValue] = useState("");
@@ -23,6 +30,9 @@ const WhitePaperLowerSection = () => {
   const states = allState.states.map((stateData) => stateData.state);
 
   const darkModeEnabled = useSelector(selectDarkMode);
+
+  const customPrevArrow = <CustomArrow className="slick-prev" icon="Previous" />;
+  const customNextArrow = <CustomArrow className="slick-next" icon="Next" />;
 
   const sliderSettings = {
     dots: false,
@@ -33,8 +43,8 @@ const WhitePaperLowerSection = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
-    prevArrow: <div className="slick-prev">Previous</div>,
-    nextArrow: <div className="slick-next">Next</div>,
+    prevArrow: customPrevArrow,
+    nextArrow: customNextArrow,
     responsive: [
       {
         breakpoint: 1024,
@@ -52,6 +62,8 @@ const WhitePaperLowerSection = () => {
       },
     ],
   };
+
+  
 
   const backOfficeSliderSettings = {
     ...sliderSettings,
