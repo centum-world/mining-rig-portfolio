@@ -16,17 +16,14 @@ import { BackOffice } from "../utils/constant";
 import { AsstHRD } from "../utils/constant";
 
 const WhitePaperLowerSection = () => {
- 
   const [selectedState, setSelectedState] = useState("");
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedFranchiseValue, setSelectedFranchiseValue] = useState();
- 
-  const states = allState.states.map((stateData) => stateData.state);
 
+  const states = allState.states.map((stateData) => stateData.state);
 
   const darkModeEnabled = useSelector(selectDarkMode);
 
-  
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -36,8 +33,8 @@ const WhitePaperLowerSection = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
-    prevArrow: <div className="slick-prev">Previous</div>, 
-    nextArrow: <div className="slick-next">Next</div>, 
+    prevArrow: <div className="slick-prev">Previous</div>,
+    nextArrow: <div className="slick-next">Next</div>,
     responsive: [
       {
         breakpoint: 1024,
@@ -54,6 +51,24 @@ const WhitePaperLowerSection = () => {
         },
       },
     ],
+  };
+
+  const backOfficeSliderSettings = {
+    ...sliderSettings,
+    slidesToShow: 2,
+  };
+
+  const asstHRDSliderSettings = {
+    ...sliderSettings,
+    slidesToShow: 1,
+  };
+  const digitalMArking = {
+    ...sliderSettings,
+    slidesToShow: 2,
+  };
+  const founder = {
+    ...sliderSettings,
+    slidesToShow: 3,
   };
 
   return (
@@ -86,240 +101,239 @@ const WhitePaperLowerSection = () => {
           ))}
         </Slider>
       </div>
-      // ... (previous code)
 
-{/* Franchise Section */}
-<div
-  className={`${
-    darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom  space-y-4 py-10 px-4 rounded-md shadow-md`}
->
-  <p
-    className={`${
-      darkModeEnabled ? "text-white" : "text-gray-800"
-    }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
-  >
-    Franchise/Business Consultant
-  </p>
-  <Slider {...sliderSettings}>
-    {FranchiseData.map((franchise, index) => (
+      {/* Franchise Section */}
       <div
-        key={index}
-        className="flex justify-center items-center h-auto"
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom  space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
-        <img
-          src={franchise.imageUrl}
-          alt="Profile"
-          className="h-64 w-80 rounded-md"
-        />
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
+        >
+          Franchise/Business Consultant
+        </p>
+        <Slider {...sliderSettings}>
+          {FranchiseData.map((franchise, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={franchise.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    ))}
-  </Slider>
-</div>
 
-{/* Core Team Section */}
-<div
-  className={`${
-    darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
->
-  <p
-    className={`${
-      darkModeEnabled ? "text-white" : "text-gray-800"
-    }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
-  >
-    Core team
-  </p>
-  <Slider {...sliderSettings}>
-    {Management.map((items, index) => (
+      {/* Core Team Section */}
       <div
-        key={index}
-        className="flex justify-center items-center h-auto"
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
-        <img
-          src={items.imageUrl}
-          alt="Profile"
-          className="h-64 w-80 rounded-md"
-        />
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
+        >
+          Core team
+        </p>
+        <Slider {...sliderSettings}>
+          {Management.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    ))}
-  </Slider>
-</div>
 
-{/* Back office */}
-<div
-  className={`${
-    darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
->
-  <p
-    className={`${
-      darkModeEnabled ? "text-white" : "text-gray-800"
-    }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
-  >
-    Back Office
-  </p>
-  <Slider {...sliderSettings}>
-    {BackOffice.map((items, index) => (
+      {/* Back office */}
       <div
-        key={index}
-        className="flex justify-center items-center h-auto"
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
-        <img
-          src={items.imageUrl}
-          alt="Profile"
-          className="h-64 w-80 rounded-md"
-        />
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
+        >
+          Back Office
+        </p>
+        <Slider {...backOfficeSliderSettings}>
+          {BackOffice.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    ))}
-  </Slider>
-</div>
 
-{/* Asst HRD */}
-<div
-  className={`${
-    darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
->
-  <p
-    className={`${
-      darkModeEnabled ? "text-white" : "text-gray-800"
-    }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
-  >
-    Asst. HRD
-  </p>
-  <Slider {...sliderSettings}>
-    {AsstHRD.map((items, index) => (
+      {/* Asst HRD */}
       <div
-        key={index}
-        className="flex justify-center items-center h-auto"
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
-        <img
-          src={items.imageUrl}
-          alt="Profile"
-          className="h-64 w-80 rounded-md"
-        />
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
+        >
+          Asst. HRD
+        </p>
+        <Slider {...asstHRDSliderSettings}>
+          {AsstHRD.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    ))}
-  </Slider>
-</div>
 
-{/* Digital Marketing */}
-<div
-  className={`${
-    darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
->
-  <p
-    className={`${
-      darkModeEnabled ? "text-white" : "text-gray-800"
-    }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
-  >
-   Digital Marketing
-  </p>
-  <Slider {...sliderSettings}>
-    {DigitalMarketing.map((items, index) => (
+      {/* Digital Marketing */}
       <div
-        key={index}
-        className="flex justify-center items-center h-auto"
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
-        <img
-          src={items.imageUrl}
-          alt="Profile"
-          className="h-64 w-80 rounded-md"
-        />
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
+        >
+          Digital Marketing
+        </p>
+        <Slider {...digitalMArking}>
+          {DigitalMarketing.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    ))}
-  </Slider>
-</div>
 
-{/* Technical Section */}
-<div
-  className={`${
-    darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md  shadow-md`}
->
-  <p
-    className={`${
-      darkModeEnabled ? "text-white" : "text-gray-800"
-    }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl`}
-  >
-    Technical
-  </p>
-  <p
-    className={`${
-      darkModeEnabled ? "text-white" : "text-gray-800"
-    }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
-  >
-    Saas, AI Apps Development, NFT
-  </p>
-  <Slider {...sliderSettings}>
-    {Technical.map((items, index) => (
+      {/* Technical Section */}
       <div
-        key={index}
-        className="flex justify-center items-center h-auto"
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md  shadow-md`}
       >
-        <img
-          src={items.imageUrl}
-          alt="Profile"
-          className="h-64 w-80 rounded-md"
-        />
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl`}
+        >
+          Technical
+        </p>
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
+        >
+          Saas, AI Apps Development, NFT
+        </p>
+        <Slider {...sliderSettings}>
+          {Technical.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
+        >
+          Saas, AI Apps Development, NFT
+        </p>
+        <Slider {...sliderSettings}>
+          {Technical2.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    ))}
-  </Slider>
-  <p
-    className={`${
-      darkModeEnabled ? "text-white" : "text-gray-800"
-    }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
-  >
-    Saas, AI Apps Development, NFT
-  </p>
-  <Slider {...sliderSettings}>
-    {Technical2.map((items, index) => (
-      <div
-        key={index}
-        className="flex justify-center items-center h-auto"
-      >
-        <img
-          src={items.imageUrl}
-          alt="Profile"
-          className="h-64 w-80 rounded-md"
-        />
-      </div>
-    ))}
-  </Slider>
-</div>
 
-{/* Founder Section */}
-<div
-  className={`${
-    darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-  } w-full h-auto bg-gradient-to-custom md:p-20 lg:-20 space-y-6 py-10 px-4 rounded-md shadow-md`}
->
-  <p
-    className={`${
-      darkModeEnabled ? "text-white" : "text-gray-800"
-    } text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
-  >
-    Founder & Co-Founder
-  </p>
-  <Slider {...sliderSettings}>
-    {Founder.map((items, index) => (
+      {/* Founder Section */}
       <div
-        key={index}
-        className="flex justify-center items-center h-auto"
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom md:p-20 lg:-20 space-y-6 py-10 px-4 rounded-md shadow-md`}
       >
-        <img
-          src={items.imageUrl}
-          alt="Profile"
-          className="h-64 w-80 rounded-md"
-        />
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          } text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
+        >
+          Founder & Co-Founder
+        </p>
+        <Slider {...founder}>
+          {Founder.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    ))}
-  </Slider>
-</div>
-</>
-);
+    </>
+  );
 };
 
 export default WhitePaperLowerSection;
