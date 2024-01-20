@@ -35,6 +35,7 @@ const CustomArrow = ({ onClick, className, icon }) => {
 
 const WhitePaperLowerSection = () => {
   const darkModeEnabled = useSelector(selectDarkMode);
+  const { selectedColor } = useSelector((state) => state.colors);
 
   const customPrevArrow = (
     <CustomArrow className="slick-prev" icon="Previous" />
@@ -90,7 +91,7 @@ const WhitePaperLowerSection = () => {
 
   return (
     <>
-      <p className="text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold  text-xl md:text-3xl lg:text-3xl">
+      <p style={{ color: selectedColor }}  className="mt-10 text-opacity-80 text-center font-tomorrow font-semibold  text-xl md:text-3xl lg:text-3xl">
         Meet Our Efficient Team
       </p>
       {/* BMM Section */}
@@ -115,7 +116,7 @@ const WhitePaperLowerSection = () => {
               <img
                 src={bmm.imageUrl}
                 alt="Profile"
-                className="h-64 w-80 rounded-md"
+                className="h-64 w-80 max-w-full rounded-md"
               />
             </div>
           ))}
@@ -144,7 +145,7 @@ const WhitePaperLowerSection = () => {
               <img
                 src={franchise.imageUrl}
                 alt="Profile"
-                className="h-64 w-80 rounded-md"
+                className="h-64 w-80 max-w-full rounded-md"
               />
             </div>
           ))}
@@ -173,7 +174,7 @@ const WhitePaperLowerSection = () => {
               <img
                 src={items.imageUrl}
                 alt="Profile"
-                className="h-64 w-80 rounded-md"
+                className="h-64 w-80 max-w-full rounded-md"
               />
             </div>
           ))}
@@ -202,7 +203,7 @@ const WhitePaperLowerSection = () => {
               <img
                 src={items.imageUrl}
                 alt="Profile"
-                className="h-64 w-80 rounded-md"
+                className="h-64 w-80 max-w-full rounded-md"
               />
             </div>
           ))}
@@ -231,7 +232,7 @@ const WhitePaperLowerSection = () => {
               <img
                 src={items.imageUrl}
                 alt="Profile"
-                className="h-64 w-80 rounded-md"
+                className="h-64 w-80 max-w-full rounded-md"
               />
             </div>
           ))}
@@ -260,7 +261,7 @@ const WhitePaperLowerSection = () => {
               <img
                 src={items.imageUrl}
                 alt="Profile"
-                className="h-64 w-80 rounded-md"
+                className="h-64 w-80 max-w-full rounded-md"
               />
             </div>
           ))}
@@ -296,7 +297,7 @@ const WhitePaperLowerSection = () => {
               <img
                 src={items.imageUrl}
                 alt="Profile"
-                className="h-64 w-80 rounded-md"
+                className="h-64 w-80 max-w-full rounded-md"
               />
             </div>
           ))}
@@ -317,7 +318,7 @@ const WhitePaperLowerSection = () => {
               <img
                 src={items.imageUrl}
                 alt="Profile"
-                className="h-64 w-80 rounded-md"
+                className="h-64 w-80 max-w-full rounded-md"
               />
             </div>
           ))}
