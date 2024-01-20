@@ -16,6 +16,7 @@ import Footer from "./common/Footer";
 import WhitePaper from "./pages/WhitePaper";
 import { useSelector } from "react-redux";
 
+
 const App = () => {
   const { selectedColor } = useSelector((state) => state.colors);
   const [isHeaderVisible] = useState(true);
