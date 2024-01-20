@@ -111,7 +111,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full  h-auto space-y-4 py-10 bg-gradient-to-custom`}
+          } w-full  h-auto space-y-4 py-10 pl-[17px] pr-[23px] bg-gradient-to-custom`}
         >
           <p
             className={`${
@@ -189,7 +189,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom mt-10 space-y-4 py-10`}
+          } w-full h-auto bg-gradient-to-custom mt-10 space-y-4 py-10 pl-[17px] pr-[23px]`}
         >
           <p
             className={`${
@@ -268,7 +268,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom space-y-4 mt-10 py-10 `}
+          } w-full h-auto bg-gradient-to-custom space-y-4 mt-10 py-10 pl-[17px] pr-[23px] `}
         >
           <p
             className={`${
@@ -307,7 +307,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-4  mt-10 py-10`}
+          } w-full h-auto bg-gradient-to-custom fle space-y-4  mt-10 py-10 pl-[17px] pr-[23px]`}
         >
           <p
             className={`${
@@ -345,7 +345,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-4 mt-10 py-10`}
+          } w-full h-auto bg-gradient-to-custom fle space-y-4 mt-10 py-10 pl-[17px] pr-[23px]`}
         >
           <p
             className={`${
@@ -382,7 +382,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-4 mt-10 py-10`}
+          } w-full h-auto bg-gradient-to-custom fle space-y-4 mt-10 py-10 pl-[17px] pr-[23px]`}
         >
           <p
             className={`${
@@ -420,7 +420,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom space-y-4 py-10 mt-10`}
+          } w-full h-auto bg-gradient-to-custom space-y-4 py-10 mt-10 pl-[17px] pr-[23px]`}
         >
           <p
             className={`${
@@ -432,7 +432,7 @@ const WhitePaperLowerSection = () => {
           <p
             className={`${
               darkModeEnabled ? "text-white" : "text-gray-800"
-            } text-center md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-semibold text-lg px-4`}
+            } text-center md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
           >
             Saas, AI Apps Development, NFT
           </p>
@@ -463,7 +463,7 @@ const WhitePaperLowerSection = () => {
           <p
             className={`${
               darkModeEnabled ? "text-white" : "text-gray-800"
-            }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-semibold text-lg space-y-6  text-start px-4`}
+            }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg space-y-6  text-start px-4`}
           >
             Saas, AI Apps Development, Blockchain Technology,System Security
           </p>
@@ -496,7 +496,7 @@ const WhitePaperLowerSection = () => {
         <div
           className={`${
             darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom md:p-20 lg:-20 space-y-6 py-10 mt-10`}
+          } w-full h-auto bg-gradient-to-custom md:p-20 lg:-20 space-y-6 py-10 mt-10 pl-[17px] pr-[23px]`}
         >
           <p
             className={` ${
