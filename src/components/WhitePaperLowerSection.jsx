@@ -16,10 +16,6 @@ import { BackOffice } from "../utils/constant";
 import { AsstHRD } from "../utils/constant";
 
 const WhitePaperLowerSection = () => {
-  const [selectedState, setSelectedState] = useState("");
-  const [selectedValue, setSelectedValue] = useState("");
-  const [selectedFranchiseValue, setSelectedFranchiseValue] = useState();
-  const states = allState.states.map((stateData) => stateData.state);
   const darkModeEnabled = useSelector(selectDarkMode);
 
   const sliderSettings = {
@@ -29,7 +25,7 @@ const WhitePaperLowerSection = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     arrows: false,
     responsive: [
       {
@@ -55,7 +51,7 @@ const WhitePaperLowerSection = () => {
       <div
         className={`${
           darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto space-y-4 flex flex-col  py-10 px-4 bg-gradient-to-custom rounded-md shadow-md`}
+        } w-full h-auto pl-[22px] mt-[10px] space-y-4 flex flex-col  py-10 px-4 bg-gradient-to-custom rounded-md shadow-md`}
       >
         <p
           className={`${
@@ -84,7 +80,7 @@ const WhitePaperLowerSection = () => {
       <div
         className={`${
           darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom  space-y-4 py-10 px-4 rounded-md shadow-md`}
+        } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
         <p
           className={`${
@@ -113,7 +109,7 @@ const WhitePaperLowerSection = () => {
       <div
         className={`${
           darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+        } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
         <p
           className={`${
@@ -142,7 +138,7 @@ const WhitePaperLowerSection = () => {
       <div
         className={`${
           darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+        } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
         <p
           className={`${
@@ -171,7 +167,7 @@ const WhitePaperLowerSection = () => {
       <div
         className={`${
           darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+        } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
         <p
           className={`${
@@ -201,14 +197,14 @@ const WhitePaperLowerSection = () => {
       <div
         className={`${
           darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+        } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md shadow-md`}
       >
         <p
           className={`${
             darkModeEnabled ? "text-white" : "text-gray-800"
           }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
         >
-         Digital Marketing
+          Digital Marketing
         </p>
         <Slider {...sliderSettings}>
           {DigitalMarketing.map((items, index) => (
@@ -230,14 +226,14 @@ const WhitePaperLowerSection = () => {
       <div
         className={`${
           darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md  shadow-md`}
+        } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] space-y-4 py-10 px-4 rounded-md  shadow-md`}
       >
         <p
           className={`${
             darkModeEnabled ? "text-white" : "text-gray-800"
-          }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl`}
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
         >
-          Technical
+          Technical/Software
         </p>
         <p
           className={`${
@@ -287,7 +283,7 @@ const WhitePaperLowerSection = () => {
       <div
         className={`${
           darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom md:p-20 lg:-20 space-y-6 py-10 px-4 rounded-md shadow-md`}
+        } w-full h-auto bg-gradient-to-custom pl-[22px] mt-[10px] mb-[10px] md:p-20 lg:-20 space-y-6 py-10 px-4 rounded-md shadow-md`}
       >
         <p
           className={`${
