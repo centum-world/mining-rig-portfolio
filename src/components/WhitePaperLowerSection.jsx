@@ -58,6 +58,7 @@ const WhitePaperLowerSection = () => {
 
   return (
     <>
+      <p  className= "text-gray-800 text-opacity-80 text-center font-tomorrow font-bold text-xl md:text-2xl lg:text-2xl">Meet Our Efficient Team</p>
       {/* BMM Section */}
       <div
         className={`${
