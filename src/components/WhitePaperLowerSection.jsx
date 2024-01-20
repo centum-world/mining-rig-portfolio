@@ -174,7 +174,7 @@ const WhitePaperLowerSection = () => {
   >
     Back Office
   </p>
-  <Slider {...sliderSettings}>
+  <Slider {...backOfficeSliderSettings}>
     {BackOffice.map((items, index) => (
       <div
         key={index}
@@ -203,7 +203,7 @@ const WhitePaperLowerSection = () => {
   >
     Asst. HRD
   </p>
-  <Slider {...sliderSettings}>
+  <Slider {...asstHRDSliderSettings}>
     {AsstHRD.map((items, index) => (
       <div
         key={index}
@@ -232,7 +232,7 @@ const WhitePaperLowerSection = () => {
   >
    Digital Marketing
   </p>
-  <Slider {...sliderSettings}>
+  <Slider {...digitalMArking}>
     {DigitalMarketing.map((items, index) => (
       <div
         key={index}
@@ -318,7 +318,7 @@ const WhitePaperLowerSection = () => {
   >
     Founder & Co-Founder
   </p>
-  <Slider {...sliderSettings}>
+  <Slider {...founder}>
     {Founder.map((items, index) => (
       <div
         key={index}
