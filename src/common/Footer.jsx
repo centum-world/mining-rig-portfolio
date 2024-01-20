@@ -54,6 +54,7 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="flex flex-col items-start mt-4 md:mt-0 md:w-1/3 ">
           <h4 className="text-lg font-semibold mb-2 ml-2">Connect With Us</h4>
+          <p className="font-calibri" >worldcentum@gmail.com</p>
           <div className="flex gap-4">
             <IconButton
               target="_blank"
