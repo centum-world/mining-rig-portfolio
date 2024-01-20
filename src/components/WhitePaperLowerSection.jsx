@@ -1,535 +1,315 @@
 import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
-import { Management } from "../utils/constant";
+import { DigitalMarketing, Management } from "../utils/constant";
 import { Technical } from "../utils/constant";
-import { BackOffice } from "../utils/constant";
 import { Technical2 } from "../utils/constant";
 import { Founder } from "../utils/constant";
-import { AsstHRD } from "../utils/constant";
 import { FranchiseData } from "../utils/constant";
-import { DigitalMarketing } from "../utils/constant";
 import allState from "../utils/AllState";
-import noDataFound from "../assets/noDataFound/nodata.gif";
-import BmmAvtar from "../assets/franchise-avatar.png";
-import BMMAvatar from "../assets/png/BMMAvatar.png";
-import "../css/WhitePaper.css";
-import baseUrl from "../../baseUrl";
+import { BMMdataNew } from "../utils/constant";
 import { useSelector } from "react-redux";
 import { selectDarkMode } from "../redux/darkModeSlice";
-import { BMMdataNew } from "../utils/constant";
+import { BackOffice } from "../utils/constant";
+import { AsstHRD } from "../utils/constant";
 
 const WhitePaperLowerSection = () => {
   const [selectedState, setSelectedState] = useState("");
-  // const [data, setData] = useState([]);
-  // const [franchiseData, setFranchiseData] = useState([]);
-  const [selectedValue, setSelectedValue] = useState(""); // State to hold selected value
+  const [selectedValue, setSelectedValue] = useState("");
   const [selectedFranchiseValue, setSelectedFranchiseValue] = useState();
   const states = allState.states.map((stateData) => stateData.state);
   const darkModeEnabled = useSelector(selectDarkMode);
 
-  // const handleSelectChange = (event) => {
-  //   setSelectedValue(event.target.value); // Update selected value
-  //   setData([]);
-  //   const state = event.target.value;
-  //   console.log(state);
-  //   let data = {
-  //     state: event.target.value,
-  //   };
-  //   axios
-  //     .post(
-  //       `${baseUrl.apiUrl}` + "/portfolio/portfolio/filter-bmm-by-state",
-  //       data
-  //     ) //localhost:4000/portfolio/filter-franchise-by-state{
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
-  //     .then((res) => {
-  //       setData(res.data.FilterBmmData);
-  //       console.log(res.data.FilterBmmData);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err.response.data.message);
-  //     });
-  // };
-
-  // const handleSelectFranchiseChange = (event) => {
-  //   setSelectedFranchiseValue(event.target.value); // Update selected value
-  //   setFranchiseData([]);
-  //   const state = event.target.value;
-  //   console.log(state);
-  //   let data = {
-  //     state: event.target.value,
-  //   };
-  //   axios
-  //     .post(
-  //       `${baseUrl.apiUrl}` + "/portfolio/portfolio/filter-franchise-by-state",
-  //       data
-  //     )
-
-  //     .then((res) => {
-  //       setFranchiseData(res.data.FilterFranchiseData);
-  //       console.log(res.data.FilterFranchiseData);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err.response.data.message);
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   fetchBMMData();
-  //   fetchFranchiseData();
-  // }, []);
-
-  // const fetchBMMData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       `${baseUrl.apiUrl}` + "/portfolio/portfolio/fetch-all-bmm"
-  //     );
-  //     console.log("Data fetched", response.data.BmmData);
-  //     setData(response.data.BmmData); // Assuming the response contains an array of BMM names
-  //   } catch (error) {
-  //     console.error("Error fetching BMM data:", error);
-  //   }
-  // };
-
-  // const fetchFranchiseData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       `${baseUrl.apiUrl}` + "/portfolio/portfolio/fetch-all-franchise"
-  //     );
-  //     console.log("Data fetched", response.data.FranchiseData);
-  //     setFranchiseData(response.data.FranchiseData);
-  //   } catch (error) {
-  //     console.error("Error fetching Franchise data:", error);
-  //   }
-  // };
   return (
     <>
+      {/* BMM Section */}
       <div
-        className={`flex flex-col justify-center items-center ${
-          darkModeEnabled ? "bg-gray-900" : "bg-gray-50"
-        } p-4`}
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto space-y-4 flex flex-col  py-10 px-4 bg-gradient-to-custom rounded-md shadow-md`}
       >
-        <div
+        <p
           className={`${
-            darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full  h-auto space-y-4 py-10 pl-[17px] pr-[23px] bg-gradient-to-custom`}
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-opacity-80 text-center font-black text-xl md:text-2xl lg:text-2xl `}
         >
-          <p
-            className={`${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            }  text-opacity-80 text-center font-black text-xl md:text-2xl lg:text-2xl `}
-          >
-            BMM
-          </p>
-          <div className="text-black flex justify-end">
-            {/* {" "}
-            <select
-              className={`${
-                darkModeEnabled ? "text-white" : ""
-              }bg-transparent border rounded-md  appearance-none`}
-              id="AllState"
-              value={selectedValue}
-              onChange={handleSelectChange}
+          BMM
+        </p>
+        <Slider {...sliderSettings}>
+          {BMMdataNew.map((bmm, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
             >
-              <option value="">Select a State</option>
-              {states.map((state, index) => (
-                <option key={index} value={state} className="text-black">
-                  {state}
-                </option>
-              ))}
-            </select> */}
-          </div>
-          <div className="overflow-x-auto flex ">
-            <div className="flex gap-4 ">
-              {/* Check if setData has data and is an array */}
-              {BMMdataNew && Array.isArray(BMMdataNew) && BMMdataNew.length > 0 ? (
-                BMMdataNew.map((bmm, index) => (
-                  // <div
-                  //   key={index}
-                  //   className="flex justify-center items-center h-auto"
-                  // >
-                  //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                  //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-                  //         <br />
-                  //         {bmm.name}
-                  //       </p>
-                  //     </div>
-                  //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
-                        <img
-                          src={bmm.imageUrl}
-                          alt="Profile"
-                          className="h-64 w-80"
-                        />
-                  //     </div>
-                  //   </div>
-                  // </div>
-                ))
-              ) : 
-              (
-                <div className=" flex flex-col justify-center text-center ">
-                  <img
-                    src={noDataFound}
-                    alt="No BMM data available"
-                    className="w-48 h-48 md:w-72 md:h-72 lg:w-72 lg:h-72"
-                  />
-                  <p
-                    className={`${
-                      darkModeEnabled ? "text-white" : ""
-                    } font-tomorrow text-lg `}
-                  >
-                    No BMM data available
-                  </p>
-                </div>
-              )}
+              <img
+                src={bmm.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
             </div>
-          </div>
-        </div>
+          ))}
+        </Slider>
+      </div>
 
-{/* franchise */}
-        <div
+      {/* Franchise Section */}
+      <div
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom  space-y-4 py-10 px-4 rounded-md shadow-md`}
+      >
+        <p
           className={`${
-            darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom mt-10 space-y-4 py-10 pl-[17px] pr-[23px]`}
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
         >
-          <p
-            className={`${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
-          >
-            Franchise/Business Consultant
-          </p>
-          <div className="text-black flex justify-end ">
-            {" "}
-            {/* <select
-              className={`${
-                darkModeEnabled ? "text-white" : ""
-              }bg-transparent border rounded-md  appearance-none`}
-              id="AllState"
-              value={selectedFranchiseValue}
-              onChange={handleSelectFranchiseChange}
+          Franchise/Business Consultant
+        </p>
+        <Slider {...sliderSettings}>
+          {FranchiseData.map((franchise, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
             >
-              <option value="">Select a State</option>
-              {states.map((state, index) => (
-                <option key={index} value={state} className="text-black">
-                  {state}
-                </option>
-              ))}
-            </select> */}
-          </div>
-          <div className="overflow-x-auto ">
-            <div className="flex gap-4 ">
-              {/* Check if setData has data and is an array */}
-              {FranchiseData &&
-              Array.isArray(FranchiseData) &&
-              FranchiseData.length > 0 ? (
-                FranchiseData.map((franchise, index) => (
-                  // <div
-                  //   key={index}
-                  //   className="flex justify-center  items-center h-auto"
-                  // >
-                  //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-                  //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-                  //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-10 text-center">
-                  //         {/* {franchise.franchiseId} */}
-                  //         FRANCHISE/CONSULTANT :<br/>                       
-                  //         {franchise.name}
-                  //       </p>
-                  //     </div>
-                  //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
-                        <img
-                          src={franchise.imageUrl}
-                          alt="Profile"
-                          className="h-64 w-80"
-                        />
-                  //     </div>
-                  //   </div>
-                  // </div>
-                ))
-              ) : (
-                <div className=" flex flex-col justify-center text-center">
-                  <img
-                    src={noDataFound}
-                    alt="No BMM data available"
-                    className="w-48 h-48 md:w-72 md:h-72 lg:w-72 lg:h-72"
-                  />
-                  <p
-                    className={`${
-                      darkModeEnabled ? "text-white" : ""
-                    } font-tomorrow text-lg `}
-                  >
-                    No Franchise data available
-                  </p>
-                </div>
-              )}
+              <img
+                src={franchise.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
             </div>
-          </div>
-        </div>
+          ))}
+        </Slider>
+      </div>
 
-        <div
+      {/* Core Team Section */}
+      <div
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+      >
+        <p
           className={`${
-            darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom space-y-4 mt-10 py-10 pl-[17px] pr-[23px] `}
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
         >
-          <p
-            className={`${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
-          >
-            Core team
-          </p>
-          <div className="flex gap-4  overflow-x-auto">
-            {Management.map((items, index) => (
-              // <div
-              //   key={index}
-              //   className="flex justify-center  items-center"
-              // >
-              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-              //         <br />
+          Core team
+        </p>
+        <Slider {...sliderSettings}>
+          {Management.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
 
-              //         {items.name}
-              //       </p>
-              //     </div>
-              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
-                    <img
-                      src={items.imageUrl}
-                      alt="Profile"
-                      className="h-64 w-80"
-                    />
-              //     </div>
-              //   </div>
-              // </div>
-            ))}
-          </div>
-        </div>
+      {/* BAck office */}
+      <div
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+      >
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
+        >
+          Back Office
+        </p>
+        <Slider {...sliderSettings}>
+          {BackOffice.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
 
-        <div
+      {/* Asst HRD */}
+      <div
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+      >
+        <p
           className={`${
-            darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-4  mt-10 py-10 pl-[17px] pr-[23px]`}
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
         >
-          <p
-            className={`${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl `}
-          >
-            Back Office
-          </p>
-          <div className="flex gap-4 overflow-x-auto">
-            {BackOffice.map((items, index) => (
-              // <div
-              //   key={index}
-              //   className="flex justify-center  items-center"
-              // >
-              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-              //         <br />
-              //         {items.name}
-              //       </p>
-              //     </div>
-              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
-                    <img
-                      src={items.imageUrl}
-                      alt="Profile"
-                      className="h-64 w-80"
-                    />
-              //     </div>
-              //   </div>
-              // </div>
-            ))}
-          </div>
-        </div>
+          Asst. HRD
+        </p>
+        <Slider {...sliderSettings}>
+          {AsstHRD.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
 
-        <div
-          className={`${
-            darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-4 mt-10 py-10 pl-[17px] pr-[23px]`}
-        >
-          <p
-            className={`${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl `}
-          >
-            Asst. HRD
-          </p>
-          <div className="flex gap-4  overflow-x-auto">
-            {AsstHRD.map((items, index) => (
-              // <div
-              //   key={index}
-              //   className="flex justify-center  items-center"
-              // >
-              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-              //         <br />
-              //         {items.name}
-              //       </p>
-              //     </div>
-              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
-                    <img
-                      src={items.imageUrl}
-                      alt="Profile"
-                      className="h-64 w-80"
-                    />
-              //     </div>
-              //   </div>
-              // </div>
-            ))}
-          </div>
-        </div>
-        <div
-          className={`${
-            darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom fle space-y-4 mt-10 py-10 pl-[17px] pr-[23px]`}
-        >
-          <p
-            className={`${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl `}
-          >
-            Digital Marketing
-          </p>
-          <div className="flex gap-4 overflow-x-auto">
-            {DigitalMarketing.map((items, index) => (
-              // <div
-              //   key={index}
-              //   className="flex justify-center  items-center"
-              // >
-              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-              //         <br />
-              //         {items.name}
-              //       </p>
-              //     </div>
-              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
-                    <img
-                      src={items.imageUrl}
-                      alt="Profile"
-                      className="h-64 w-80"
-                    />
-              //     </div>
-              //   </div>
-              // </div>
-            ))}
-          </div>
-        </div>
+      {/* Digital Marketing */}
 
-        <div
+      <div
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md shadow-md`}
+      >
+        <p
           className={`${
-            darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom space-y-4 py-10 mt-10 pl-[17px] pr-[23px]`}
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
         >
-          <p
-            className={`${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl`}
-          >
-            Technical
-          </p>
-          <p
-            className={`${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            } text-center md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
-          >
-            Saas, AI Apps Development, NFT
-          </p>
-          <div className="flex gap-4 overflow-x-auto">
-            {Technical.map((items, index) => (
-              // <div
-              //   key={index}
-              //   className="flex justify-center  items-center"
-              // >
-              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-              //         <br />
-              //         TECHNICAL DEV : {items.name}
-              //       </p>
-              //     </div>
-              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
-                    <img
-                      src={items.imageUrl}
-                      alt="Profile"
-                      className="h-64 w-80"
-                    />
-              //     </div>
-              //   </div>
-              // </div>
-            ))}
-          </div>
-          <p
-            className={`${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg space-y-6  text-start px-4`}
-          >
-            Saas, AI Apps Development, Blockchain Technology,System Security
-          </p>
-          <div className="flex  gap-4 overflow-x-auto">
-            {Technical2.map((items, index) => (
-              // <div
-              //   key={index}
-              //   className="flex justify-center  items-center"
-              // >
-              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-              //         <br />
-              //         TECHNICAL DEV : {items.name}
-              //       </p>
-              //     </div>
-              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
-                    <img
-                      src={items.imageUrl}
-                      alt="Profile"
-                      className="h-64 w-80"
-                    />
-              //     </div>
-              //   </div>
-              // </div>
-            ))}
-          </div>
-        </div>
+         Digital Marketing
+        </p>
+        <Slider {...sliderSettings}>
+          {DigitalMarketing.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
 
-        <div
+      {/* Technical Section */}
+      <div
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom space-y-4 py-10 px-4 rounded-md  shadow-md`}
+      >
+        <p
           className={`${
-            darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-          } w-full h-auto bg-gradient-to-custom md:p-20 lg:-20 space-y-6 py-10 mt-10 pl-[17px] pr-[23px]`}
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl`}
         >
-          <p
-            className={` ${
-              darkModeEnabled ? "text-white" : "text-gray-800"
-            } text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
-          >
-            Founder & Co-Founder
-          </p>
-          <div className="flex gap-4 overflow-x-auto">
-            {Founder.map((items, index) => (
-              // <div
-              //   key={index}
-              //   className="flex justify-center  items-center"
-              // >
-              //   <div className="relative h-60 w-80 rounded-lg bg-gradient-to-r to-indigo-600 from-indigo-10% via-sky-30% from-emerald-400 to-emerald-90% p-2 flex flex-col items-center justify-end transform rotateY-5 rotateX-5">
-              //     <div className="relative z-10 bg-indigo-600 h-28 w-full flex items-center justify-center ">
-              //       <p className="font-thin text-white text-lg overflow-hidden max-w-full break-words mt-3 text-center">
-              //         <br />
-              //         {items.name}
-              //       </p>
-              //     </div>
-              //     <div className="absolute z-50 border-4 border-white top-1 rounded-full overflow-hidden object-cover">
-                    <img
-                      src={items.imageUrl}
-                      alt="Profile"
-                      className="h-64 w-80"
-                    />
-              //     </div>
-              //   </div>
-              // </div>
-            ))}
-          </div>
-        </div>
+          Technical
+        </p>
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
+        >
+          Saas, AI Apps Development, NFT
+        </p>
+        <Slider {...sliderSettings}>
+          {Technical.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium text-lg px-4`}
+        >
+          Saas, AI Apps Development, NFT
+        </p>
+        <Slider {...sliderSettings}>
+          {Technical2.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* Founder Section */}
+      <div
+        className={`${
+          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
+        } w-full h-auto bg-gradient-to-custom md:p-20 lg:-20 space-y-6 py-10 px-4 rounded-md shadow-md`}
+      >
+        <p
+          className={`${
+            darkModeEnabled ? "text-white" : "text-gray-800"
+          } text-gray-800 text-opacity-80 text-center font-black text-xl md:text-3xl lg:text-3xl`}
+        >
+          Founder & Co-Founder
+        </p>
+        <Slider {...sliderSettings}>
+          {Founder.map((items, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center h-auto"
+            >
+              <img
+                src={items.imageUrl}
+                alt="Profile"
+                className="h-64 w-80 rounded-md"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
     </>
   );
