@@ -128,6 +128,7 @@ const TeamSection = ({ title, data, sliderSettings }) => {
 
 const WhitePaperLowerSection = () => {
   const darkModeEnabled = useSelector(selectDarkMode);
+  const { selectedColor } = useSelector((state) => state.colors);
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -181,6 +182,7 @@ const WhitePaperLowerSection = () => {
         className={`${
           darkModeEnabled ? "bg-gray-900 text-white" : ""
         } md:text-6xl text-5xl font-roboto font-semibold  text-gray-900 pt-10`}
+        style={{color:selectedColor}}
       >
         Meet Our Efficient Team
       </div>
