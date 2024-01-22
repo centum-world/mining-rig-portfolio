@@ -2,34 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add these styles for centering */
-.slick-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.slick-slide {
-  padding: 0 10px;
-}
-
-
-.slick-prev,
-.slick-next {
-  display: block;
-  z-index: 99;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.slick-prev {
-  left: 0;
-}
-
-.slick-next {
- right :0 
-}
 
 
 @keyframes slideInLeft {

@@ -1,33 +1,142 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { DigitalMarketing, Management } from "../utils/constant";
-import { Technical } from "../utils/constant";
-import { Technical2 } from "../utils/constant";
-import { Founder } from "../utils/constant";
-import { FranchiseData } from "../utils/constant";
-import { BMMdataNew } from "../utils/constant";
+import {
+  BMMdataNew,
+  FranchiseData,
+  Management,
+  BackOffice,
+  AsstHRD,
+  DigitalMarketing,
+  Technical,
+  Technical2,
+  Founder,
+} from "../utils/constant";
+import IconButton from "@mui/material/IconButton";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { Button } from "@mui/material";
 import { useSelector } from "react-redux";
 import { selectDarkMode } from "../redux/darkModeSlice";
-import { BackOffice } from "../utils/constant";
-import { AsstHRD } from "../utils/constant";
 
+export const PurchaseButton = () => {
+  const { selectedColor } = useSelector((state) => state.colors);
+  const darkModeEnabled = useSelector(selectDarkMode);
+
+  const handleDownload = () => {
+    const pdfFileName = "brochure.pdf";
+    saveAs(brochurePDF, pdfFileName);
+  };
+
+  const handlePurchaseNow = () => {
+    window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
+  };
+
+  return (
+    <div
+      className={`${
+        darkModeEnabled ? "bg-gray-900 " : ""
+      } flex md:flex-row flex-col items-center justify-center gap-4 w-full  p-4`}
+    >
+      <Button
+        onClick={handlePurchaseNow}
+        style={{
+          background: selectedColor,
+          cursor: "pointer",
+          color: "white",
+        }}
+        className={` text-white cursor-pointer w-full sm:w-auto`}
+      >
+        Add liquidity
+      </Button>
+      <Button
+        variant="outlined"
+        onClick={handleDownload}
+        style={{
+          borderColor: selectedColor,
+          cursor: "pointer",
+          color: selectedColor,
+        }}
+        className={` text-white cursor-pointer w-full sm:w-auto `}
+      >
+        View Documentation
+      </Button>
+    </div>
+  );
+};
+
+const TeamSection = ({ title, data, sliderSettings }) => {
+  const sliderRef = useRef(null);
+  const darkModeEnabled = useSelector(selectDarkMode);
+
+  const handleNext = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  const handlePrev = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
+
+  return (
+    <div
+      className={`${
+        darkModeEnabled ? "bg-gray-900 text-white" : ""
+      } flex items-center justify-center flex-col space-y-2 `}
+    >
+      <div
+        className={`${
+          darkModeEnabled ? " text-white" : "text-gray-700"
+        }  text-4xl font-semibold w-full text-center mt-10`}
+      >
+        {title}
+      </div>
+      <div className="w-full">
+        <Slider ref={sliderRef} {...sliderSettings}>
+          {data.map((item, index) => (
+            <div key={index} className="">
+              <div className="w-full flex justify-center items-center text-center mt-6">
+                <img
+                  src={item.imageUrl}
+                  alt="Profile"
+                  className="h-64 w-80 rounded-md  shadow-lg transition-transform transform hover:scale-105 duration-300"
+                />
+              </div>
+            </div>
+          ))}
+        </Slider>
+        <div className="flex justify-center gap-4">
+          <IconButton onClick={handlePrev}>
+            <KeyboardArrowLeftIcon
+              className={`${darkModeEnabled ? "text-white" : ""}`}
+            />
+          </IconButton>
+          <IconButton onClick={handleNext}>
+            <KeyboardArrowRightIcon
+              className={`${darkModeEnabled ? "text-white" : ""}`}
+            />
+          </IconButton>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const WhitePaperLowerSection = () => {
   const darkModeEnabled = useSelector(selectDarkMode);
-  const { selectedColor } = useSelector((state) => state.colors);
-
-
   const sliderSettings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay:true,
+    autoplay: true,
     autoplaySpeed: 3000,
-    arrows: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -55,284 +164,89 @@ const WhitePaperLowerSection = () => {
     ...sliderSettings,
     slidesToShow: 1,
   };
+
   const digitalMArking = {
     ...sliderSettings,
     slidesToShow: 2,
   };
+
   const founder = {
     ...sliderSettings,
     slidesToShow: 3,
   };
 
   return (
-    <>
-      <p
-        style={{ color: selectedColor }}
-        className="mt-10 text-opacity-80 text-center font-tomorrow font-semibold  text-xl md:text-3xl lg:text-3xl"
+    <div className="text-center">
+      <div
+        className={`${
+          darkModeEnabled ? "bg-gray-900 text-white" : ""
+        } md:text-6xl text-5xl font-roboto font-semibold  text-gray-900 pt-10`}
       >
         Meet Our Efficient Team
-      </p>
-      {/* BMM Section */}
-      <div
-        className={`${
-          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto space-y-4 flex flex-col pl-[22px] mt-3 py-10 px-4 bg-gradient-to-custom rounded-md shadow-md`}
-      >
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          }  text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-2xl lg:text-3xl `}
-        >
-          BMM
-        </p>
-        <Slider {...sliderSettings}>
-          {BMMdataNew.map((bmm, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center h-auto"
-            >
-              <img
-                src={bmm.imageUrl}
-                alt="Profile"
-                className="h-64 w-80 max-w-full rounded-md"
-              />
-            </div>
-          ))}
-        </Slider>
       </div>
-
-      {/* Franchise Section */}
-      <div
-        className={`${
-          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom pl-[22px] md:mt-3 mt-10  space-y-4 py-10 px-4 rounded-md shadow-md`}
-      >
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl`}
-        >
-          Franchise/Business Consultant
-        </p>
-        <Slider {...sliderSettings}>
-          {FranchiseData.map((franchise, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center h-auto"
-            >
-              <img
-                src={franchise.imageUrl}
-                alt="Profile"
-                className="h-64 w-80 max-w-full rounded-md"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* Core Team Section */}
-      <div
-        className={`${
-          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom pl-[22px] md:mt-3 mt-10  space-y-4 py-10 px-4 rounded-md shadow-md`}
-      >
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold  text-xl md:text-3xl lg:text-3xl`}
-        >
-          Core Team
-        </p>
-        <Slider {...sliderSettings}>
-          {Management.map((items, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center h-auto"
-            >
-              <img
-                src={items.imageUrl}
-                alt="Profile"
-                className="h-64 w-80 max-w-full rounded-md"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* Back office */}
-      <div
-        className={`${
-          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom pl-[22px] md:mt-3 mt-10  space-y-4 py-10 px-4 rounded-md shadow-md`}
-      >
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold  text-xl md:text-3xl lg:text-3xl`}
-        >
-          Back Office
-        </p>
-        <Slider {...backOfficeSliderSettings}>
-          {BackOffice.map((items, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center h-auto"
-            >
-              <img
-                src={items.imageUrl}
-                alt="Profile"
-                className="h-64 w-80 max-w-full rounded-md"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* Asst HRD */}
-      <div
-        className={`${
-          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom pl-[22px] md:mt-3 mt-10  space-y-4 py-10 px-4 rounded-md shadow-md`}
-      >
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl`}
-        >
-          Asst. HRD
-        </p>
-        <Slider {...asstHRDSliderSettings}>
-          {AsstHRD.map((items, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center h-auto"
-            >
-              <img
-                src={items.imageUrl}
-                alt="Profile"
-                className="h-64 w-80 max-w-full rounded-md"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* Digital Marketing */}
-      <div
-        className={`${
-          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom pl-[22px] md:mt-3 mt-10  space-y-4 py-10 px-4 rounded-md shadow-md`}
-      >
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold  text-xl md:text-3xl lg:text-3xl`}
-        >
-          Digital Marketing
-        </p>
-        <Slider {...digitalMArking}>
-          {DigitalMarketing.map((items, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center h-auto"
-            >
-              <img
-                src={items.imageUrl}
-                alt="Profile"
-                className="h-64 w-80 max-w-full rounded-md"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* Technical Section */}
-      <div
-        className={`${
-          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom pl-[22px] md:mt-3 mt-10  space-y-4 py-10 px-4 rounded-md  shadow-md`}
-      >
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          }  text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold text-xl md:text-3xl lg:text-3xl`}
+      <TeamSection
+        title="BMM"
+        data={BMMdataNew}
+        sliderSettings={sliderSettings}
+      />
+      <PurchaseButton />
+      <TeamSection
+        title="Franchise/Business Consultant"
+        data={FranchiseData}
+        sliderSettings={sliderSettings}
+      />
+      <PurchaseButton />
+      <TeamSection
+        title="Core Team"
+        data={Management}
+        sliderSettings={sliderSettings}
+      />
+      <PurchaseButton />
+      <TeamSection
+        title="Back Office"
+        data={BackOffice}
+        sliderSettings={backOfficeSliderSettings}
+      />
+      <PurchaseButton />
+      <TeamSection
+        title="Asst. HRD"
+        data={AsstHRD}
+        sliderSettings={asstHRDSliderSettings}
+      />
+      <PurchaseButton />
+      <TeamSection
+        title="Digital Marketing"
+        data={DigitalMarketing}
+        sliderSettings={digitalMArking}
+      />
+      <PurchaseButton />
+      <div>
+        <div
+          className={` ${
+            darkModeEnabled ? "bg-gray-900 text-white" : ""
+          } text-gray-700 text-4xl font-semibold w-full p-6`}
         >
           Technical/Software
-        </p>
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium md:text-lg text-base px-4`}
-        >
-          SaaS, AI Apps Development, NFT
-        </p>
-        <Slider {...sliderSettings}>
-          {Technical.map((items, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center h-auto"
-            >
-              <img
-                src={items.imageUrl}
-                alt="Profile"
-                className="h-64 w-80 max-w-full rounded-md"
-              />
-            </div>
-          ))}
-        </Slider>
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          }  md:text-start lg:text-start  text-gray-800 text-opacity-80  font-tomorrow font-medium md:text-lg text-base px-4`}
-        >
-          SaaS, AI Apps & Blockchain Dev
-        </p>
-        <Slider {...sliderSettings}>
-          {Technical2.map((items, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center h-auto"
-            >
-              <img
-                src={items.imageUrl}
-                alt="Profile"
-                className="h-64 w-80 max-w-full rounded-md"
-              />
-            </div>
-          ))}
-        </Slider>
+          <TeamSection
+            title=" SaaS, AI Apps Development, NFT"
+            data={Technical}
+            sliderSettings={sliderSettings}
+          />
+          <TeamSection
+            title="SaaS, AI Apps & Blockchain Dev"
+            data={Technical2}
+            sliderSettings={sliderSettings}
+          />
+        </div>
       </div>
-
-      {/* Founder Section */}
-      <div
-        className={`${
-          darkModeEnabled ? "bg-gray-800" : "bg-gray-200"
-        } w-full h-auto bg-gradient-to-custom pl-[22px] md:mt-3 mt-10   md:p-20 lg:-20 space-y-6 py-10 px-4 rounded-t-md shadow-md`}
-      >
-        <p
-          className={`${
-            darkModeEnabled ? "text-white" : "text-gray-800"
-          } text-gray-800 text-opacity-80 text-center font-tomorrow font-semibold  text-xl md:text-3xl lg:text-3xl`}
-        >
-          Founder & Co-Founder
-        </p>
-        <Slider {...founder}>
-          {Founder.map((items, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center h-auto"
-            >
-              <img
-                src={items.imageUrl}
-                alt="Profile"
-                className="h-64 w-80 rounded-md"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </>
+      <PurchaseButton />
+      <TeamSection
+        title="Founder & Co-Founder"
+        data={Founder}
+        sliderSettings={founder}
+      />
+      <PurchaseButton />
+    </div>
   );
 };
-
 export default WhitePaperLowerSection;
