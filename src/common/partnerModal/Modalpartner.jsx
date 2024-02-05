@@ -47,8 +47,6 @@ const Modalpartner = ({partnerVisible, handleClose}) => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          {loginPage?<Button type="submit">Sign In</Button>:
-          <Button type="submit">Sign Up</Button>}
           {loginPage?<Button onClick={signup}>Create new account</Button>:
           <Button onClick={login}>Aready have an account</Button>}
         </DialogActions>
