@@ -1,6 +1,6 @@
 // Header.js
 
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -15,12 +15,17 @@ import Drawer from "./Drawer";
 import logo from "../assets/png/clogo.png";
 import brochurePDF from "../assets/pdf/brochure.pdf";
 import { saveAs } from "file-saver";
+import Modalpartner from "./partnerModal/Modalpartner";
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const { selectedColor } = useSelector((state) => state.colors);
   const darkModeEnabled = useSelector(selectDarkMode);
+  const [modalShow, setModalShow] = useState({
+    partnerVisible : false,
+    memberVisible : false
+  })
 
   const dispatch = useDispatch();
 
@@ -47,8 +52,20 @@ const Header = () => {
   };
 
   const handlePartner = () => {
-    window.open("http://apps.centumworldrig.com/mininglogin", "_blank");
+    // window.open("http://apps.centumworldrig.com/mininglogin", "_blank");
+    setModalShow((prev) => ({
+      ...prev,
+      partnerVisible: !prev.partnerVisible
+    }));
+
   };
+
+  const handleModalClose = (modalType) => {
+    setModalShow((prev) => ({ ...prev, [modalType]: false }));
+  };
+
+
+  
 
   const handleMember = () => {
     window.open("http://apps.centumworldrig.com/memberlogin", "_blank");
@@ -158,6 +175,7 @@ const Header = () => {
           <MenuItem onClick={handleBmm}>BMM</MenuItem>
         </Menu>
       </div>
+      <Modalpartner partnerVisible={modalShow.partnerVisible}   handleClose={() => handleModalClose("partnerVisible")}/>
     </div>
   );
 };
