@@ -10,7 +10,7 @@ const WhitepaperSection = () => {
   const heroInnovation = darkModeEnabled ? innovation1 : innovation
 
   return (
-    <div className={`w-full ${darkModeEnabled ? 'bg-gray-900' : 'bg-white'} h-full`}>
+    <div className={`w-full ${darkModeEnabled ? 'bg-gray-900' : 'bg-gray-50'} h-full`}>
       <div className="pl-6 pt-14  pb-14 pr-6 sm:pr-0 flex flex-col justify-center items-center">
         <p className={`text-2xl md:text-3xl ${darkModeEnabled ? 'text-white' : 'text-gray-700'} font-calibri font-bold`}>
           White Paper & Roadmap

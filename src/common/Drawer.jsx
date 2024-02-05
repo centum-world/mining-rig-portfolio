@@ -11,7 +11,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Close";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Collapse } from "@mui/material";
 import { useSelector } from "react-redux";
 import { selectDarkMode } from "../redux/darkModeSlice";
@@ -101,22 +100,18 @@ export default function TemporaryDrawer() {
             subItems: [
               {
                 text: "Partner",
-                icon: <AccountCircleOutlinedIcon />,
                 path: "http://apps.centumworldrig.com/mininglogin",
               },
               {
                 text: "Referral",
-                icon: <AccountCircleOutlinedIcon />,
                 path: "http://apps.centumworldrig.com/memberlogin",
               },
               {
                 text: "Franchise",
-                icon: <AccountCircleOutlinedIcon />,
                 path: "http://apps.centumworldrig.com/franchiselogin",
               },
               {
                 text: "BMM",
-                icon: <AccountCircleOutlinedIcon />,
                 path: "http://apps.centumworldrig.com/statelogin",
               },
             ],
@@ -129,8 +124,8 @@ export default function TemporaryDrawer() {
                 href={item.path}
                 onClick={(event) => item.onClick(event, item.path)}
               >
-                <ListItemIcon   style={{ color: darkModeEnabled ? 'gray'  : '' }}>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.text} />
+                <ListItemIcon   style={{ color: darkModeEnabled ? 'white'  : '' }}>{item.icon}</ListItemIcon>
+                <ListItemText style={{ color: darkModeEnabled ? 'white'  : '' }} primary={item.text} />
                 {item.subItems &&
                   (state.openLogin ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
               </ListItemButton>
@@ -145,7 +140,7 @@ export default function TemporaryDrawer() {
                       onClick={(event) => handleLoginClick(event, subItem.path)}
                     >
                       <ListItemIcon style={{ color: darkModeEnabled ? 'gray'  : '' }}>{subItem.icon}</ListItemIcon>
-                      <ListItemText primary={subItem.text} />
+                      <ListItemText style={{ color: darkModeEnabled ? 'white'  : '' }} primary={subItem.text} />
                     </ListItem>
                   ))}
                 </List>

@@ -108,10 +108,10 @@ export const FranchiseData = [
     imageUrl:mukherjee,
     name:"BMM : S. Mukherjee"
   },
-  {
-    imageUrl:gangaram,
-    name:"BMM : B. Sardar"
-  },
+  // {
+  //   imageUrl:gangaram,
+  //   name:"BMM : B. Sardar"
+  // },
 
 ]
 export const BMMdataNew = [

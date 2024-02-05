@@ -1,12 +1,19 @@
 // colorsSlice.js
 import { createSlice } from "@reduxjs/toolkit";
+const getInitialState = () => {
+  const storedColor = localStorage.getItem("selectedColor");
+  return {
+    selectedColor: storedColor ? storedColor : "#4169E1",
+  };
+};
 
 const colorsSlice = createSlice({
   name: "colors",
-  initialState: { selectedColor: "#4169E1" },
+  initialState: getInitialState(),
   reducers: {
     setSelectedColor: (state, action) => {
       state.selectedColor = action.payload;
+      localStorage.setItem("selectedColor", action.payload);
     },
   },
 });
