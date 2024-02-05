@@ -57,7 +57,7 @@ const Header = () => {
       ...prev,
       partnerVisible: !prev.partnerVisible
     }));
-
+    setAnchorEl(null);
   };
 
   const handleModalClose = (modalType) => {

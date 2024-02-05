@@ -41,7 +41,7 @@ const Modalpartner = ({partnerVisible, handleClose}) => {
         <DialogTitle>WELCOME TO CENTUM WORLD</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            GPU MINING RIG
+            GPU MINING RIG 
           </DialogContentText>
           {loginPage?<LoginModal/>: <SignUp/>}
         </DialogContent>
