@@ -52,12 +52,12 @@ const Header = () => {
   };
 
   const handlePartner = () => {
-    // window.open("http://apps.centumworldrig.com/mininglogin", "_blank");
-    setModalShow((prev) => ({
-      ...prev,
-      partnerVisible: !prev.partnerVisible
-    }));
-    setAnchorEl(null);
+    window.open("http://apps.centumworldrig.com/mininglogin", "_blank");
+    // setModalShow((prev) => ({
+    //   ...prev,
+    //   partnerVisible: !prev.partnerVisible
+    // }));
+    // setAnchorEl(null);
   };
 
   const handleModalClose = (modalType) => {

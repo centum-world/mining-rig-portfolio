@@ -24,14 +24,14 @@ const LoginModal = () => {
         `${apiurl}/mining/mining-partner-login`,
         requestData
       );
-      const newWindows = window.open(
-        "http://apps.centumworldrig.com/miningdashboard/home",
-        "_blank"
-      );
-      newWindows.postMessage(
-        { key: "login", value: true },
-        "https://apps.centumworldrig.com/miningdashboard/home"
-      );
+      
+      console.log(response.data.token)  
+      const variable = {
+        data:response.data.token
+      } 
+
+      window.location.href = `http://localhost:4200?variable=${encodeURIComponent(variable)}`;
+    
     } catch (error) {
       console.error("Error during login", error);
     }
