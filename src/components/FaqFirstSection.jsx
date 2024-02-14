@@ -195,7 +195,7 @@ const FaqFirstSection = () => {
           >
             <div className="">
               <h2 className={`text-xl font-calibri font-semibold ${darkModeEnabled ? 'text-white' : 'text-gray-900'} text-opacity-70`}>
-                Why shall you add the liquidity (amount) in the GPU Mining Rig ?
+                Why shall you add the liquidity (amount) in the GPU Mining RIG ?
               </h2>
               {isArrowDown4 ? (
                 <p className={`text-sm ${darkModeEnabled ? 'text-gray-500' : 'text-gray-700'} text-opacity-80`}>
@@ -260,12 +260,12 @@ const FaqFirstSection = () => {
             <div className="">
               <h2 className={`text-xl font-calibri font-semibold ${darkModeEnabled ? 'text-white' : 'text-gray-900'} text-opacity-70`}>
                 How much payout a RIG Partner get from adding the liquidity in
-                the GPU Mining Rig?
+                the GPU Mining RIG?
               </h2>
               {isArrowDown6 ? (
                 <p className={`text-sm ${darkModeEnabled ? 'text-gray-500' : 'text-gray-700'} text-opacity-80`}>
                   The RIG Partner payout from adding the liquidity in the GPU
-                  Mining Rig depends on the distinct liquidity proveders. For an
+                  Mining RIG depends on the distinct liquidity proveders. For an
                   instance : If you are a liquidity provider of 6 lakh in this
                   case you are going to get Rs.64,125/- per month.
                 </p>
@@ -334,7 +334,7 @@ const FaqFirstSection = () => {
                 <p className={`text-sm ${darkModeEnabled ? 'text-gray-500' : 'text-gray-700'} text-opacity-80`}>
                   With CENTUMO RIG, you can tap into the potential of crypto
                   mining and earn your share of the profits. We distribute 60%
-                  of our earnings from our work profit via our GPU Mining Rig
+                  of our earnings from our work profit via our GPU Mining RIG
                   Module, ensuring that you benefit from your partnership.
                 </p>
               ) : (
