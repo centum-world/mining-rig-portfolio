@@ -40,7 +40,7 @@ const GetStarted = () => {
         <ul className="list-disc font-calibri text-lg ">
           <li className="mb-2">Fill up the Contract Form</li>
           <li className="mb-2">Submit All Needful Documents</li>
-          <li className="mb-2">Add Liquidity 6L/3L/2L/1L</li>
+          <li className="mb-2">Add Liquidity 12L/6L/3L/2L/1L</li>
           <li className="mb-2">
             Get the Virtual & Mutual Agreement Bond and Approve it
           </li>
