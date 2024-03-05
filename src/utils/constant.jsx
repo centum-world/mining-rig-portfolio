@@ -154,16 +154,6 @@ export const AsstHRD = [
     name:"ASST. HRD : A. Pal"
   },
 ]
-export const DigitalMarketing = [
-  {
-    imageUrl:raju,
-    name:"DIGITAL MARKETING : R. Balmuchu"
-  },
-  {
-    imageUrl:rakesh,
-    name:"DIGITAL MARKETING : R. Barik"
-  },
-]
 
 export const Technical = [
   {

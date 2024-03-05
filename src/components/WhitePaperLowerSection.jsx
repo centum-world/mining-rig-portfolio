@@ -8,7 +8,6 @@ import {
   Management,
   BackOffice,
   AsstHRD,
-  DigitalMarketing,
   Technical,
   Technical2,
   Founder,
@@ -216,11 +215,6 @@ const WhitePaperLowerSection = () => {
         sliderSettings={asstHRDSliderSettings}
       />
       <PurchaseButton />
-      <TeamSection
-        title="Digital Marketing"
-        data={DigitalMarketing}
-        sliderSettings={digitalMArking}
-      />
       <PurchaseButton />
       <div>
         <div
