@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import Data1 from "../assets/png/Data1.gif";
 import Data2 from "../assets/png/Data2.gif";
 import brochurePDF from "../assets/pdf/brochure.pdf";
+
+import partnerdocs from '../assets/pdf/cw-partnerdocs.pdf'
 import { saveAs } from "file-saver";
 import { selectDarkMode } from "../redux/darkModeSlice";
 
@@ -16,11 +18,17 @@ const HeroSection = () => {
     saveAs(brochurePDF, pdfFileName);
   };
 
+    
+  const downloadPartnerDocs = () => {
+    const pdfFileName = "cw-partnerdocs.pdf";
+    saveAs(partnerdocs, pdfFileName);
+  };
+
   const handlePurchaseNow = () => {
     window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
   };
 
-  const heroImg = darkModeEnabled ? Data2 : Data1
+  const heroImg = darkModeEnabled ? Data2 : Data1;
 
   return (
     <section
@@ -59,15 +67,16 @@ const HeroSection = () => {
           </p>
           <div className="flex md:flex-row flex-col gap-4 w-full">
             <Button
-              onClick={handlePurchaseNow}
+              onClick={downloadPartnerDocs}
               style={{
                 background: selectedColor,
                 cursor: "pointer",
                 color: "white",
               }}
             >
-              Add liquidity
+              CW MUTUAL RIG PARTNER DOCS
             </Button>
+
             <Button
               variant="outlined"
               onClick={handleDownload}
@@ -79,11 +88,21 @@ const HeroSection = () => {
             >
               View Documentation
             </Button>
+            <Button
+              onClick={handlePurchaseNow}
+              style={{
+                background: selectedColor,
+                cursor: "pointer",
+                color: "white",
+              }}
+            >
+              Add liquidity
+            </Button>
           </div>
         </div>
       </div>
       <div className="flex items-center justify-center md:w-[50%] w-full">
-        <img src={heroImg} alt="heroImg"  className="md:w-3/4 " />
+        <img src={heroImg} alt="heroImg" className="md:w-3/4 " />
       </div>
     </section>
   );

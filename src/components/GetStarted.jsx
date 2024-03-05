@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectDarkMode } from "../redux/darkModeSlice";
+import partnerdocs from '../assets/pdf/cw-partnerdocs.pdf'
 
 const GetStarted = () => {
   const { selectedColor } = useSelector((state) => state.colors);
@@ -9,6 +10,12 @@ const GetStarted = () => {
 
   const handlePurchaseNow = () => {
     window.open("https://apps.centumworldrig.com/mininglogin", "_blank");
+  };
+
+    
+  const downloadPartnerDocs = () => {
+    const pdfFileName = "cw-partnerdocs.pdf";
+    saveAs(partnerdocs, pdfFileName);
   };
 
   return (
@@ -55,7 +62,7 @@ const GetStarted = () => {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="flex flex-col gap-4">
         <Button
           onClick={handlePurchaseNow}
           style={{
@@ -65,6 +72,16 @@ const GetStarted = () => {
           }}
         >
           Add liquidity
+        </Button>
+        <Button
+          onClick={downloadPartnerDocs}
+          style={{
+            background: selectedColor,
+            cursor: "pointer",
+            color: "white",
+          }}
+        >
+          CW MUTUAL RIG PARTNER DOCS
         </Button>
       </div>
     </div>

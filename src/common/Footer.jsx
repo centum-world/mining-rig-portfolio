@@ -4,6 +4,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import logo from "../assets/png/clogo.png";
 import brochurePDF from "../assets/pdf/brochure.pdf";
+import partnerdocs from "../assets/pdf/cw-partnerdocs.pdf";
 import { saveAs } from "file-saver";
 
 const Footer = () => {
@@ -18,6 +19,11 @@ const Footer = () => {
     saveAs(brochurePDF, pdfFileName);
   };
 
+  const downloadPartnerDocs = () => {
+    const pdfFileName = "cw-partnerdocs.pdf";
+    saveAs(partnerdocs, pdfFileName);
+  };
+
   return (
     <div className="p-4 md:p-8 space-y-4 bg-gray-900 text-white">
       <div className="flex flex-col md:flex-row items-center justify-between space-y-4">
@@ -27,6 +33,16 @@ const Footer = () => {
         </div>
 
         <div className="flex md:flex-row flex-col gap-6">
+          <Button
+            onClick={downloadPartnerDocs}
+            style={{
+              background: selectedColor,
+              cursor: "pointer",
+              color: "white",
+            }}
+          >
+            CW MUTUAL RIG PARTNER DOCS
+          </Button>
           <Button
             onClick={handleDownload}
             style={{
